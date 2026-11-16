@@ -208,7 +208,10 @@
     $('gridwrap').innerHTML = h + '</tbody></table>';
   }
   function pick(letter, row, scroll) {
-    state.letter = letter; if (row !== undefined) state.row = row;
+    state.letter = letter;
+    // A click on the heading shows the first row that has something in this column.
+    if (row === undefined) { var sh = D.sheets[state.tab], ci = sh.letters.indexOf(letter); row = 0; sh.rows.some(function (r, n) { if (r[ci] !== '') { row = n; return true; } return false; }); }
+    state.row = row;
     drawGrid(); drawDrawer();
     $('tip').style.display = 'none';
     if (scroll) { var th = $('gridwrap').querySelector('.hd th[data-l="' + letter + '"]'); if (th) $('gridwrap').scrollLeft = th.offsetLeft - 80; }
@@ -315,7 +318,7 @@
   $('screens').onclick = function (e) { var b = e.target.closest('button'); if (b) { state.screen = b.dataset.s; state.spot = -1; drawPages(); $('board').scrollTop = 0; history.replaceState(null, '', '#pages/' + b.dataset.s); } };
   $('board').onclick = function (e) {
     var go = e.target.closest('[data-go]');
-    if (go) { var p = go.dataset.go.split('/'); showTab(p[0]); pick(p[1], 0, true); return; }
+    if (go) { var p = go.dataset.go.split('/'); showTab(p[0]); pick(p[1], undefined, true); return; }
     var p2 = e.target.closest('[data-p]');
     if (p2) { state.spot = +p2.dataset.p; drawPages(); var card = $('was').querySelector('.card.on'); if (card && e.target.closest('.spot')) card.scrollIntoView({ behavior: 'smooth', block: 'nearest' }); }
   };
@@ -338,13 +341,13 @@
     }); });
     $('found').innerHTML = out.join('') || (q ? '<button disabled>No column with that name</button>' : ''); $('found').style.display = q ? 'block' : 'none';
   };
-  $('found').onclick = function (e) { var b = e.target.closest('[data-go]'); if (!b) return; var p = b.dataset.go.split('/'); $('found').style.display = 'none'; $('find').value = ''; showTab(p[0]); pick(p[1], 0, true); };
+  $('found').onclick = function (e) { var b = e.target.closest('[data-go]'); if (!b) return; var p = b.dataset.go.split('/'); $('found').style.display = 'none'; $('find').value = ''; showTab(p[0]); pick(p[1], undefined, true); };
   document.addEventListener('click', function (e) { if (!e.target.closest('header')) $('found').style.display = 'none'; });
 
   // ---- start (a link such as #hph/J opens that column)
   function route() {
     var start = location.hash.slice(1).split('/');
-    if ((start[0] === 'hph' || start[0] === 'nm') && byLetter[start[0]][start[1]]) { showTab(start[0]); pick(start[1], 0, true); return; }
+    if ((start[0] === 'hph' || start[0] === 'nm') && byLetter[start[0]][start[1]]) { showTab(start[0]); pick(start[1], undefined, true); return; }
     if (start[0] === 'pages' && screenOf[start[1]]) { state.screen = start[1]; state.spot = -1; }
     showTab(start[0] === 'pages' || start[0] === 'notes' ? start[0] : 'hph');
   }
