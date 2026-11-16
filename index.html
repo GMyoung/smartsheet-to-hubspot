@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Smartsheet to HubSpot</title>
+<meta name="description" content="Click a column of the old Smartsheet log and see where it is in HubSpot now.">
+<style>
+  :root { --navy:#0b2a4a; --blue:#1565c0; --tint:#e3f0ff; --line:#d5d9de; --head:#f1f3f5; --ink:#1f2933; --soft:#5f6b7a; --orange:#ff7a59; --bg:#f6f7f9; }
+  * { box-sizing: border-box; }
+  html, body { height: 100%; margin: 0; }
+  body { font: 13px/1.45 Arial, Helvetica, sans-serif; color: var(--ink); background: var(--bg); display: flex; flex-direction: column; }
+  button { font: inherit; cursor: pointer; }
+  header { background: var(--navy); color: #fff; padding: 10px 16px; display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+  header h1 { font-size: 17px; margin: 0; font-weight: 700; }
+  header h1 span { color: var(--orange); }
+  header p { margin: 0; color: #c9d6e4; flex: 1; min-width: 220px; }
+  #find { width: 250px; max-width: 100%; padding: 7px 10px; border-radius: 6px; border: 0; font: inherit; }
+  #found { position: absolute; z-index: 30; background: #fff; color: var(--ink); border: 1px solid var(--line); border-radius: 6px; box-shadow: 0 8px 24px rgba(0,0,0,.18);
+    width: 340px; max-height: 320px; overflow: auto; display: none; }
+  #found button { display: block; width: 100%; text-align: left; border: 0; background: none; padding: 7px 10px; border-bottom: 1px solid #eef0f2; }
+  #found button:hover, #found button:focus { background: var(--tint); }
+  #found small { color: var(--soft); }
+  nav { background: #fff; border-bottom: 1px solid var(--line); padding: 0 12px; display: flex; gap: 2px; overflow-x: auto; }
+  nav button { border: 0; background: none; padding: 10px 14px; border-bottom: 3px solid transparent; color: var(--soft); white-space: nowrap; font-weight: 700; }
+  nav button small { font-weight: 400; }
+  nav button.on { color: var(--blue); border-bottom-color: var(--blue); }
+  main { flex: 1; min-height: 0; display: flex; }
+  .view { flex: 1; min-width: 0; display: none; }
+  .view.on { display: flex; }
+
+  /* The sheet */
+  #sheet { flex-direction: row; }
+  #gridwrap { flex: 1; min-width: 0; overflow: auto; background: #fff; }
+  table.grid { border-collapse: separate; border-spacing: 0; }
+  .grid th, .grid td { border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 4px 6px; vertical-align: top; }
+  .grid .lt th { position: sticky; top: 0; z-index: 3; background: #e6e9ed; color: var(--soft); font-weight: 400; font-size: 11px; text-align: center; height: 22px; }
+  .grid .hd th { position: sticky; top: 22px; z-index: 3; background: var(--head); text-align: left; font-size: 12px; height: 52px; cursor: pointer; }
+  .grid .hd th:hover { background: #e3e8ee; }
+  .grid th.rn, .grid td.rn { position: sticky; left: 0; z-index: 2; background: #e6e9ed; color: var(--soft); text-align: center; width: 34px; min-width: 34px; font-size: 11px; }
+  .grid .lt th.rn, .grid .hd th.rn { z-index: 4; }
+  .grid td { cursor: pointer; }
+  .grid td div { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; white-space: pre-line; }
+  .grid .w1 { min-width: 96px; max-width: 96px; text-align: center; }
+  .grid .w2 { min-width: 150px; max-width: 150px; }
+  .grid .w3 { min-width: 250px; max-width: 250px; }
+  .box { display: inline-block; width: 14px; height: 14px; border: 1.5px solid #8793a1; border-radius: 2px; vertical-align: middle; position: relative; }
+  .box.y { background: var(--blue); border-color: var(--blue); }
+  .box.y::after { content: ""; position: absolute; left: 3.5px; top: 0; width: 4px; height: 8px; border: solid #fff; border-width: 0 2px 2px 0; transform: rotate(45deg); }
+  .grid .sel { background: var(--tint) !important; }
+  .grid .hd th.sel { box-shadow: inset 0 3px 0 var(--blue); }
+  .tip { padding: 8px 12px; background: #fff8e1; border-bottom: 1px solid #f0dfa3; }
+
+  /* The drawer */
+  #drawer { width: 380px; max-width: 100%; background: #fff; border-left: 1px solid var(--line); overflow: auto; padding: 16px; display: none; }
+  #drawer.on { display: block; }
+  .eyebrow { font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: var(--soft); margin: 0 0 4px; }
+  #drawer h2 { font-size: 18px; margin: 0 0 10px; }
+  .sample { background: var(--head); border-radius: 6px; padding: 8px 10px; margin: 8px 0 14px; white-space: pre-line; max-height: 130px; overflow: auto; }
+  .go { display: block; width: 100%; background: var(--orange); color: #fff; border: 0; border-radius: 8px; padding: 12px; font-size: 15px; font-weight: 700; }
+  .go:hover { filter: brightness(.95); }
+  .answer { margin-top: 14px; display: none; }
+  .answer.on { display: block; }
+  .chip { display: inline-block; padding: 2px 8px; border-radius: 10px; background: #e8edf3; font-size: 11px; font-weight: 700; margin-bottom: 8px; }
+  .chip.auto { background: #dff3e3; color: #1b6b31; } .chip.gone { background: #eceff1; color: #546e7a; } .chip.moved { background: #fff1cc; color: #7a5a00; }
+  .where { font-weight: 700; margin: 0 0 6px; }
+  .shots { display: grid; gap: 10px; margin-top: 12px; }
+  .shot { border: 1px solid var(--line); border-radius: 8px; overflow: hidden; background: #fff; padding: 0; text-align: left; }
+  .shot:hover { border-color: var(--blue); }
+  .shot b { display: block; padding: 6px 8px; }
+  .shot small { display: block; padding: 0 8px 8px; color: var(--soft); }
+  .crop { position: relative; height: 150px; overflow: hidden; background: #dfe3e8; }
+  .crop img { position: absolute; max-width: none; }
+  .ring { position: absolute; border: 3px solid var(--orange); border-radius: 6px; box-shadow: 0 0 0 4000px rgba(11,42,74,.45); pointer-events: none; }
+  .close { float: right; border: 0; background: none; font-size: 20px; color: var(--soft); }
+
+  /* HubSpot pages */
+  #pages { flex-direction: row; }
+  #screens { width: 250px; background: #fff; border-right: 1px solid var(--line); overflow: auto; padding: 8px; }
+  #screens h3 { font-size: 11px; text-transform: uppercase; letter-spacing: .06em; color: var(--soft); margin: 12px 6px 4px; }
+  #screens button { display: block; width: 100%; text-align: left; border: 0; background: none; padding: 7px 8px; border-radius: 6px; }
+  #screens button.on { background: var(--tint); color: var(--blue); font-weight: 700; }
+  #board { flex: 1; min-width: 0; overflow: auto; padding: 14px; }
+  #board h2 { margin: 0 0 4px; font-size: 16px; }
+  .stage { position: relative; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; background: #fff; max-width: 1568px; }
+  .stage img { display: block; width: 100%; }
+  .spot { position: absolute; border: 2px solid var(--orange); border-radius: 5px; background: rgba(255,122,89,.10); padding: 0; }
+  .spot:hover, .spot.on { background: rgba(255,122,89,.28); box-shadow: 0 0 0 3px rgba(255,122,89,.35); }
+  .spot i { position: absolute; left: -9px; top: -9px; width: 18px; height: 18px; border-radius: 50%; background: var(--orange); color: #fff; font: 700 10px/18px Arial; text-align: center; }
+  #was { margin-top: 12px; display: grid; gap: 8px; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
+  .card { background: #fff; border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; }
+  .card.on { border-color: var(--orange); box-shadow: 0 0 0 2px rgba(255,122,89,.3); }
+  .card h4 { margin: 0 0 4px; font-size: 13px; }
+  .card h4 i { display: inline-block; width: 18px; height: 18px; border-radius: 50%; background: var(--orange); color: #fff; font: 700 10px/18px Arial; text-align: center; margin-right: 6px; }
+  .card p { margin: 0 0 6px; color: var(--soft); }
+  .link { border: 1px solid var(--line); background: #fff; border-radius: 12px; padding: 3px 9px; margin: 2px 4px 2px 0; color: var(--blue); }
+  .link:hover { background: var(--tint); }
+
+  /* Colors and what changed */
+  #notes { display: none; overflow: auto; padding: 16px; }
+  #notes.on { display: block; }
+  #notes table { border-collapse: collapse; background: #fff; margin: 0 0 24px; max-width: 1100px; }
+  #notes th, #notes td { border: 1px solid var(--line); padding: 7px 10px; text-align: left; vertical-align: top; }
+  #notes th { background: var(--head); }
+  .dot { display: inline-block; width: 12px; height: 12px; border-radius: 50%; border: 1px solid #9aa5b1; margin-right: 6px; vertical-align: -1px; }
+
+  /* The big viewer */
+  #viewer { position: fixed; inset: 0; background: #0b1a2b; z-index: 50; display: none; flex-direction: column; padding: 14px; }
+  #viewer.on { display: flex; }
+  #vbar { color: #fff; display: flex; gap: 12px; align-items: center; margin-bottom: 10px; flex-wrap: wrap; }
+  #vbar h2 { margin: 0; font-size: 16px; flex: 1; min-width: 200px; }
+  #vbar h2 small { display: block; font-weight: 400; color: #c9d6e4; font-size: 13px; }
+  #vbar button { border: 1px solid #5d7896; background: #17395c; color: #fff; border-radius: 6px; padding: 7px 12px; }
+  #vbar button:hover { background: #1f4a76; }
+  #vstage { flex: 1; min-height: 0; overflow: auto; background: #0e1c2c; border-radius: 8px; }
+  #vcanvas { position: relative; margin: 0 auto; }
+  #vcanvas img { display: block; width: 100%; }
+  #vcanvas .ring { box-shadow: 0 0 0 4000px rgba(8,20,36,.55); animation: pulse 1.3s ease-in-out 3; }
+  #vlabel { position: absolute; background: var(--orange); color: #fff; font-weight: 700; padding: 3px 9px; border-radius: 5px; white-space: nowrap; }
+  #vhow { background: #fff; border-radius: 8px; padding: 10px 14px; margin-top: 10px; max-height: 26vh; overflow: auto; }
+  #vhow b { display: block; margin-bottom: 3px; }
+  @keyframes pulse { 50% { border-color: #fff; } }
+  @media (prefers-reduced-motion: reduce) { #vcanvas .ring { animation: none; } }
+  @media (max-width: 800px) { #sheet, #pages { flex-direction: column; } #drawer { width: 100%; max-height: 55%; border-left: 0; border-top: 1px solid var(--line); }
+    #screens { width: 100%; max-height: 150px; } }
+</style>
+</head>
+<body>
+<header>
+  <h1>Smartsheet <span>&rarr;</span> HubSpot</h1>
+  <p>Click the column you used to fill. One more click shows where it is in HubSpot now. The patients here are made up.</p>
+  <div><input id="find" type="search" placeholder="Find a column, for example MRN" aria-label="Find a column"><div id="found"></div></div>
+</header>
+<nav id="tabs"></nav>
+<main>
+  <section class="view" id="sheet">
+    <div style="flex:1;min-width:0;display:flex;flex-direction:column">
+      <div class="tip" id="tip">This looks like the old sheet on purpose. Click any column heading or cell.</div>
+      <div id="gridwrap"></div>
+    </div>
+    <aside id="drawer" aria-live="polite"></aside>
+  </section>
+  <section class="view" id="pages">
+    <div id="screens"></div>
+    <div id="board"></div>
+  </section>
+  <section id="notes"></section>
+</main>
+<div id="viewer" role="dialog" aria-modal="true" aria-label="Where it is in HubSpot">
+  <div id="vbar"><h2 id="vtitle"></h2><button id="vprev">&larr; Previous place</button><span id="vcount"></span><button id="vnext">Next place &rarr;</button>
+    <button id="vzoom">Whole page</button><button id="vclose">Close (Esc)</button></div>
+  <div id="vstage"><div id="vcanvas"><img id="vimg" alt=""><div class="ring" id="vring"></div><div id="vlabel"></div></div></div>
+  <div id="vhow"></div>
+</div>
+<script src="data.js"></script>
+<script>
+(function () {
+  var D = window.DATA, W = 1568, H = 726;
+  var $ = function (id) { return document.getElementById(id); };
+  var esc = function (s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); };
+  var state = { tab: 'hph', letter: '', row: 0, screen: D.screens[0].id, spot: -1 };
+  var byLetter = { hph: {}, nm: {} };
+  D.columns.forEach(function (c) { ['hph', 'nm'].forEach(function (k) { c[k].forEach(function (l) { byLetter[k][l] = c; }); }); });
+  var screenOf = {}; D.screens.forEach(function (s) { screenOf[s.id] = s; });
+  var chipClass = function (kind) { return /system/.test(kind) ? 'auto' : /Not in/.test(kind) ? 'gone' : /another place/.test(kind) ? 'moved' : ''; };
+  var pct = function (r) { return 'left:' + ((r[0] - 7) / W * 100) + '%;top:' + ((r[1] - 4) / H * 100) + '%;width:' + ((r[2] + 14) / W * 100) + '%;height:' + ((r[3] + 8) / H * 100) + '%'; };
+
+  // ---- tabs
+  var TABS = [['hph', D.sheets.hph.name, D.sheets.hph.hospital + ' sheet'], ['nm', D.sheets.nm.name, D.sheets.nm.hospital + ' sheet'],
+    ['pages', 'HubSpot pages', 'what each box used to be'], ['notes', 'Colors and what changed', '']];
+  function showTab(tab) {
+    state.tab = tab;
+    $('tabs').innerHTML = TABS.map(function (t) {
+      return '<button data-tab="' + t[0] + '" class="' + (t[0] === tab ? 'on' : '') + '">' + esc(t[1]) + (t[2] ? ' <small>&middot; ' + esc(t[2]) + '</small>' : '') + '</button>';
+    }).join('');
+    $('sheet').className = 'view' + (tab === 'hph' || tab === 'nm' ? ' on' : '');
+    $('pages').className = 'view' + (tab === 'pages' ? ' on' : '');
+    $('notes').className = tab === 'notes' ? 'on' : '';
+    if (tab === 'hph' || tab === 'nm') drawGrid();
+    if (tab === 'pages') drawPages();
+    if (tab === 'notes') drawNotes();
+  }
+  $('tabs').onclick = function (e) { var b = e.target.closest('button'); if (b) { state.letter = ''; showTab(b.dataset.tab); drawDrawer(); } };
+
+  // ---- the sheet
+  function width(sheet, i) {
+    var vals = sheet.rows.map(function (r) { return r[i]; });
+    var c = byLetter[sheet === D.sheets.hph ? 'hph' : 'nm'][sheet.letters[i]];
+    if (vals.some(function (v) { return v === true; }) || (vals.every(function (v) { return v === ''; }) && c && /^Tick:/.test(c.was))) return 'w1';
+    return vals.some(function (v) { return String(v).length > 60; }) ? 'w3' : 'w2';
+  }
+  function drawGrid() {
+    var s = D.sheets[state.tab], h = '<table class="grid"><thead><tr class="lt"><th class="rn"></th>';
+    var w = s.header.map(function (_, i) { return width(s, i); });
+    s.letters.forEach(function (l, i) { h += '<th class="' + w[i] + (l === state.letter ? ' sel' : '') + '" data-l="' + l + '">' + l + '</th>'; });
+    h += '</tr><tr class="hd"><th class="rn"></th>';
+    s.header.forEach(function (name, i) { var l = s.letters[i]; h += '<th class="' + w[i] + (l === state.letter ? ' sel' : '') + '" data-l="' + l + '" tabindex="0">' + esc(name) + '</th>'; });
+    h += '</tr></thead><tbody>';
+    s.rows.forEach(function (row, r) {
+      h += '<tr><td class="rn">' + (r + 1) + '</td>';
+      row.forEach(function (v, i) {
+        var l = s.letters[i], box = w[i] === 'w1' && (v === true || v === '');
+        h += '<td class="' + w[i] + (l === state.letter ? ' sel' : '') + '" data-l="' + l + '" data-r="' + r + '">' +
+          (box ? '<span class="box' + (v === true ? ' y' : '') + '"></span>' : '<div>' + esc(v === true ? 'Yes' : v) + '</div>') + '</td>';
+      });
+      h += '</tr>';
+    });
+    $('gridwrap').innerHTML = h + '</tbody></table>';
+  }
+  function pick(letter, row, scroll) {
+    state.letter = letter; if (row !== undefined) state.row = row;
+    drawGrid(); drawDrawer();
+    $('tip').style.display = 'none';
+    if (scroll) { var th = $('gridwrap').querySelector('.hd th[data-l="' + letter + '"]'); if (th) $('gridwrap').scrollLeft = th.offsetLeft - 80; }
+    history.replaceState(null, '', '#' + state.tab + '/' + letter);
+  }
+  $('gridwrap').onclick = function (e) { var c = e.target.closest('[data-l]'); if (c) pick(c.dataset.l, c.dataset.r === undefined ? undefined : +c.dataset.r); };
+  $('gridwrap').onkeydown = function (e) { if (e.key === 'Enter' && e.target.dataset.l) pick(e.target.dataset.l); };
+
+  // ---- the drawer: the column, then the button, then the answer
+  function crop(t) {
+    var r = t.rect, boxW = 346, boxH = 150, scale = Math.min(boxW * .8 / r[2], boxH * .6 / r[3], 1.1), z = Math.max(scale, .42);
+    var left = boxW / 2 - (r[0] + r[2] / 2) * z, top = boxH / 2 - (r[1] + r[3] / 2) * z;
+    return '<div class="crop"><img src="img/' + t.screen + '.jpg" alt="" style="width:' + W * z + 'px;left:' + left + 'px;top:' + top + 'px">' +
+      '<div class="ring" style="left:' + (left + r[0] * z - 3) + 'px;top:' + (top + r[1] * z - 3) + 'px;width:' + (r[2] * z + 6) + 'px;height:' + (r[3] * z + 6) + 'px"></div></div>';
+  }
+  function answer(c, open) {
+    var h = '<div class="answer' + (open ? ' on' : '') + '" id="answer"><span class="chip ' + chipClass(c.kind) + '">' + esc(c.kind) + '</span>' +
+      '<p class="where">' + esc(c.where) + '</p><p>' + esc(c.how) + '</p>';
+    if (c.targets.length) {
+      h += '<div class="shots">' + c.targets.map(function (t, i) {
+        return '<button class="shot" data-view="' + c.id + ':' + i + '">' + crop(t) + '<b>' + esc(t.label) + '</b><small>' + esc(screenOf[t.screen].title) + ' &middot; click to see the whole page</small></button>';
+      }).join('') + '</div>';
+    } else h += '<p><i>Nothing to fill in HubSpot for this one, so there is no picture.</i></p>';
+    return h + '</div>';
+  }
+  function drawDrawer(open) {
+    var el = $('drawer'), s = D.sheets[state.tab];
+    if (!s || !state.letter) { el.className = ''; return; }
+    var i = s.letters.indexOf(state.letter), c = byLetter[state.tab][state.letter], v = s.rows[state.row][i];
+    el.className = 'on';
+    el.innerHTML = '<button class="close" aria-label="Close">&times;</button><p class="eyebrow">' + esc(s.name) + ' &middot; column ' + state.letter + '</p><h2>' + esc(s.header[i]) + '</h2>' +
+      '<p>' + esc(c.was) + '</p><p class="eyebrow">Row ' + (state.row + 1) + ' in the sheet</p><div class="sample">' + (v === true ? '&#9745; ticked' : v === '' ? '<i>empty</i>' : esc(v)) + '</div>' +
+      '<button class="go" id="go">Show me in HubSpot &rarr;</button>' + answer(c, open);
+  }
+  $('drawer').onclick = function (e) {
+    if (e.target.closest('.close')) { state.letter = ''; drawGrid(); drawDrawer(); return; }
+    var c = byLetter[state.tab][state.letter];
+    if (e.target.id === 'go') {
+      $('answer').className = 'answer on'; e.target.style.display = 'none';
+      if (c.targets.length) view(c, 0); else $('answer').scrollIntoView({ behavior: 'smooth' });
+    }
+    var shot = e.target.closest('[data-view]');
+    if (shot) view(D.columns[+shot.dataset.view.split(':')[0]], +shot.dataset.view.split(':')[1]);
+  };
+
+  // ---- the big viewer
+  var V = { c: null, i: 0, zoom: true };
+  function view(c, i) { V.c = c; V.i = i; V.zoom = true; $('viewer').className = 'on'; drawViewer(); $('vclose').focus(); }
+  function drawViewer() {
+    var t = V.c.targets[V.i], r = t.rect, stage = $('vstage'), n = V.c.targets.length;
+    $('vtitle').innerHTML = 'Smartsheet: ' + esc(V.c.name) + ' &rarr; HubSpot: ' + esc(t.label) + '<small>' + esc(screenOf[t.screen].title) + '</small>';
+    $('vcount').textContent = n > 1 ? (V.i + 1) + ' of ' + n : '';
+    $('vprev').style.display = $('vnext').style.display = n > 1 ? '' : 'none';
+    $('vzoom').textContent = V.zoom ? 'Whole page' : 'Zoom in';
+    $('vhow').innerHTML = '<b>' + esc(V.c.where) + '</b>' + esc(V.c.how);
+    var fit = stage.clientWidth, z = V.zoom ? Math.max(fit, Math.min(W * 1.25, fit * 1.9)) : fit, k = z / W;
+    $('vcanvas').style.width = z + 'px';
+    $('vimg').src = 'img/' + t.screen + '.jpg';
+    $('vring').style.cssText = 'left:' + (r[0] * k - 4) + 'px;top:' + (r[1] * k - 4) + 'px;width:' + (r[2] * k + 8) + 'px;height:' + (r[3] * k + 8) + 'px';
+    var label = $('vlabel'); label.textContent = t.label;
+    label.style.left = Math.max(4, r[0] * k - 4) + 'px'; label.style.top = (r[1] * k > 34 ? r[1] * k - 32 : (r[1] + r[3]) * k + 8) + 'px';
+    stage.scrollLeft = (r[0] + r[2] / 2) * k - stage.clientWidth / 2; stage.scrollTop = (r[1] + r[3] / 2) * k - stage.clientHeight / 2;
+  }
+  function closeViewer() { $('viewer').className = ''; }
+  function step(by) { var n = V.c.targets.length; V.i = (V.i + by + n) % n; drawViewer(); }
+  $('vclose').onclick = closeViewer; $('vprev').onclick = function () { step(-1); }; $('vnext').onclick = function () { step(1); };
+  $('vzoom').onclick = function () { V.zoom = !V.zoom; drawViewer(); };
+  $('viewer').onclick = function (e) { if (e.target.id === 'viewer') closeViewer(); };
+  document.addEventListener('keydown', function (e) {
+    if ($('viewer').className !== 'on') return;
+    if (e.key === 'Escape') closeViewer(); if (e.key === 'ArrowRight') step(1); if (e.key === 'ArrowLeft') step(-1);
+  });
+  window.addEventListener('resize', function () { if ($('viewer').className === 'on') drawViewer(); });
+
+  // ---- HubSpot pages: every box on a screenshot, and what it used to be
+  function spotsOf(id) {
+    var out = [];
+    D.columns.forEach(function (c) { c.targets.forEach(function (t) {
+      if (t.screen !== id) return;
+      var same = out.filter(function (s) { return s.rect.join() === t.rect.join(); })[0];
+      if (same) same.columns.push(c); else out.push({ rect: t.rect, label: t.label, columns: [c] });
+    }); });
+    return out.sort(function (a, b) { return a.rect[1] - b.rect[1] || a.rect[0] - b.rect[0]; });
+  }
+  function drawPages() {
+    var group = '', h = '';
+    D.screens.forEach(function (s) {
+      if (s.group !== group) { group = s.group; h += '<h3>' + esc(group) + '</h3>'; }
+      h += '<button data-s="' + s.id + '" class="' + (s.id === state.screen ? 'on' : '') + '">' + esc(s.title) + '</button>';
+    });
+    $('screens').innerHTML = h;
+    var s = screenOf[state.screen], spots = spotsOf(s.id);
+    $('board').innerHTML = '<h2>' + esc(s.title) + '</h2><p>Each orange box is something you fill or read in HubSpot. Click a box to see which Smartsheet column it used to be.</p>' +
+      '<div class="stage"><img src="img/' + s.id + '.jpg" alt="' + esc(s.title) + '">' + spots.map(function (p, i) {
+        return '<button class="spot' + (i === state.spot ? ' on' : '') + '" data-p="' + i + '" style="' + pct(p.rect) + '" title="' + esc(p.label) + '"><i>' + (i + 1) + '</i></button>';
+      }).join('') + '</div><div id="was">' + spots.map(function (p, i) {
+        return '<div class="card' + (i === state.spot ? ' on' : '') + '" data-p="' + i + '"><h4><i>' + (i + 1) + '</i>' + esc(p.label) + '</h4>' + p.columns.map(function (c) {
+          var links = c.hph.map(function (l) { return '<button class="link" data-go="hph/' + l + '">' + esc(D.sheets.hph.hospital) + ' sheet, column ' + l + '</button>'; })
+            .concat(c.nm.map(function (l) { return '<button class="link" data-go="nm/' + l + '">' + esc(D.sheets.nm.hospital) + ' sheet, column ' + l + '</button>'; })).join('');
+          return '<p><b>' + (c.isNew ? 'New in HubSpot: ' : 'Was: ') + esc(c.name) + '</b><br>' + esc(c.how) + '</p>' + links;
+        }).join('') + '</div>';
+      }).join('') + '</div>';
+  }
+  $('screens').onclick = function (e) { var b = e.target.closest('button'); if (b) { state.screen = b.dataset.s; state.spot = -1; drawPages(); $('board').scrollTop = 0; history.replaceState(null, '', '#pages/' + b.dataset.s); } };
+  $('board').onclick = function (e) {
+    var go = e.target.closest('[data-go]');
+    if (go) { var p = go.dataset.go.split('/'); showTab(p[0]); pick(p[1], 0, true); return; }
+    var p2 = e.target.closest('[data-p]');
+    if (p2) { state.spot = +p2.dataset.p; drawPages(); var card = $('was').querySelector('.card.on'); if (card && e.target.closest('.spot')) card.scrollIntoView({ behavior: 'smooth', block: 'nearest' }); }
+  };
+
+  // ---- colors and what changed
+  var HEX = { Pink: '#f8bbd0', Yellow: '#fff59d', Red: '#ef9a9a', Green: '#a5d6a7', Orange: '#ffcc80', Blue: '#90caf9', Grey: '#cfd8dc', White: '#ffffff', Purple: '#ce93d8' };
+  function drawNotes() {
+    $('notes').innerHTML = '<h2>Row colors</h2><table><tr><th>Color</th><th>It meant</th><th>In HubSpot</th><th>Where you see it</th></tr>' + D.colors.map(function (c) {
+      return '<tr><td><span class="dot" style="background:' + HEX[c.color] + '"></span>' + esc(c.color) + '</td><td>' + esc(c.meant) + '</td><td>' + esc(c.now) + '</td><td>' + esc(c.where) + '</td></tr>';
+    }).join('') + '</table><h2>What is different</h2><table><tr><th>In Smartsheet</th><th>In HubSpot</th></tr>' + D.differences.map(function (d) {
+      return '<tr><td>' + esc(d.before) + '</td><td>' + esc(d.now) + '</td></tr>';
+    }).join('') + '</table>';
+  }
+
+  // ---- find a column
+  $('find').oninput = function () {
+    var q = this.value.trim().toLowerCase(), out = [];
+    if (q) ['hph', 'nm'].forEach(function (k) { D.sheets[k].header.forEach(function (name, i) {
+      if (name.toLowerCase().indexOf(q) >= 0 && out.length < 14) out.push('<button data-go="' + k + '/' + D.sheets[k].letters[i] + '">' + esc(name) + ' <small>' + esc(D.sheets[k].hospital) + ' sheet, column ' + D.sheets[k].letters[i] + '</small></button>');
+    }); });
+    $('found').innerHTML = out.join('') || (q ? '<button disabled>No column with that name</button>' : ''); $('found').style.display = q ? 'block' : 'none';
+  };
+  $('found').onclick = function (e) { var b = e.target.closest('[data-go]'); if (!b) return; var p = b.dataset.go.split('/'); $('found').style.display = 'none'; $('find').value = ''; showTab(p[0]); pick(p[1], 0, true); };
+  document.addEventListener('click', function (e) { if (!e.target.closest('header')) $('found').style.display = 'none'; });
+
+  // ---- start (a link such as #hph/J opens that column)
+  function route() {
+    var start = location.hash.slice(1).split('/');
+    if ((start[0] === 'hph' || start[0] === 'nm') && byLetter[start[0]][start[1]]) { showTab(start[0]); pick(start[1], 0, true); return; }
+    if (start[0] === 'pages' && screenOf[start[1]]) { state.screen = start[1]; state.spot = -1; }
+    showTab(start[0] === 'pages' || start[0] === 'notes' ? start[0] : 'hph');
+  }
+  window.addEventListener('hashchange', route);
+  route();
+})();
+</script>
+</body>
+</html>
