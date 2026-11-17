@@ -586,6 +586,13 @@ window.DATA = {
     "CA",
     "CB",
     "CC"
+   ],
+   "rowColors": [
+    "green",
+    "grey",
+    "blue",
+    "white",
+    "red"
    ]
   },
   "nm": {
@@ -1118,6 +1125,13 @@ window.DATA = {
     "BS",
     "BT",
     "BU"
+   ],
+   "rowColors": [
+    "white",
+    "grey",
+    "green",
+    "grey",
+    "red"
    ]
   }
  },
@@ -1137,7 +1151,18 @@ window.DATA = {
    "where": "Left card and ED Visit card: ICT Intake Date",
    "how": "Filled by itself on the day you create the patient. If the patient came to us on another day, click the date on the ED Visit card and change it.",
    "kind": "Filled by the system",
-   "targets": [
+   "steps": [
+    {
+     "screen": "patients-list",
+     "rect": [
+      276,
+      289,
+      142,
+      26
+     ],
+     "text": "Open ICT Patients in the left menu and click the patient's name.",
+     "kind": "open"
+    },
     {
      "screen": "overview-3",
      "rect": [
@@ -1146,7 +1171,19 @@ window.DATA = {
       200,
       36
      ],
-     "label": "ICT Intake Date"
+     "text": "Here it is: ICT Intake Date. It is on the left card, whichever tab is open.",
+     "kind": "field"
+    },
+    {
+     "screen": "overview-1",
+     "rect": [
+      637,
+      93,
+      120,
+      38
+     ],
+     "text": "On the patient page, click the Hospital EMR tab.",
+     "kind": "tab"
     },
     {
      "screen": "ed-visit",
@@ -1156,7 +1193,8 @@ window.DATA = {
       190,
       36
      ],
-     "label": "ICT Intake Date"
+     "text": "Here it is: ICT Intake Date.",
+     "kind": "field"
     }
    ]
   },
@@ -1175,16 +1213,39 @@ window.DATA = {
    "where": "New ICT Patient page: Last Name. Guardian: Patient Demographics tab, Parent / Guardian",
    "how": "Always type the patient's own last name. For a patient under 18 the page shows a red Minor Patient box: enter the parent or guardian (name, relationship, phone, email) under Parent / Guardian.",
    "kind": "Same fact, one field",
-   "targets": [
+   "steps": [
     {
-     "screen": "new-patient",
+     "screen": "patients-list",
      "rect": [
-      532,
-      187,
-      170,
-      53
+      276,
+      289,
+      142,
+      26
      ],
-     "label": "Last Name"
+     "text": "Open ICT Patients in the left menu and click the patient's name.",
+     "kind": "open"
+    },
+    {
+     "screen": "overview-1",
+     "rect": [
+      757,
+      93,
+      168,
+      38
+     ],
+     "text": "On the patient page, click the Patient Demographics tab.",
+     "kind": "tab"
+    },
+    {
+     "screen": "demographics-1",
+     "rect": [
+      974,
+      304,
+      180,
+      36
+     ],
+     "text": "Here it is: Last Name.",
+     "kind": "field"
     },
     {
      "screen": "demographics-3",
@@ -1194,7 +1255,19 @@ window.DATA = {
       611,
       231
      ],
-     "label": "Parent / Guardian"
+     "text": "Here it is: Parent / Guardian (for a patient under 18).",
+     "kind": "field"
+    },
+    {
+     "screen": "new-patient",
+     "rect": [
+      532,
+      187,
+      170,
+      53
+     ],
+     "text": "For a new patient you type it first, on the New ICT Patient page: Last Name.",
+     "kind": "create"
     }
    ]
   },
@@ -1213,7 +1286,40 @@ window.DATA = {
    "where": "New ICT Patient page: First Name",
    "how": "Type it when you create the patient. Required.",
    "kind": "Same fact, one field",
-   "targets": [
+   "steps": [
+    {
+     "screen": "patients-list",
+     "rect": [
+      276,
+      289,
+      142,
+      26
+     ],
+     "text": "Open ICT Patients in the left menu and click the patient's name.",
+     "kind": "open"
+    },
+    {
+     "screen": "overview-1",
+     "rect": [
+      757,
+      93,
+      168,
+      38
+     ],
+     "text": "On the patient page, click the Patient Demographics tab.",
+     "kind": "tab"
+    },
+    {
+     "screen": "demographics-1",
+     "rect": [
+      571,
+      304,
+      190,
+      36
+     ],
+     "text": "Here it is: First Name.",
+     "kind": "field"
+    },
     {
      "screen": "new-patient",
      "rect": [
@@ -1222,7 +1328,8 @@ window.DATA = {
       170,
       53
      ],
-     "label": "First Name"
+     "text": "For a new patient you type it first, on the New ICT Patient page: First Name.",
+     "kind": "create"
     }
    ]
   },
@@ -1241,16 +1348,28 @@ window.DATA = {
    "where": "New ICT Patient page: Date of Birth. Later: Patient Demographics tab",
    "how": "Type the digits (12271999 becomes 12/27/1999) or pick the day in the calendar. A date that cannot be right turns red. The age is worked out from it.",
    "kind": "Same fact, one field",
-   "targets": [
+   "steps": [
     {
-     "screen": "new-patient",
+     "screen": "patients-list",
      "rect": [
-      352,
-      328,
-      370,
-      53
+      276,
+      289,
+      142,
+      26
      ],
-     "label": "Date of Birth"
+     "text": "Open ICT Patients in the left menu and click the patient's name.",
+     "kind": "open"
+    },
+    {
+     "screen": "overview-1",
+     "rect": [
+      757,
+      93,
+      168,
+      38
+     ],
+     "text": "On the patient page, click the Patient Demographics tab.",
+     "kind": "tab"
     },
     {
      "screen": "demographics-1",
@@ -1260,7 +1379,19 @@ window.DATA = {
       190,
       36
      ],
-     "label": "Date of Birth"
+     "text": "Here it is: Date of Birth.",
+     "kind": "field"
+    },
+    {
+     "screen": "new-patient",
+     "rect": [
+      352,
+      328,
+      370,
+      53
+     ],
+     "text": "For a new patient you type it first, on the New ICT Patient page: Date of Birth.",
+     "kind": "create"
     }
    ]
   },
@@ -1279,16 +1410,28 @@ window.DATA = {
    "where": "New ICT Patient page: Patient Language. Patient Demographics tab: Interpreter Needed",
    "how": "Pick the one language the patient prefers. If an interpreter is needed, set Interpreter Needed to Yes instead of typing a second language.",
    "kind": "One pick from a list",
-   "targets": [
+   "steps": [
     {
-     "screen": "new-patient",
+     "screen": "patients-list",
      "rect": [
-      352,
-      398,
-      97,
-      53
+      276,
+      289,
+      142,
+      26
      ],
-     "label": "Patient Language"
+     "text": "Open ICT Patients in the left menu and click the patient's name.",
+     "kind": "open"
+    },
+    {
+     "screen": "overview-1",
+     "rect": [
+      757,
+      93,
+      168,
+      38
+     ],
+     "text": "On the patient page, click the Patient Demographics tab.",
+     "kind": "tab"
     },
     {
      "screen": "demographics-1",
@@ -1298,7 +1441,8 @@ window.DATA = {
       180,
       36
      ],
-     "label": "Patient Language"
+     "text": "Here it is: Patient Language.",
+     "kind": "field"
     },
     {
      "screen": "demographics-1",
@@ -1308,7 +1452,19 @@ window.DATA = {
       190,
       36
      ],
-     "label": "Interpreter Needed"
+     "text": "Here it is: Interpreter Needed.",
+     "kind": "field"
+    },
+    {
+     "screen": "new-patient",
+     "rect": [
+      352,
+      398,
+      97,
+      53
+     ],
+     "text": "For a new patient you type it first, on the New ICT Patient page: Patient Language.",
+     "kind": "create"
     }
    ]
   },
@@ -1327,16 +1483,28 @@ window.DATA = {
    "where": "New ICT Patient page: Phone Number. Patient Demographics tab: Secondary Phone Number",
    "how": "Phone Number is the patient's mobile, the number we call. A home or work number goes in Secondary Phone Number; a guardian's or relative's number goes with that person (next row).",
    "kind": "Same fact, one field",
-   "targets": [
+   "steps": [
     {
-     "screen": "new-patient",
+     "screen": "patients-list",
      "rect": [
-      352,
-      257,
-      170,
-      53
+      276,
+      289,
+      142,
+      26
      ],
-     "label": "Phone Number"
+     "text": "Open ICT Patients in the left menu and click the patient's name.",
+     "kind": "open"
+    },
+    {
+     "screen": "overview-1",
+     "rect": [
+      757,
+      93,
+      168,
+      38
+     ],
+     "text": "On the patient page, click the Patient Demographics tab.",
+     "kind": "tab"
     },
     {
      "screen": "demographics-2",
@@ -1346,7 +1514,19 @@ window.DATA = {
       270,
       93
      ],
-     "label": "Phone Number, Secondary Phone Number"
+     "text": "Here it is: Phone Number, Secondary Phone Number.",
+     "kind": "field"
+    },
+    {
+     "screen": "new-patient",
+     "rect": [
+      352,
+      257,
+      170,
+      53
+     ],
+     "text": "For a new patient you type it first, on the New ICT Patient page: Phone Number.",
+     "kind": "create"
     }
    ]
   },
@@ -1365,7 +1545,29 @@ window.DATA = {
    "where": "Patient Demographics tab: Emergency Contacts, Parent / Guardian",
    "how": "One contact per entry: name, relationship, phone. Two emergency contacts are shown; + Add Emergency Contact adds up to five.",
    "kind": "An entry in a card",
-   "targets": [
+   "steps": [
+    {
+     "screen": "patients-list",
+     "rect": [
+      276,
+      289,
+      142,
+      26
+     ],
+     "text": "Open ICT Patients in the left menu and click the patient's name.",
+     "kind": "open"
+    },
+    {
+     "screen": "overview-1",
+     "rect": [
+      757,
+      93,
+      168,
+      38
+     ],
+     "text": "On the patient page, click the Patient Demographics tab.",
+     "kind": "tab"
+    },
     {
      "screen": "demographics-3",
      "rect": [
@@ -1374,7 +1576,8 @@ window.DATA = {
       611,
       201
      ],
-     "label": "Emergency Contacts"
+     "text": "Here it is: Emergency Contacts.",
+     "kind": "field"
     },
     {
      "screen": "demographics-3",
@@ -1384,7 +1587,8 @@ window.DATA = {
       611,
       231
      ],
-     "label": "Parent / Guardian"
+     "text": "Here it is: Parent / Guardian.",
+     "kind": "field"
     }
    ]
   },
@@ -1403,7 +1607,29 @@ window.DATA = {
    "where": "Patient Demographics tab: Address",
    "how": "Street, City, State and ZIP are separate boxes. A 5-digit ZIP fills an empty State. A lien to the patient needs all four.",
    "kind": "Same fact, one field",
-   "targets": [
+   "steps": [
+    {
+     "screen": "patients-list",
+     "rect": [
+      276,
+      289,
+      142,
+      26
+     ],
+     "text": "Open ICT Patients in the left menu and click the patient's name.",
+     "kind": "open"
+    },
+    {
+     "screen": "overview-1",
+     "rect": [
+      757,
+      93,
+      168,
+      38
+     ],
+     "text": "On the patient page, click the Patient Demographics tab.",
+     "kind": "tab"
+    },
     {
      "screen": "demographics-2",
      "rect": [
@@ -1412,7 +1638,8 @@ window.DATA = {
       298,
       410
      ],
-     "label": "Address"
+     "text": "Here it is: Address.",
+     "kind": "field"
     }
    ]
   },
@@ -1431,7 +1658,29 @@ window.DATA = {
    "where": "Patient Demographics tab: Email",
    "how": "Type the full address. Leave it empty when there is none (N/A is refused).",
    "kind": "Same fact, one field",
-   "targets": [
+   "steps": [
+    {
+     "screen": "patients-list",
+     "rect": [
+      276,
+      289,
+      142,
+      26
+     ],
+     "text": "Open ICT Patients in the left menu and click the patient's name.",
+     "kind": "open"
+    },
+    {
+     "screen": "overview-1",
+     "rect": [
+      757,
+      93,
+      168,
+      38
+     ],
+     "text": "On the patient page, click the Patient Demographics tab.",
+     "kind": "tab"
+    },
     {
      "screen": "demographics-2",
      "rect": [
@@ -1440,7 +1689,8 @@ window.DATA = {
       270,
       36
      ],
-     "label": "Email"
+     "text": "Here it is: Email.",
+     "kind": "field"
     }
    ]
   },
@@ -1459,16 +1709,28 @@ window.DATA = {
    "where": "New ICT Patient page: MRN. Also the left card and the ED Visit card",
    "how": "Type it when you create the patient. A second patient with the same MRN at the same hospital shows a Possible Duplicate Patient box.",
    "kind": "Same fact, one field",
-   "targets": [
+   "steps": [
     {
-     "screen": "new-patient",
+     "screen": "patients-list",
      "rect": [
-      352,
-      468,
-      170,
-      53
+      276,
+      289,
+      142,
+      26
      ],
-     "label": "MRN"
+     "text": "Open ICT Patients in the left menu and click the patient's name.",
+     "kind": "open"
+    },
+    {
+     "screen": "overview-1",
+     "rect": [
+      637,
+      93,
+      120,
+      38
+     ],
+     "text": "On the patient page, click the Hospital EMR tab.",
+     "kind": "tab"
     },
     {
      "screen": "ed-visit",
@@ -1478,7 +1740,19 @@ window.DATA = {
       190,
       36
      ],
-     "label": "MRN"
+     "text": "Here it is: MRN.",
+     "kind": "field"
+    },
+    {
+     "screen": "new-patient",
+     "rect": [
+      352,
+      468,
+      170,
+      53
+     ],
+     "text": "For a new patient you type it first, on the New ICT Patient page: MRN.",
+     "kind": "create"
     }
    ]
   },
@@ -1497,16 +1771,28 @@ window.DATA = {
    "where": "New ICT Patient page: Hospital Account Number",
    "how": "Type it when you create the patient. A number another patient already has is refused: open that patient instead (a new visit has a new number).",
    "kind": "Same fact, one field",
-   "targets": [
+   "steps": [
     {
-     "screen": "new-patient",
+     "screen": "patients-list",
      "rect": [
-      532,
-      468,
-      170,
-      53
+      276,
+      289,
+      142,
+      26
      ],
-     "label": "Hospital Account Number"
+     "text": "Open ICT Patients in the left menu and click the patient's name.",
+     "kind": "open"
+    },
+    {
+     "screen": "overview-1",
+     "rect": [
+      637,
+      93,
+      120,
+      38
+     ],
+     "text": "On the patient page, click the Hospital EMR tab.",
+     "kind": "tab"
     },
     {
      "screen": "ed-visit",
@@ -1516,7 +1802,19 @@ window.DATA = {
       190,
       36
      ],
-     "label": "Hospital Account Number"
+     "text": "Here it is: Hospital Account Number.",
+     "kind": "field"
+    },
+    {
+     "screen": "new-patient",
+     "rect": [
+      532,
+      468,
+      170,
+      53
+     ],
+     "text": "For a new patient you type it first, on the New ICT Patient page: Hospital Account Number.",
+     "kind": "create"
     }
    ]
   },
@@ -1533,16 +1831,28 @@ window.DATA = {
    "where": "New ICT Patient page: Hospital Facility",
    "how": "One list for every hospital (Humboldt Park Hospital, Northwestern Palos, Other) instead of one sheet per hospital. With Other, type the name in Hospital Facility (Other).",
    "kind": "One pick from a list",
-   "targets": [
+   "steps": [
     {
-     "screen": "new-patient",
+     "screen": "patients-list",
      "rect": [
-      459,
-      398,
-      170,
-      53
+      276,
+      289,
+      142,
+      26
      ],
-     "label": "Hospital Facility"
+     "text": "Open ICT Patients in the left menu and click the patient's name.",
+     "kind": "open"
+    },
+    {
+     "screen": "overview-1",
+     "rect": [
+      637,
+      93,
+      120,
+      38
+     ],
+     "text": "On the patient page, click the Hospital EMR tab.",
+     "kind": "tab"
     },
     {
      "screen": "ed-visit",
@@ -1552,7 +1862,19 @@ window.DATA = {
       190,
       36
      ],
-     "label": "Hospital Facility"
+     "text": "Here it is: Hospital Facility.",
+     "kind": "field"
+    },
+    {
+     "screen": "new-patient",
+     "rect": [
+      459,
+      398,
+      170,
+      53
+     ],
+     "text": "For a new patient you type it first, on the New ICT Patient page: Hospital Facility.",
+     "kind": "create"
     }
    ]
   },
@@ -1569,7 +1891,7 @@ window.DATA = {
    "where": "No field",
    "how": "A patient who came through an ER is an ICT Patient with its Hospital Facility. A patient sent straight to a clinic is Care Coordination work. (confirm with supervisor)",
    "kind": "Not in HubSpot",
-   "targets": []
+   "steps": []
   },
   {
    "id": 13,
@@ -1586,7 +1908,29 @@ window.DATA = {
    "where": "Created By (list column), Owner",
    "how": "Created By is set to whoever creates the patient and never changes. The person responsible now is the Owner. There is no separate field for a specialist who did not enter the patient (confirm with supervisor).",
    "kind": "Filled by the system",
-   "targets": [
+   "steps": [
+    {
+     "screen": "patients-list",
+     "rect": [
+      276,
+      289,
+      142,
+      26
+     ],
+     "text": "Open ICT Patients in the left menu and click the patient's name.",
+     "kind": "open"
+    },
+    {
+     "screen": "overview-1",
+     "rect": [
+      535,
+      93,
+      102,
+      38
+     ],
+     "text": "The patient page opens. Click the Overview tab if another tab is showing.",
+     "kind": "tab"
+    },
     {
      "screen": "overview-1",
      "rect": [
@@ -1595,7 +1939,8 @@ window.DATA = {
       270,
       36
      ],
-     "label": "Owner"
+     "text": "Here it is: Owner.",
+     "kind": "field"
     }
    ]
   },
@@ -1614,7 +1959,29 @@ window.DATA = {
    "where": "Hospital EMR tab, ED Visit card: DOI. Also at the top of the Insurance card",
    "how": "Click the value and type the date.",
    "kind": "Same fact, one field",
-   "targets": [
+   "steps": [
+    {
+     "screen": "patients-list",
+     "rect": [
+      276,
+      289,
+      142,
+      26
+     ],
+     "text": "Open ICT Patients in the left menu and click the patient's name.",
+     "kind": "open"
+    },
+    {
+     "screen": "overview-1",
+     "rect": [
+      637,
+      93,
+      120,
+      38
+     ],
+     "text": "On the patient page, click the Hospital EMR tab.",
+     "kind": "tab"
+    },
     {
      "screen": "ed-visit",
      "rect": [
@@ -1623,7 +1990,19 @@ window.DATA = {
       180,
       36
      ],
-     "label": "Date of Injury"
+     "text": "Here it is: Date of Injury.",
+     "kind": "field"
+    },
+    {
+     "screen": "tabs-more",
+     "rect": [
+      945,
+      152,
+      160,
+      24
+     ],
+     "text": "On the patient page, click More, then Insurance and Verification. (On a wide screen the tab is in the row itself.)",
+     "kind": "tab"
     },
     {
      "screen": "insurance-top",
@@ -1633,7 +2012,8 @@ window.DATA = {
       270,
       36
      ],
-     "label": "Date of Injury"
+     "text": "Here it is: Date of Injury.",
+     "kind": "field"
     }
    ]
   },
@@ -1648,16 +2028,28 @@ window.DATA = {
    "where": "New ICT Patient page: Date of Service (DOS)",
    "how": "Required. Days in Queue, the weekly hospital reviews and the hospital deadline all count from it.",
    "kind": "Same fact, one field",
-   "targets": [
+   "steps": [
     {
-     "screen": "new-patient",
+     "screen": "patients-list",
      "rect": [
-      352,
-      539,
-      370,
-      53
+      276,
+      289,
+      142,
+      26
      ],
-     "label": "Date of Service (DOS)"
+     "text": "Open ICT Patients in the left menu and click the patient's name.",
+     "kind": "open"
+    },
+    {
+     "screen": "overview-1",
+     "rect": [
+      637,
+      93,
+      120,
+      38
+     ],
+     "text": "On the patient page, click the Hospital EMR tab.",
+     "kind": "tab"
     },
     {
      "screen": "ed-visit",
@@ -1667,7 +2059,19 @@ window.DATA = {
       190,
       36
      ],
-     "label": "Date of Service (DOS)"
+     "text": "Here it is: Date of Service (DOS).",
+     "kind": "field"
+    },
+    {
+     "screen": "new-patient",
+     "rect": [
+      352,
+      539,
+      370,
+      53
+     ],
+     "text": "For a new patient you type it first, on the New ICT Patient page: Date of Service (DOS).",
+     "kind": "create"
     }
    ]
   },
@@ -1684,7 +2088,29 @@ window.DATA = {
    "where": "Hospital EMR tab, ED Visit card: BIBA",
    "how": "Pick Yes or No.",
    "kind": "One pick from a list",
-   "targets": [
+   "steps": [
+    {
+     "screen": "patients-list",
+     "rect": [
+      276,
+      289,
+      142,
+      26
+     ],
+     "text": "Open ICT Patients in the left menu and click the patient's name.",
+     "kind": "open"
+    },
+    {
+     "screen": "overview-1",
+     "rect": [
+      637,
+      93,
+      120,
+      38
+     ],
+     "text": "On the patient page, click the Hospital EMR tab.",
+     "kind": "tab"
+    },
     {
      "screen": "ed-visit",
      "rect": [
@@ -1693,7 +2119,8 @@ window.DATA = {
       190,
       36
      ],
-     "label": "BIBA"
+     "text": "Here it is: BIBA.",
+     "kind": "field"
     }
    ]
   },
@@ -1712,7 +2139,29 @@ window.DATA = {
    "where": "Hospital EMR tab, ED Visit card: Incident Type, Injured Body Parts, Other Injury Notes",
    "how": "Two picks instead of one free text. Incident Type says what happened (Motor Vehicle Accident, Slip and Fall, Dog Bite, Work Injury, Other). Injured Body Parts says what hurts (several can be picked). Anything else goes in Other Injury Notes. Whether it is a WC or PI case is Case Type (part 4).",
    "kind": "One pick from a list",
-   "targets": [
+   "steps": [
+    {
+     "screen": "patients-list",
+     "rect": [
+      276,
+      289,
+      142,
+      26
+     ],
+     "text": "Open ICT Patients in the left menu and click the patient's name.",
+     "kind": "open"
+    },
+    {
+     "screen": "overview-1",
+     "rect": [
+      637,
+      93,
+      120,
+      38
+     ],
+     "text": "On the patient page, click the Hospital EMR tab.",
+     "kind": "tab"
+    },
     {
      "screen": "ed-visit",
      "rect": [
@@ -1721,7 +2170,8 @@ window.DATA = {
       590,
       66
      ],
-     "label": "Incident Type, Injured Body Parts, Other Injury Notes"
+     "text": "Here it is: Incident Type, Injured Body Parts, Other Injury Notes.",
+     "kind": "field"
     }
    ]
   },
@@ -1738,7 +2188,29 @@ window.DATA = {
    "where": "Hospital EMR tab, ED Visit card: ED Visit Notes",
    "how": "Three notes, each on its own tab: Triage Notes (nurse at registration), Admission Notes (provider), Discharge Notes (discharge summary and instructions). Add Note or Edit Note on the right.",
    "kind": "Same fact, one field",
-   "targets": [
+   "steps": [
+    {
+     "screen": "patients-list",
+     "rect": [
+      276,
+      289,
+      142,
+      26
+     ],
+     "text": "Open ICT Patients in the left menu and click the patient's name.",
+     "kind": "open"
+    },
+    {
+     "screen": "overview-1",
+     "rect": [
+      637,
+      93,
+      120,
+      38
+     ],
+     "text": "On the patient page, click the Hospital EMR tab.",
+     "kind": "tab"
+    },
     {
      "screen": "ed-notes",
      "rect": [
@@ -1747,7 +2219,8 @@ window.DATA = {
       611,
       245
      ],
-     "label": "ED Visit Notes"
+     "text": "Here it is: ED Visit Notes.",
+     "kind": "field"
     }
    ]
   },
@@ -1766,7 +2239,29 @@ window.DATA = {
    "where": "Split over several places",
    "how": "What the hospital wrote goes in the ED Visit Notes. What the patient told us on the phone goes in the notes of that call (Log a Call). Each fact has its own field: BIBA, Incident Type, Case Type, the insurance policy, the Police / Crash Report file, the attorney.",
    "kind": "Done in another place",
-   "targets": [
+   "steps": [
+    {
+     "screen": "patients-list",
+     "rect": [
+      276,
+      289,
+      142,
+      26
+     ],
+     "text": "Open ICT Patients in the left menu and click the patient's name.",
+     "kind": "open"
+    },
+    {
+     "screen": "overview-1",
+     "rect": [
+      637,
+      93,
+      120,
+      38
+     ],
+     "text": "On the patient page, click the Hospital EMR tab.",
+     "kind": "tab"
+    },
     {
      "screen": "ed-notes",
      "rect": [
@@ -1775,7 +2270,19 @@ window.DATA = {
       611,
       245
      ],
-     "label": "What the hospital wrote: ED Visit Notes"
+     "text": "Here it is: What the hospital wrote: ED Visit Notes.",
+     "kind": "field"
+    },
+    {
+     "screen": "activities-menu",
+     "rect": [
+      1298,
+      294,
+      190,
+      24
+     ],
+     "text": "On the patient page, click Add activities, then Log a call. (The Call button under the patient name does the same.)",
+     "kind": "tab"
     },
     {
      "screen": "log-call",
@@ -1785,7 +2292,19 @@ window.DATA = {
       492,
       45
      ],
-     "label": "What the patient told us: the notes of the call"
+     "text": "Here it is: What the patient told us: the notes of the call.",
+     "kind": "field"
+    },
+    {
+     "screen": "tabs-more",
+     "rect": [
+      945,
+      152,
+      160,
+      24
+     ],
+     "text": "On the patient page, click More, then Insurance and Verification. (On a wide screen the tab is in the row itself.)",
+     "kind": "tab"
     },
     {
      "screen": "insurance-top",
@@ -1795,7 +2314,8 @@ window.DATA = {
       270,
       36
      ],
-     "label": "Case Type"
+     "text": "Here it is: Case Type.",
+     "kind": "field"
     }
    ]
   },
@@ -1812,7 +2332,29 @@ window.DATA = {
    "where": "Hospital EMR tab, ED Visit card: ER Bill Amount",
    "how": "Type the amount of the first ER visit. The real bills (with invoice number and payments) are added on the Lien and Collection tab with + Add Hospital Bill.",
    "kind": "Same fact, one field",
-   "targets": [
+   "steps": [
+    {
+     "screen": "patients-list",
+     "rect": [
+      276,
+      289,
+      142,
+      26
+     ],
+     "text": "Open ICT Patients in the left menu and click the patient's name.",
+     "kind": "open"
+    },
+    {
+     "screen": "overview-1",
+     "rect": [
+      637,
+      93,
+      120,
+      38
+     ],
+     "text": "On the patient page, click the Hospital EMR tab.",
+     "kind": "tab"
+    },
     {
      "screen": "ed-visit",
      "rect": [
@@ -1821,7 +2363,8 @@ window.DATA = {
       180,
       36
      ],
-     "label": "ER Bill Amount"
+     "text": "Here it is: ER Bill Amount.",
+     "kind": "field"
     }
    ]
   },
@@ -1838,7 +2381,29 @@ window.DATA = {
    "where": "No field",
    "how": "For a set time, tick \"Create a To-do task to follow up\" when you log a call and pick the date and time: it becomes the Callback Time and the patient shows in the Callback Queue. A general preference (\"mornings\") goes in a note.",
    "kind": "Done in another place",
-   "targets": [
+   "steps": [
+    {
+     "screen": "patients-list",
+     "rect": [
+      276,
+      289,
+      142,
+      26
+     ],
+     "text": "Open ICT Patients in the left menu and click the patient's name.",
+     "kind": "open"
+    },
+    {
+     "screen": "activities-menu",
+     "rect": [
+      1298,
+      294,
+      190,
+      24
+     ],
+     "text": "On the patient page, click Add activities, then Log a call. (The Call button under the patient name does the same.)",
+     "kind": "tab"
+    },
     {
      "screen": "log-call",
      "rect": [
@@ -1847,7 +2412,8 @@ window.DATA = {
       390,
       22
      ],
-     "label": "A follow-up task: its time is the Callback Time"
+     "text": "Here it is: A follow-up task: its time is the Callback Time.",
+     "kind": "field"
     }
    ]
   },
@@ -1864,7 +2430,29 @@ window.DATA = {
    "where": "Object create date/time (list column)",
    "how": "Recorded by itself when the patient is created.",
    "kind": "Filled by the system",
-   "targets": [
+   "steps": [
+    {
+     "screen": "patients-list",
+     "rect": [
+      276,
+      289,
+      142,
+      26
+     ],
+     "text": "Open ICT Patients in the left menu and click the patient's name.",
+     "kind": "open"
+    },
+    {
+     "screen": "overview-1",
+     "rect": [
+      535,
+      93,
+      102,
+      38
+     ],
+     "text": "The patient page opens. Click the Overview tab if another tab is showing.",
+     "kind": "tab"
+    },
     {
      "screen": "overview-1",
      "rect": [
@@ -1873,7 +2461,8 @@ window.DATA = {
       243,
       108
      ],
-     "label": "Created: recorded by the system"
+     "text": "Here it is: Created: recorded by the system.",
+     "kind": "field"
     }
    ]
   },
@@ -1890,7 +2479,29 @@ window.DATA = {
    "where": "Files on the patient; All Files on the Overview tab",
    "how": "A file is added where it belongs: under its attorney, under its insurance policy, Police / Crash Report and Case Files at the top of the Insurance card, lien files on the Lien and Collection tab. All Files lists them all. There is no field for a SharePoint link.",
    "kind": "Done in another place",
-   "targets": [
+   "steps": [
+    {
+     "screen": "patients-list",
+     "rect": [
+      276,
+      289,
+      142,
+      26
+     ],
+     "text": "Open ICT Patients in the left menu and click the patient's name.",
+     "kind": "open"
+    },
+    {
+     "screen": "overview-1",
+     "rect": [
+      535,
+      93,
+      102,
+      38
+     ],
+     "text": "The patient page opens. Click the Overview tab if another tab is showing.",
+     "kind": "tab"
+    },
     {
      "screen": "overview-1",
      "rect": [
@@ -1899,7 +2510,19 @@ window.DATA = {
       611,
       62
      ],
-     "label": "All Files"
+     "text": "Here it is: All Files.",
+     "kind": "field"
+    },
+    {
+     "screen": "tabs-more",
+     "rect": [
+      945,
+      152,
+      160,
+      24
+     ],
+     "text": "On the patient page, click More, then Insurance and Verification. (On a wide screen the tab is in the row itself.)",
+     "kind": "tab"
     },
     {
      "screen": "insurance-top",
@@ -1909,7 +2532,8 @@ window.DATA = {
       270,
       110
      ],
-     "label": "Police / Crash Report, Case Files"
+     "text": "Here it is: Police / Crash Report, Case Files.",
+     "kind": "field"
     }
    ]
   },
@@ -1926,7 +2550,7 @@ window.DATA = {
    "where": "A new ICT Patient",
    "how": "A new hospital visit is a new case: create a new patient with the new DOS and account number. The yellow Possible Duplicate Patient box will show the earlier visit; keep both (Not a Duplicate).",
    "kind": "Done in another place",
-   "targets": [
+   "steps": [
     {
      "screen": "new-patient",
      "rect": [
@@ -1935,7 +2559,8 @@ window.DATA = {
       370,
       53
      ],
-     "label": "A new patient with the new DOS"
+     "text": "On the New ICT Patient page: A new patient with the new DOS.",
+     "kind": "create"
     }
    ]
   },
@@ -1952,7 +2577,29 @@ window.DATA = {
    "where": "Overview tab and left card: Owner",
    "how": "New patients belong to Intake Board. Click Assign to Me, or just log your first call: it makes you the owner.",
    "kind": "Filled by the system",
-   "targets": [
+   "steps": [
+    {
+     "screen": "patients-list",
+     "rect": [
+      276,
+      289,
+      142,
+      26
+     ],
+     "text": "Open ICT Patients in the left menu and click the patient's name.",
+     "kind": "open"
+    },
+    {
+     "screen": "overview-1",
+     "rect": [
+      535,
+      93,
+      102,
+      38
+     ],
+     "text": "The patient page opens. Click the Overview tab if another tab is showing.",
+     "kind": "tab"
+    },
     {
      "screen": "overview-1",
      "rect": [
@@ -1961,7 +2608,8 @@ window.DATA = {
       270,
       36
      ],
-     "label": "Owner"
+     "text": "Here it is: Owner.",
+     "kind": "field"
     }
    ]
   },
@@ -1978,7 +2626,29 @@ window.DATA = {
    "where": "Last Call By; Activities tab",
    "how": "Nothing to type. Every logged call keeps who made it; Last Call By shows the latest caller.",
    "kind": "Filled by the system",
-   "targets": [
+   "steps": [
+    {
+     "screen": "patients-list",
+     "rect": [
+      276,
+      289,
+      142,
+      26
+     ],
+     "text": "Open ICT Patients in the left menu and click the patient's name.",
+     "kind": "open"
+    },
+    {
+     "screen": "overview-1",
+     "rect": [
+      535,
+      93,
+      102,
+      38
+     ],
+     "text": "The patient page opens. Click the Overview tab if another tab is showing.",
+     "kind": "tab"
+    },
     {
      "screen": "overview-1",
      "rect": [
@@ -1987,7 +2657,8 @@ window.DATA = {
       298,
       135
      ],
-     "label": "Last Contact: who called"
+     "text": "Here it is: Last Contact: who called.",
+     "kind": "field"
     }
    ]
   },
@@ -2006,7 +2677,29 @@ window.DATA = {
    "where": "Last Attempt At, Contact Attempts; Activities tab",
    "how": "Nothing to type. Each logged call has its own date and time, and Contact Attempts counts them.",
    "kind": "Filled by the system",
-   "targets": [
+   "steps": [
+    {
+     "screen": "patients-list",
+     "rect": [
+      276,
+      289,
+      142,
+      26
+     ],
+     "text": "Open ICT Patients in the left menu and click the patient's name.",
+     "kind": "open"
+    },
+    {
+     "screen": "overview-1",
+     "rect": [
+      535,
+      93,
+      102,
+      38
+     ],
+     "text": "The patient page opens. Click the Overview tab if another tab is showing.",
+     "kind": "tab"
+    },
     {
      "screen": "overview-1",
      "rect": [
@@ -2015,7 +2708,19 @@ window.DATA = {
       298,
       135
      ],
-     "label": "Last Contact: when, and how many attempts"
+     "text": "Here it is: Last Contact: when, and how many attempts.",
+     "kind": "field"
+    },
+    {
+     "screen": "activities-menu",
+     "rect": [
+      1298,
+      294,
+      190,
+      24
+     ],
+     "text": "On the patient page, click Add activities, then Log a call. (The Call button under the patient name does the same.)",
+     "kind": "tab"
     },
     {
      "screen": "log-call",
@@ -2025,7 +2730,8 @@ window.DATA = {
       170,
       55
      ],
-     "label": "Activity date"
+     "text": "Here it is: Activity date.",
+     "kind": "field"
     }
    ]
   },
@@ -2044,7 +2750,29 @@ window.DATA = {
    "where": "Call button under the patient name: Log a Call. Notes: the Note button",
    "how": "After every call, log it, pick the Call outcome and write what happened in the call text. Your name and the time are added by the system. The newest calls and notes show under Notes and Calls on the right.",
    "kind": "A logged call or note",
-   "targets": [
+   "steps": [
+    {
+     "screen": "patients-list",
+     "rect": [
+      276,
+      289,
+      142,
+      26
+     ],
+     "text": "Open ICT Patients in the left menu and click the patient's name.",
+     "kind": "open"
+    },
+    {
+     "screen": "activities-menu",
+     "rect": [
+      1298,
+      294,
+      190,
+      24
+     ],
+     "text": "On the patient page, click Add activities, then Log a call. (The Call button under the patient name does the same.)",
+     "kind": "tab"
+    },
     {
      "screen": "log-call",
      "rect": [
@@ -2053,7 +2781,19 @@ window.DATA = {
       492,
       45
      ],
-     "label": "The notes of the call"
+     "text": "Here it is: The notes of the call.",
+     "kind": "field"
+    },
+    {
+     "screen": "overview-1",
+     "rect": [
+      535,
+      93,
+      102,
+      38
+     ],
+     "text": "The patient page opens. Click the Overview tab if another tab is showing.",
+     "kind": "tab"
     },
     {
      "screen": "overview-1",
@@ -2063,7 +2803,8 @@ window.DATA = {
       306,
       415
      ],
-     "label": "Notes and Calls"
+     "text": "Here it is: Notes and Calls.",
+     "kind": "field"
     }
    ]
   },
@@ -2082,7 +2823,29 @@ window.DATA = {
    "where": "Log a Call: Call outcome. Texts: Add activities, SMS",
    "how": "Pick Left voicemail (or Left live message) as the Call outcome. A text is logged with Add activities, SMS. The stage becomes Attempted.",
    "kind": "A logged call or note",
-   "targets": [
+   "steps": [
+    {
+     "screen": "patients-list",
+     "rect": [
+      276,
+      289,
+      142,
+      26
+     ],
+     "text": "Open ICT Patients in the left menu and click the patient's name.",
+     "kind": "open"
+    },
+    {
+     "screen": "activities-menu",
+     "rect": [
+      1298,
+      294,
+      190,
+      24
+     ],
+     "text": "On the patient page, click Add activities, then Log a call. (The Call button under the patient name does the same.)",
+     "kind": "tab"
+    },
     {
      "screen": "log-call",
      "rect": [
@@ -2091,7 +2854,8 @@ window.DATA = {
       75,
       40
      ],
-     "label": "Call outcome"
+     "text": "Here it is: Call outcome.",
+     "kind": "field"
     }
    ]
   },
@@ -2110,7 +2874,29 @@ window.DATA = {
    "where": "Log a Call: Call outcome",
    "how": "Pick No answer (or Busy, Wrong number). The stage becomes Attempted and the patient stays on the Call Team Board until reached. After 30 days without contact the supervisor confirms No Response.",
    "kind": "A logged call or note",
-   "targets": [
+   "steps": [
+    {
+     "screen": "patients-list",
+     "rect": [
+      276,
+      289,
+      142,
+      26
+     ],
+     "text": "Open ICT Patients in the left menu and click the patient's name.",
+     "kind": "open"
+    },
+    {
+     "screen": "activities-menu",
+     "rect": [
+      1298,
+      294,
+      190,
+      24
+     ],
+     "text": "On the patient page, click Add activities, then Log a call. (The Call button under the patient name does the same.)",
+     "kind": "tab"
+    },
     {
      "screen": "log-call",
      "rect": [
@@ -2119,7 +2905,8 @@ window.DATA = {
       75,
       40
      ],
-     "label": "Call outcome"
+     "text": "Here it is: Call outcome.",
+     "kind": "field"
     }
    ]
   },
@@ -2138,7 +2925,18 @@ window.DATA = {
    "where": "Stage: No Response, with No Response Reason = Patient Refused",
    "how": "Change the stage to No Response and pick the reason. The open call tasks are withdrawn. If the patient is reached later on a logged call, the case reopens by itself.",
    "kind": "A stage or status",
-   "targets": [
+   "steps": [
+    {
+     "screen": "patients-list",
+     "rect": [
+      276,
+      289,
+      142,
+      26
+     ],
+     "text": "Open ICT Patients in the left menu and click the patient's name.",
+     "kind": "open"
+    },
     {
      "screen": "overview-1",
      "rect": [
@@ -2147,7 +2945,8 @@ window.DATA = {
       150,
       36
      ],
-     "label": "Stage"
+     "text": "Here it is: Stage. It is on the left card, whichever tab is open.",
+     "kind": "field"
     }
    ]
   },
@@ -2166,7 +2965,7 @@ window.DATA = {
    "where": "No field",
    "how": "Not needed. Tasks and alerts go to the Owner and to the team by themselves; the Care record has its own owner (the case manager).",
    "kind": "Not in HubSpot",
-   "targets": []
+   "steps": []
   },
   {
    "id": 33,
@@ -2183,7 +2982,29 @@ window.DATA = {
    "where": "Insurance and Verification tab: Case Type",
    "how": "Pick PI. One pick replaces the row of tick boxes; it decides which insurance the case needs.",
    "kind": "One pick from a list",
-   "targets": [
+   "steps": [
+    {
+     "screen": "patients-list",
+     "rect": [
+      276,
+      289,
+      142,
+      26
+     ],
+     "text": "Open ICT Patients in the left menu and click the patient's name.",
+     "kind": "open"
+    },
+    {
+     "screen": "tabs-more",
+     "rect": [
+      945,
+      152,
+      160,
+      24
+     ],
+     "text": "On the patient page, click More, then Insurance and Verification. (On a wide screen the tab is in the row itself.)",
+     "kind": "tab"
+    },
     {
      "screen": "insurance-top",
      "rect": [
@@ -2192,7 +3013,8 @@ window.DATA = {
       270,
       36
      ],
-     "label": "Case Type"
+     "text": "Here it is: Case Type.",
+     "kind": "field"
     }
    ]
   },
@@ -2211,7 +3033,29 @@ window.DATA = {
    "where": "Insurance and Verification tab: Case Type",
    "how": "Pick WC, or PI and WC when both apply.",
    "kind": "One pick from a list",
-   "targets": [
+   "steps": [
+    {
+     "screen": "patients-list",
+     "rect": [
+      276,
+      289,
+      142,
+      26
+     ],
+     "text": "Open ICT Patients in the left menu and click the patient's name.",
+     "kind": "open"
+    },
+    {
+     "screen": "tabs-more",
+     "rect": [
+      945,
+      152,
+      160,
+      24
+     ],
+     "text": "On the patient page, click More, then Insurance and Verification. (On a wide screen the tab is in the row itself.)",
+     "kind": "tab"
+    },
     {
      "screen": "insurance-top",
      "rect": [
@@ -2220,7 +3064,8 @@ window.DATA = {
       270,
       36
      ],
-     "label": "Case Type"
+     "text": "Here it is: Case Type.",
+     "kind": "field"
     }
    ]
   },
@@ -2239,7 +3084,29 @@ window.DATA = {
    "where": "Insurance and Verification tab: Case Type",
    "how": "Pick Possible TPL while it is being checked.",
    "kind": "One pick from a list",
-   "targets": [
+   "steps": [
+    {
+     "screen": "patients-list",
+     "rect": [
+      276,
+      289,
+      142,
+      26
+     ],
+     "text": "Open ICT Patients in the left menu and click the patient's name.",
+     "kind": "open"
+    },
+    {
+     "screen": "tabs-more",
+     "rect": [
+      945,
+      152,
+      160,
+      24
+     ],
+     "text": "On the patient page, click More, then Insurance and Verification. (On a wide screen the tab is in the row itself.)",
+     "kind": "tab"
+    },
     {
      "screen": "insurance-top",
      "rect": [
@@ -2248,7 +3115,8 @@ window.DATA = {
       270,
       36
      ],
-     "label": "Case Type"
+     "text": "Here it is: Case Type.",
+     "kind": "field"
     }
    ]
   },
@@ -2267,7 +3135,29 @@ window.DATA = {
    "where": "Insurance and Verification tab: Case Type",
    "how": "Pick At-fault Driver. The case then needs the patient's own auto policy, and the Overview asks Filing Through Own Insurance?",
    "kind": "One pick from a list",
-   "targets": [
+   "steps": [
+    {
+     "screen": "patients-list",
+     "rect": [
+      276,
+      289,
+      142,
+      26
+     ],
+     "text": "Open ICT Patients in the left menu and click the patient's name.",
+     "kind": "open"
+    },
+    {
+     "screen": "tabs-more",
+     "rect": [
+      945,
+      152,
+      160,
+      24
+     ],
+     "text": "On the patient page, click More, then Insurance and Verification. (On a wide screen the tab is in the row itself.)",
+     "kind": "tab"
+    },
     {
      "screen": "insurance-top",
      "rect": [
@@ -2276,7 +3166,8 @@ window.DATA = {
       270,
       36
      ],
-     "label": "Case Type"
+     "text": "Here it is: Case Type.",
+     "kind": "field"
     }
    ]
   },
@@ -2295,7 +3186,29 @@ window.DATA = {
    "where": "Insurance and Verification tab: Case Type = No TPL / No Case, and No TPL / No Case Confirmation at the bottom",
    "how": "Pick the case type, then fill the confirmation: date, who confirmed it and the reason. The tabs then say so in red and the hospital team closes the account. If the patient simply does not qualify, close the stage as No Case with a No Case Reason.",
    "kind": "One pick from a list",
-   "targets": [
+   "steps": [
+    {
+     "screen": "patients-list",
+     "rect": [
+      276,
+      289,
+      142,
+      26
+     ],
+     "text": "Open ICT Patients in the left menu and click the patient's name.",
+     "kind": "open"
+    },
+    {
+     "screen": "tabs-more",
+     "rect": [
+      945,
+      152,
+      160,
+      24
+     ],
+     "text": "On the patient page, click More, then Insurance and Verification. (On a wide screen the tab is in the row itself.)",
+     "kind": "tab"
+    },
     {
      "screen": "insurance-top",
      "rect": [
@@ -2304,7 +3217,8 @@ window.DATA = {
       270,
       36
      ],
-     "label": "Case Type"
+     "text": "Here it is: Case Type.",
+     "kind": "field"
     },
     {
      "screen": "insurance-notpl",
@@ -2314,7 +3228,8 @@ window.DATA = {
       611,
       198
      ],
-     "label": "No TPL / No Case Confirmation"
+     "text": "Here it is: No TPL / No Case Confirmation.",
+     "kind": "field"
     }
    ]
   },
@@ -2333,7 +3248,29 @@ window.DATA = {
    "where": "Insurance and Verification tab: Case Type",
    "how": "Leave Case Type at Unknown (nothing known) or pick Possible TPL (something to check). What is still missing shows under What's Left.",
    "kind": "One pick from a list",
-   "targets": [
+   "steps": [
+    {
+     "screen": "patients-list",
+     "rect": [
+      276,
+      289,
+      142,
+      26
+     ],
+     "text": "Open ICT Patients in the left menu and click the patient's name.",
+     "kind": "open"
+    },
+    {
+     "screen": "tabs-more",
+     "rect": [
+      945,
+      152,
+      160,
+      24
+     ],
+     "text": "On the patient page, click More, then Insurance and Verification. (On a wide screen the tab is in the row itself.)",
+     "kind": "tab"
+    },
     {
      "screen": "insurance-top",
      "rect": [
@@ -2342,7 +3279,8 @@ window.DATA = {
       270,
       36
      ],
-     "label": "Case Type"
+     "text": "Here it is: Case Type.",
+     "kind": "field"
     }
    ]
   },
@@ -2359,7 +3297,29 @@ window.DATA = {
    "where": "No field",
    "how": "Closest today: Attorney Status = Referred to Attorney (part 6). (confirm with supervisor)",
    "kind": "Not in HubSpot",
-   "targets": [
+   "steps": [
+    {
+     "screen": "patients-list",
+     "rect": [
+      276,
+      289,
+      142,
+      26
+     ],
+     "text": "Open ICT Patients in the left menu and click the patient's name.",
+     "kind": "open"
+    },
+    {
+     "screen": "tabs-more",
+     "rect": [
+      945,
+      185,
+      160,
+      24
+     ],
+     "text": "On the patient page, click More, then Patient Attorney. (On a wide screen the tab is in the row itself.)",
+     "kind": "tab"
+    },
     {
      "screen": "attorney-top",
      "rect": [
@@ -2368,7 +3328,8 @@ window.DATA = {
       190,
       36
      ],
-     "label": "Attorney Status"
+     "text": "Here it is: Attorney Status.",
+     "kind": "field"
     }
    ]
   },
@@ -2385,7 +3346,18 @@ window.DATA = {
    "where": "No field",
    "how": "Closest today: the stage No Case or No Response with its reason, or Attorney Rejected Date when the firm declined. (confirm with supervisor)",
    "kind": "Not in HubSpot",
-   "targets": [
+   "steps": [
+    {
+     "screen": "patients-list",
+     "rect": [
+      276,
+      289,
+      142,
+      26
+     ],
+     "text": "Open ICT Patients in the left menu and click the patient's name.",
+     "kind": "open"
+    },
     {
      "screen": "overview-1",
      "rect": [
@@ -2394,7 +3366,8 @@ window.DATA = {
       150,
       36
      ],
-     "label": "Stage"
+     "text": "Here it is: Stage. It is on the left card, whichever tab is open.",
+     "kind": "field"
     }
    ]
   },
@@ -2413,7 +3386,29 @@ window.DATA = {
    "where": "Insurance card: + Add Insurance, type Health",
    "how": "Add it as a Health policy (carrier, member ID, group number). It is reference only and never used for a lien. If health insurance is all there is, close as No Case with the reason Private Health Insurance Only.",
    "kind": "An entry in a card",
-   "targets": [
+   "steps": [
+    {
+     "screen": "patients-list",
+     "rect": [
+      276,
+      289,
+      142,
+      26
+     ],
+     "text": "Open ICT Patients in the left menu and click the patient's name.",
+     "kind": "open"
+    },
+    {
+     "screen": "tabs-more",
+     "rect": [
+      945,
+      152,
+      160,
+      24
+     ],
+     "text": "On the patient page, click More, then Insurance and Verification. (On a wide screen the tab is in the row itself.)",
+     "kind": "tab"
+    },
     {
      "screen": "insurance-notpl",
      "rect": [
@@ -2422,7 +3417,8 @@ window.DATA = {
       611,
       70
      ],
-     "label": "Health Insurance"
+     "text": "Here it is: Health Insurance.",
+     "kind": "field"
     },
     {
      "screen": "insurance-top",
@@ -2432,7 +3428,8 @@ window.DATA = {
       116,
       29
      ],
-     "label": "+ Add Insurance"
+     "text": "Here it is: + Add Insurance.",
+     "kind": "field"
     }
    ]
   },
@@ -2451,7 +3448,29 @@ window.DATA = {
    "where": "Insurance card: + Add Insurance",
    "how": "Add the policy under the type that fits: Third-Party Liability when a business is liable, otherwise Other. (confirm with supervisor)",
    "kind": "An entry in a card",
-   "targets": [
+   "steps": [
+    {
+     "screen": "patients-list",
+     "rect": [
+      276,
+      289,
+      142,
+      26
+     ],
+     "text": "Open ICT Patients in the left menu and click the patient's name.",
+     "kind": "open"
+    },
+    {
+     "screen": "tabs-more",
+     "rect": [
+      945,
+      152,
+      160,
+      24
+     ],
+     "text": "On the patient page, click More, then Insurance and Verification. (On a wide screen the tab is in the row itself.)",
+     "kind": "tab"
+    },
     {
      "screen": "insurance-top",
      "rect": [
@@ -2460,7 +3479,8 @@ window.DATA = {
       116,
       29
      ],
-     "label": "+ Add Insurance"
+     "text": "Here it is: + Add Insurance.",
+     "kind": "field"
     }
    ]
   },
@@ -2479,7 +3499,29 @@ window.DATA = {
    "where": "No field",
    "how": "Incident Type = Other with the details in Other Injury Notes; the liable party's insurer as a Third-Party Liability policy. (confirm with supervisor)",
    "kind": "Not in HubSpot",
-   "targets": [
+   "steps": [
+    {
+     "screen": "patients-list",
+     "rect": [
+      276,
+      289,
+      142,
+      26
+     ],
+     "text": "Open ICT Patients in the left menu and click the patient's name.",
+     "kind": "open"
+    },
+    {
+     "screen": "overview-1",
+     "rect": [
+      637,
+      93,
+      120,
+      38
+     ],
+     "text": "On the patient page, click the Hospital EMR tab.",
+     "kind": "tab"
+    },
     {
      "screen": "ed-visit",
      "rect": [
@@ -2488,7 +3530,8 @@ window.DATA = {
       590,
       66
      ],
-     "label": "Incident Type, Injured Body Parts, Other Injury Notes"
+     "text": "Here it is: Incident Type, Injured Body Parts, Other Injury Notes.",
+     "kind": "field"
     }
    ]
   },
@@ -2507,7 +3550,29 @@ window.DATA = {
    "where": "No field",
    "how": "Incident Type = Other with the details in Other Injury Notes; the school's insurer as a policy on the Insurance card. (confirm with supervisor)",
    "kind": "Not in HubSpot",
-   "targets": [
+   "steps": [
+    {
+     "screen": "patients-list",
+     "rect": [
+      276,
+      289,
+      142,
+      26
+     ],
+     "text": "Open ICT Patients in the left menu and click the patient's name.",
+     "kind": "open"
+    },
+    {
+     "screen": "overview-1",
+     "rect": [
+      637,
+      93,
+      120,
+      38
+     ],
+     "text": "On the patient page, click the Hospital EMR tab.",
+     "kind": "tab"
+    },
     {
      "screen": "ed-visit",
      "rect": [
@@ -2516,7 +3581,8 @@ window.DATA = {
       590,
       66
      ],
-     "label": "Incident Type, Injured Body Parts, Other Injury Notes"
+     "text": "Here it is: Incident Type, Injured Body Parts, Other Injury Notes.",
+     "kind": "field"
     }
    ]
   },
@@ -2535,7 +3601,29 @@ window.DATA = {
    "where": "Case Type = WC; Insurance card, Workers' Compensation policy",
    "how": "Pick WC and add the Workers' Compensation policy; say it is a union plan in the policy Notes. (confirm with supervisor)",
    "kind": "An entry in a card",
-   "targets": [
+   "steps": [
+    {
+     "screen": "patients-list",
+     "rect": [
+      276,
+      289,
+      142,
+      26
+     ],
+     "text": "Open ICT Patients in the left menu and click the patient's name.",
+     "kind": "open"
+    },
+    {
+     "screen": "tabs-more",
+     "rect": [
+      945,
+      152,
+      160,
+      24
+     ],
+     "text": "On the patient page, click More, then Insurance and Verification. (On a wide screen the tab is in the row itself.)",
+     "kind": "tab"
+    },
     {
      "screen": "insurance-top",
      "rect": [
@@ -2544,7 +3632,8 @@ window.DATA = {
       270,
       36
      ],
-     "label": "Case Type"
+     "text": "Here it is: Case Type.",
+     "kind": "field"
     },
     {
      "screen": "insurance-top",
@@ -2554,7 +3643,8 @@ window.DATA = {
       116,
       29
      ],
-     "label": "+ Add Insurance"
+     "text": "Here it is: + Add Insurance.",
+     "kind": "field"
     }
    ]
   },
@@ -2573,7 +3663,29 @@ window.DATA = {
    "where": "Case Type = WC; Insurance card, Workers' Compensation policy",
    "how": "Pick WC and add the Workers' Compensation policy; say it is federal in the policy Notes. (confirm with supervisor)",
    "kind": "An entry in a card",
-   "targets": [
+   "steps": [
+    {
+     "screen": "patients-list",
+     "rect": [
+      276,
+      289,
+      142,
+      26
+     ],
+     "text": "Open ICT Patients in the left menu and click the patient's name.",
+     "kind": "open"
+    },
+    {
+     "screen": "tabs-more",
+     "rect": [
+      945,
+      152,
+      160,
+      24
+     ],
+     "text": "On the patient page, click More, then Insurance and Verification. (On a wide screen the tab is in the row itself.)",
+     "kind": "tab"
+    },
     {
      "screen": "insurance-top",
      "rect": [
@@ -2582,7 +3694,8 @@ window.DATA = {
       270,
       36
      ],
-     "label": "Case Type"
+     "text": "Here it is: Case Type.",
+     "kind": "field"
     },
     {
      "screen": "insurance-top",
@@ -2592,7 +3705,8 @@ window.DATA = {
       116,
       29
      ],
-     "label": "+ Add Insurance"
+     "text": "Here it is: + Add Insurance.",
+     "kind": "field"
     }
    ]
   },
@@ -2611,7 +3725,40 @@ window.DATA = {
    "where": "Insurance and Verification tab, Insurance card: + Add Insurance",
    "how": "One entry per policy. Pick the type (Third-Party Liability, Workers' Compensation, First-Party Auto, MedPay, Health, Other) and fill its boxes: Insurance Company, Claim Number, Policy Number, Whose Policy, Other Driver Name, Adjuster Name, Phone, Fax, Email, Billing Address, Notes. A WC policy also has the employer name, address and phone. The police report itself is uploaded under Police / Crash Report at the top of the card; its number can go in the policy Notes.",
    "kind": "An entry in a card",
-   "targets": [
+   "steps": [
+    {
+     "screen": "patients-list",
+     "rect": [
+      276,
+      289,
+      142,
+      26
+     ],
+     "text": "Open ICT Patients in the left menu and click the patient's name.",
+     "kind": "open"
+    },
+    {
+     "screen": "tabs-more",
+     "rect": [
+      945,
+      152,
+      160,
+      24
+     ],
+     "text": "On the patient page, click More, then Insurance and Verification. (On a wide screen the tab is in the row itself.)",
+     "kind": "tab"
+    },
+    {
+     "screen": "insurance-top",
+     "rect": [
+      634,
+      494,
+      116,
+      29
+     ],
+     "text": "Click + Add Insurance and pick the Coverage Type.",
+     "kind": "click"
+    },
     {
      "screen": "insurance-form",
      "rect": [
@@ -2620,7 +3767,8 @@ window.DATA = {
       611,
       581
      ],
-     "label": "New Insurance: one box per fact"
+     "text": "Here it is: New Insurance: one box per fact.",
+     "kind": "field"
     },
     {
      "screen": "insurance-policy",
@@ -2630,7 +3778,8 @@ window.DATA = {
       611,
       263
      ],
-     "label": "The saved policy"
+     "text": "Here it is: The saved policy.",
+     "kind": "field"
     },
     {
      "screen": "insurance-top",
@@ -2640,7 +3789,8 @@ window.DATA = {
       270,
       48
      ],
-     "label": "Police / Crash Report"
+     "text": "Here it is: Police / Crash Report.",
+     "kind": "field"
     }
    ]
   },
@@ -2657,7 +3807,29 @@ window.DATA = {
    "where": "Insurance card: + Add Insurance, type Health",
    "how": "Add a Health policy. What the hospital record says shows on the ED Visit card as Health Insurance Carrier (Hospital Record).",
    "kind": "An entry in a card",
-   "targets": [
+   "steps": [
+    {
+     "screen": "patients-list",
+     "rect": [
+      276,
+      289,
+      142,
+      26
+     ],
+     "text": "Open ICT Patients in the left menu and click the patient's name.",
+     "kind": "open"
+    },
+    {
+     "screen": "tabs-more",
+     "rect": [
+      945,
+      152,
+      160,
+      24
+     ],
+     "text": "On the patient page, click More, then Insurance and Verification. (On a wide screen the tab is in the row itself.)",
+     "kind": "tab"
+    },
     {
      "screen": "insurance-notpl",
      "rect": [
@@ -2666,7 +3838,8 @@ window.DATA = {
       611,
       70
      ],
-     "label": "Health Insurance"
+     "text": "Here it is: Health Insurance.",
+     "kind": "field"
     }
    ]
   },
@@ -2685,7 +3858,29 @@ window.DATA = {
    "where": "Insurance card: + Add Insurance, type MedPay",
    "how": "Add a MedPay policy with its amount; it needs a billing address like the others if a lien goes to it. UIM is part of the patient's own auto policy: add it as First-Party Auto and say so in Notes (confirm with supervisor).",
    "kind": "An entry in a card",
-   "targets": [
+   "steps": [
+    {
+     "screen": "patients-list",
+     "rect": [
+      276,
+      289,
+      142,
+      26
+     ],
+     "text": "Open ICT Patients in the left menu and click the patient's name.",
+     "kind": "open"
+    },
+    {
+     "screen": "tabs-more",
+     "rect": [
+      945,
+      152,
+      160,
+      24
+     ],
+     "text": "On the patient page, click More, then Insurance and Verification. (On a wide screen the tab is in the row itself.)",
+     "kind": "tab"
+    },
     {
      "screen": "insurance-top",
      "rect": [
@@ -2694,7 +3889,8 @@ window.DATA = {
       116,
       29
      ],
-     "label": "+ Add Insurance"
+     "text": "Here it is: + Add Insurance.",
+     "kind": "field"
     }
    ]
   },
@@ -2713,7 +3909,40 @@ window.DATA = {
    "where": "Insurance card: Verify on the policy",
    "how": "Call the carrier, then click Verify on that policy and pick the Verification Method and the Result. The policy shows a green Verified tag; who verified and when are recorded by the system. What the patient says is not a verification.",
    "kind": "An entry in a card",
-   "targets": [
+   "steps": [
+    {
+     "screen": "patients-list",
+     "rect": [
+      276,
+      289,
+      142,
+      26
+     ],
+     "text": "Open ICT Patients in the left menu and click the patient's name.",
+     "kind": "open"
+    },
+    {
+     "screen": "tabs-more",
+     "rect": [
+      945,
+      152,
+      160,
+      24
+     ],
+     "text": "On the patient page, click More, then Insurance and Verification. (On a wide screen the tab is in the row itself.)",
+     "kind": "tab"
+    },
+    {
+     "screen": "insurance-notpl",
+     "rect": [
+      573,
+      180,
+      61,
+      27
+     ],
+     "text": "On the policy, click Verify.",
+     "kind": "click"
+    },
     {
      "screen": "insurance-verify",
      "rect": [
@@ -2722,7 +3951,8 @@ window.DATA = {
       571,
       300
      ],
-     "label": "Verify"
+     "text": "Here it is: Verify.",
+     "kind": "field"
     },
     {
      "screen": "insurance-policy",
@@ -2732,7 +3962,8 @@ window.DATA = {
       58,
       18
      ],
-     "label": "Verified"
+     "text": "Here it is: Verified.",
+     "kind": "field"
     }
    ]
   },
@@ -2751,7 +3982,40 @@ window.DATA = {
    "where": "Each policy: Added On, Last Verified On. List column: Insurance Last Verified Date",
    "how": "Nothing to type. Every change is dated by the system, and the clock next to a field shows its earlier values.",
    "kind": "Filled by the system",
-   "targets": [
+   "steps": [
+    {
+     "screen": "patients-list",
+     "rect": [
+      276,
+      289,
+      142,
+      26
+     ],
+     "text": "Open ICT Patients in the left menu and click the patient's name.",
+     "kind": "open"
+    },
+    {
+     "screen": "tabs-more",
+     "rect": [
+      945,
+      152,
+      160,
+      24
+     ],
+     "text": "On the patient page, click More, then Insurance and Verification. (On a wide screen the tab is in the row itself.)",
+     "kind": "tab"
+    },
+    {
+     "screen": "insurance-notpl",
+     "rect": [
+      573,
+      180,
+      61,
+      27
+     ],
+     "text": "On the policy, click Verify.",
+     "kind": "click"
+    },
     {
      "screen": "insurance-verify",
      "rect": [
@@ -2760,7 +4024,8 @@ window.DATA = {
       350,
       36
      ],
-     "label": "Added On, Last Verified On"
+     "text": "Here it is: Added On, Last Verified On.",
+     "kind": "field"
     }
    ]
   },
@@ -2779,7 +4044,40 @@ window.DATA = {
    "where": "Verification History under each policy; Insurance Verified By",
    "how": "Nothing to type. Your name is recorded when you verify.",
    "kind": "Filled by the system",
-   "targets": [
+   "steps": [
+    {
+     "screen": "patients-list",
+     "rect": [
+      276,
+      289,
+      142,
+      26
+     ],
+     "text": "Open ICT Patients in the left menu and click the patient's name.",
+     "kind": "open"
+    },
+    {
+     "screen": "tabs-more",
+     "rect": [
+      945,
+      152,
+      160,
+      24
+     ],
+     "text": "On the patient page, click More, then Insurance and Verification. (On a wide screen the tab is in the row itself.)",
+     "kind": "tab"
+    },
+    {
+     "screen": "insurance-notpl",
+     "rect": [
+      573,
+      180,
+      61,
+      27
+     ],
+     "text": "On the policy, click Verify.",
+     "kind": "click"
+    },
     {
      "screen": "insurance-verify",
      "rect": [
@@ -2788,7 +4086,8 @@ window.DATA = {
       216,
       20
      ],
-     "label": "Verification History: who verified"
+     "text": "Here it is: Verification History: who verified.",
+     "kind": "field"
     }
    ]
   },
@@ -2807,7 +4106,29 @@ window.DATA = {
    "where": "No field",
    "how": "HubSpot does not track EZDocs. The date the insurance was added to the hospital account is on the Hospital EMR Tracker (part 8). (confirm with supervisor)",
    "kind": "Not in HubSpot",
-   "targets": [
+   "steps": [
+    {
+     "screen": "patients-list",
+     "rect": [
+      276,
+      289,
+      142,
+      26
+     ],
+     "text": "Open ICT Patients in the left menu and click the patient's name.",
+     "kind": "open"
+    },
+    {
+     "screen": "overview-1",
+     "rect": [
+      637,
+      93,
+      120,
+      38
+     ],
+     "text": "On the patient page, click the Hospital EMR tab.",
+     "kind": "tab"
+    },
     {
      "screen": "tracker-1",
      "rect": [
@@ -2816,7 +4137,8 @@ window.DATA = {
       270,
       36
      ],
-     "label": "TPL/WC Insurance Added to Hospital Date"
+     "text": "Here it is: TPL/WC Insurance Added to Hospital Date.",
+     "kind": "field"
     }
    ]
   },
@@ -2835,7 +4157,29 @@ window.DATA = {
    "where": "Patient Attorney tab: Attorney Status = Wants Referral",
    "how": "Pick Wants Referral. The owner gets the task \"Refer to a network attorney\".",
    "kind": "One pick from a list",
-   "targets": [
+   "steps": [
+    {
+     "screen": "patients-list",
+     "rect": [
+      276,
+      289,
+      142,
+      26
+     ],
+     "text": "Open ICT Patients in the left menu and click the patient's name.",
+     "kind": "open"
+    },
+    {
+     "screen": "tabs-more",
+     "rect": [
+      945,
+      185,
+      160,
+      24
+     ],
+     "text": "On the patient page, click More, then Patient Attorney. (On a wide screen the tab is in the row itself.)",
+     "kind": "tab"
+    },
     {
      "screen": "attorney-top",
      "rect": [
@@ -2844,7 +4188,8 @@ window.DATA = {
       190,
       36
      ],
-     "label": "Attorney Status"
+     "text": "Here it is: Attorney Status.",
+     "kind": "field"
     }
    ]
   },
@@ -2864,7 +4209,29 @@ window.DATA = {
    "where": "Patient Attorney tab: Attorney Status = Referred to Attorney, Referred to Attorney Date",
    "how": "Change the status to Referred to Attorney and enter the date. One date field replaces the two columns.",
    "kind": "Same fact, one field",
-   "targets": [
+   "steps": [
+    {
+     "screen": "patients-list",
+     "rect": [
+      276,
+      289,
+      142,
+      26
+     ],
+     "text": "Open ICT Patients in the left menu and click the patient's name.",
+     "kind": "open"
+    },
+    {
+     "screen": "tabs-more",
+     "rect": [
+      945,
+      185,
+      160,
+      24
+     ],
+     "text": "On the patient page, click More, then Patient Attorney. (On a wide screen the tab is in the row itself.)",
+     "kind": "tab"
+    },
     {
      "screen": "attorney-top",
      "rect": [
@@ -2873,7 +4240,8 @@ window.DATA = {
       190,
       36
      ],
-     "label": "Referred to Attorney Date"
+     "text": "Here it is: Referred to Attorney Date.",
+     "kind": "field"
     }
    ]
   },
@@ -2892,7 +4260,40 @@ window.DATA = {
    "where": "Patient Attorney tab, Attorneys card: + Add Attorney",
    "how": "Add the attorney as Current Patient Attorney and pick the Law Firm from the list (type part of the name; a new firm is saved as a company).",
    "kind": "An entry in a card",
-   "targets": [
+   "steps": [
+    {
+     "screen": "patients-list",
+     "rect": [
+      276,
+      289,
+      142,
+      26
+     ],
+     "text": "Open ICT Patients in the left menu and click the patient's name.",
+     "kind": "open"
+    },
+    {
+     "screen": "tabs-more",
+     "rect": [
+      945,
+      185,
+      160,
+      24
+     ],
+     "text": "On the patient page, click More, then Patient Attorney. (On a wide screen the tab is in the row itself.)",
+     "kind": "tab"
+    },
+    {
+     "screen": "attorney-top",
+     "rect": [
+      634,
+      239,
+      111,
+      27
+     ],
+     "text": "Click + Add Attorney.",
+     "kind": "click"
+    },
     {
      "screen": "attorney-form",
      "rect": [
@@ -2901,7 +4302,8 @@ window.DATA = {
       571,
       148
      ],
-     "label": "Attorney Name, Law Firm"
+     "text": "Here it is: Attorney Name, Law Firm.",
+     "kind": "field"
     },
     {
      "screen": "attorney-top",
@@ -2911,7 +4313,8 @@ window.DATA = {
       611,
       130
      ],
-     "label": "Current Patient Attorney"
+     "text": "Here it is: Current Patient Attorney.",
+     "kind": "field"
     }
    ]
   },
@@ -2930,7 +4333,40 @@ window.DATA = {
    "where": "Attorneys card: the attorney entry, + Legal Assistant",
    "how": "Name, phone, email and address have their own boxes. Add each assistant or case manager with + Legal Assistant.",
    "kind": "An entry in a card",
-   "targets": [
+   "steps": [
+    {
+     "screen": "patients-list",
+     "rect": [
+      276,
+      289,
+      142,
+      26
+     ],
+     "text": "Open ICT Patients in the left menu and click the patient's name.",
+     "kind": "open"
+    },
+    {
+     "screen": "tabs-more",
+     "rect": [
+      945,
+      185,
+      160,
+      24
+     ],
+     "text": "On the patient page, click More, then Patient Attorney. (On a wide screen the tab is in the row itself.)",
+     "kind": "tab"
+    },
+    {
+     "screen": "attorney-top",
+     "rect": [
+      634,
+      239,
+      111,
+      27
+     ],
+     "text": "Click + Add Attorney.",
+     "kind": "click"
+    },
     {
      "screen": "attorney-form",
      "rect": [
@@ -2939,7 +4375,8 @@ window.DATA = {
       571,
       256
      ],
-     "label": "Phone, Fax, Email, Address"
+     "text": "Here it is: Phone, Fax, Email, Address.",
+     "kind": "field"
     }
    ]
   },
@@ -2958,7 +4395,29 @@ window.DATA = {
    "where": "Patient Attorney tab: Referred to Attorney Date filled, Attorney Signed Date still empty",
    "how": "No tick box: a referral without a signed date is waiting for the signature, and the attorney step stays yellow. The agreement can be added with + Add File under the attorney.",
    "kind": "A stage or status",
-   "targets": [
+   "steps": [
+    {
+     "screen": "patients-list",
+     "rect": [
+      276,
+      289,
+      142,
+      26
+     ],
+     "text": "Open ICT Patients in the left menu and click the patient's name.",
+     "kind": "open"
+    },
+    {
+     "screen": "tabs-more",
+     "rect": [
+      945,
+      185,
+      160,
+      24
+     ],
+     "text": "On the patient page, click More, then Patient Attorney. (On a wide screen the tab is in the row itself.)",
+     "kind": "tab"
+    },
     {
      "screen": "attorney-top",
      "rect": [
@@ -2967,7 +4426,8 @@ window.DATA = {
       382,
       36
      ],
-     "label": "Referred date filled, Signed date still empty"
+     "text": "Here it is: Referred date filled, Signed date still empty.",
+     "kind": "field"
     }
    ]
   },
@@ -2988,7 +4448,29 @@ window.DATA = {
    "where": "Patient Attorney tab: Attorney Signed Date",
    "how": "Enter the date once the firm confirms. The date is the tick.",
    "kind": "Same fact, one field",
-   "targets": [
+   "steps": [
+    {
+     "screen": "patients-list",
+     "rect": [
+      276,
+      289,
+      142,
+      26
+     ],
+     "text": "Open ICT Patients in the left menu and click the patient's name.",
+     "kind": "open"
+    },
+    {
+     "screen": "tabs-more",
+     "rect": [
+      945,
+      185,
+      160,
+      24
+     ],
+     "text": "On the patient page, click More, then Patient Attorney. (On a wide screen the tab is in the row itself.)",
+     "kind": "tab"
+    },
     {
      "screen": "attorney-top",
      "rect": [
@@ -2997,7 +4479,8 @@ window.DATA = {
       180,
       36
      ],
-     "label": "Attorney Signed Date"
+     "text": "Here it is: Attorney Signed Date.",
+     "kind": "field"
     }
    ]
   },
@@ -3016,7 +4499,29 @@ window.DATA = {
    "where": "Patient Attorney tab: Attorney Rejected Date",
    "how": "Enter the date the firm declined. (The patient not wanting an attorney is different: Attorney Status = Declined Attorney.)",
    "kind": "Same fact, one field",
-   "targets": [
+   "steps": [
+    {
+     "screen": "patients-list",
+     "rect": [
+      276,
+      289,
+      142,
+      26
+     ],
+     "text": "Open ICT Patients in the left menu and click the patient's name.",
+     "kind": "open"
+    },
+    {
+     "screen": "tabs-more",
+     "rect": [
+      945,
+      185,
+      160,
+      24
+     ],
+     "text": "On the patient page, click More, then Patient Attorney. (On a wide screen the tab is in the row itself.)",
+     "kind": "tab"
+    },
     {
      "screen": "attorney-top",
      "rect": [
@@ -3025,7 +4530,8 @@ window.DATA = {
       190,
       36
      ],
-     "label": "Attorney Rejected Date"
+     "text": "Here it is: Attorney Rejected Date.",
+     "kind": "field"
     }
    ]
   },
@@ -3044,7 +4550,29 @@ window.DATA = {
    "where": "Patient Attorney tab: Attorney Status = Own Attorney",
    "how": "Pick Own Attorney and enter Attorney Reported Date (the day the patient told us).",
    "kind": "One pick from a list",
-   "targets": [
+   "steps": [
+    {
+     "screen": "patients-list",
+     "rect": [
+      276,
+      289,
+      142,
+      26
+     ],
+     "text": "Open ICT Patients in the left menu and click the patient's name.",
+     "kind": "open"
+    },
+    {
+     "screen": "tabs-more",
+     "rect": [
+      945,
+      185,
+      160,
+      24
+     ],
+     "text": "On the patient page, click More, then Patient Attorney. (On a wide screen the tab is in the row itself.)",
+     "kind": "tab"
+    },
     {
      "screen": "attorney-top",
      "rect": [
@@ -3053,7 +4581,8 @@ window.DATA = {
       190,
       36
      ],
-     "label": "Attorney Status"
+     "text": "Here it is: Attorney Status.",
+     "kind": "field"
     }
    ]
   },
@@ -3076,7 +4605,40 @@ window.DATA = {
    "where": "Attorneys card: + Add Attorney",
    "how": "The same entry as for a network attorney: attorney name, Law Firm, phone, email, address, legal assistants. If the patient changes attorney, use Replace Attorney: the old one is kept as a previous attorney.",
    "kind": "An entry in a card",
-   "targets": [
+   "steps": [
+    {
+     "screen": "patients-list",
+     "rect": [
+      276,
+      289,
+      142,
+      26
+     ],
+     "text": "Open ICT Patients in the left menu and click the patient's name.",
+     "kind": "open"
+    },
+    {
+     "screen": "tabs-more",
+     "rect": [
+      945,
+      185,
+      160,
+      24
+     ],
+     "text": "On the patient page, click More, then Patient Attorney. (On a wide screen the tab is in the row itself.)",
+     "kind": "tab"
+    },
+    {
+     "screen": "attorney-top",
+     "rect": [
+      634,
+      239,
+      111,
+      27
+     ],
+     "text": "Click + Add Attorney.",
+     "kind": "click"
+    },
     {
      "screen": "attorney-form",
      "rect": [
@@ -3085,7 +4647,8 @@ window.DATA = {
       571,
       431
      ],
-     "label": "New Attorney"
+     "text": "Here it is: New Attorney.",
+     "kind": "field"
     }
    ]
   },
@@ -3104,7 +4667,29 @@ window.DATA = {
    "where": "Attorneys card: Add New Verification on the current attorney",
    "how": "Call the law office and add a verification with the result Representing. The attorney shows a green Representing (Verified) tag, and only then can a lien go to that attorney.",
    "kind": "An entry in a card",
-   "targets": [
+   "steps": [
+    {
+     "screen": "patients-list",
+     "rect": [
+      276,
+      289,
+      142,
+      26
+     ],
+     "text": "Open ICT Patients in the left menu and click the patient's name.",
+     "kind": "open"
+    },
+    {
+     "screen": "tabs-more",
+     "rect": [
+      945,
+      185,
+      160,
+      24
+     ],
+     "text": "On the patient page, click More, then Patient Attorney. (On a wide screen the tab is in the row itself.)",
+     "kind": "tab"
+    },
     {
      "screen": "attorney-verify",
      "rect": [
@@ -3113,7 +4698,8 @@ window.DATA = {
       572,
       300
      ],
-     "label": "Add New Verification"
+     "text": "Here it is: Add New Verification.",
+     "kind": "field"
     },
     {
      "screen": "attorney-top",
@@ -3123,7 +4709,8 @@ window.DATA = {
       133,
       19
      ],
-     "label": "Representing (Verified)"
+     "text": "Here it is: Representing (Verified).",
+     "kind": "field"
     }
    ]
   },
@@ -3142,7 +4729,29 @@ window.DATA = {
    "where": "Overview tab: Medical Follow-up = Requests Coordination",
    "how": "Pick Requests Coordination and the Medical Follow-up Destination. A Care Coordination record and the task \"Book first visit\" are made by themselves.",
    "kind": "One pick from a list",
-   "targets": [
+   "steps": [
+    {
+     "screen": "patients-list",
+     "rect": [
+      276,
+      289,
+      142,
+      26
+     ],
+     "text": "Open ICT Patients in the left menu and click the patient's name.",
+     "kind": "open"
+    },
+    {
+     "screen": "overview-1",
+     "rect": [
+      535,
+      93,
+      102,
+      38
+     ],
+     "text": "The patient page opens. Click the Overview tab if another tab is showing.",
+     "kind": "tab"
+    },
     {
      "screen": "overview-3",
      "rect": [
@@ -3151,7 +4760,8 @@ window.DATA = {
       190,
       36
      ],
-     "label": "Medical Follow-up"
+     "text": "Here it is: Medical Follow-up.",
+     "kind": "field"
     }
    ]
   },
@@ -3170,7 +4780,29 @@ window.DATA = {
    "where": "Overview tab, Initial Appointment card: Appointment Update = Scheduled",
    "how": "Enter the New Appointment Date and Time, Facility and Location. The Care stage becomes Appointment Scheduled. Book the real appointment in Nimbly as before.",
    "kind": "An entry in a card",
-   "targets": [
+   "steps": [
+    {
+     "screen": "patients-list",
+     "rect": [
+      276,
+      289,
+      142,
+      26
+     ],
+     "text": "Open ICT Patients in the left menu and click the patient's name.",
+     "kind": "open"
+    },
+    {
+     "screen": "overview-1",
+     "rect": [
+      535,
+      93,
+      102,
+      38
+     ],
+     "text": "The patient page opens. Click the Overview tab if another tab is showing.",
+     "kind": "tab"
+    },
     {
      "screen": "overview-3",
      "rect": [
@@ -3179,7 +4811,8 @@ window.DATA = {
       575,
       140
      ],
-     "label": "Initial Appointment"
+     "text": "Here it is: Initial Appointment.",
+     "kind": "field"
     }
    ]
   },
@@ -3198,7 +4831,29 @@ window.DATA = {
    "where": "Medical Follow-up Destination and Provider Name and Location; Initial Appointment: Facility, Location",
    "how": "Destination is IPM, HPH or Other Network Provider; the clinic (for example IPM Midway) goes in Provider Name and Location. A patient who declines or sees their own doctor is a Medical Follow-up answer instead: Declines Follow-up, Own Doctor - No Further Contact or Own Doctor - Call Back Later.",
    "kind": "One pick from a list",
-   "targets": [
+   "steps": [
+    {
+     "screen": "patients-list",
+     "rect": [
+      276,
+      289,
+      142,
+      26
+     ],
+     "text": "Open ICT Patients in the left menu and click the patient's name.",
+     "kind": "open"
+    },
+    {
+     "screen": "overview-1",
+     "rect": [
+      535,
+      93,
+      102,
+      38
+     ],
+     "text": "The patient page opens. Click the Overview tab if another tab is showing.",
+     "kind": "tab"
+    },
     {
      "screen": "overview-3",
      "rect": [
@@ -3207,7 +4862,8 @@ window.DATA = {
       572,
       36
      ],
-     "label": "Medical Follow-up Destination, Provider Name and Location"
+     "text": "Here it is: Medical Follow-up Destination, Provider Name and Location.",
+     "kind": "field"
     }
    ]
   },
@@ -3226,7 +4882,29 @@ window.DATA = {
    "where": "Initial Appointment card; Medical Follow-up Note",
    "how": "The date, time, facility and place are fields. Afterwards set Appointment Update to Attended, No-show, Cancelled or Rescheduled. What the Care team should know goes in Medical Follow-up Note.",
    "kind": "An entry in a card",
-   "targets": [
+   "steps": [
+    {
+     "screen": "patients-list",
+     "rect": [
+      276,
+      289,
+      142,
+      26
+     ],
+     "text": "Open ICT Patients in the left menu and click the patient's name.",
+     "kind": "open"
+    },
+    {
+     "screen": "overview-1",
+     "rect": [
+      535,
+      93,
+      102,
+      38
+     ],
+     "text": "The patient page opens. Click the Overview tab if another tab is showing.",
+     "kind": "tab"
+    },
     {
      "screen": "overview-3",
      "rect": [
@@ -3235,7 +4913,8 @@ window.DATA = {
       575,
       140
      ],
-     "label": "Initial Appointment"
+     "text": "Here it is: Initial Appointment.",
+     "kind": "field"
     },
     {
      "screen": "overview-3",
@@ -3245,7 +4924,8 @@ window.DATA = {
       190,
       36
      ],
-     "label": "Medical Follow-up Note"
+     "text": "Here it is: Medical Follow-up Note.",
+     "kind": "field"
     }
    ]
   },
@@ -3264,7 +4944,29 @@ window.DATA = {
    "where": "The Care Coordination record",
    "how": "The case manager works on the Care record: Appointment Update for each result, then Next Step (Follow-up Visit, External Referral, Surgery Evaluation, Discharge). The tasks come by themselves (remind the patient, record the outcome, review visit notes, rebook).",
    "kind": "Done in another place",
-   "targets": [
+   "steps": [
+    {
+     "screen": "patients-list",
+     "rect": [
+      276,
+      289,
+      142,
+      26
+     ],
+     "text": "Open ICT Patients in the left menu and click the patient's name.",
+     "kind": "open"
+    },
+    {
+     "screen": "overview-1",
+     "rect": [
+      535,
+      93,
+      102,
+      38
+     ],
+     "text": "The patient page opens. Click the Overview tab if another tab is showing.",
+     "kind": "tab"
+    },
     {
      "screen": "overview-3",
      "rect": [
@@ -3273,7 +4975,8 @@ window.DATA = {
       611,
       85
      ],
-     "label": "Liens and Care: the Care Coordination record"
+     "text": "Here it is: Liens and Care: the Care Coordination record.",
+     "kind": "field"
     }
    ]
   },
@@ -3294,7 +4997,29 @@ window.DATA = {
    "where": "The Care Coordination record: Next Step = Follow-up Visit",
    "how": "Pick Follow-up Visit; the task \"Book follow-up visit\" follows. Details go in a note on the Care record.",
    "kind": "Done in another place",
-   "targets": [
+   "steps": [
+    {
+     "screen": "patients-list",
+     "rect": [
+      276,
+      289,
+      142,
+      26
+     ],
+     "text": "Open ICT Patients in the left menu and click the patient's name.",
+     "kind": "open"
+    },
+    {
+     "screen": "overview-1",
+     "rect": [
+      535,
+      93,
+      102,
+      38
+     ],
+     "text": "The patient page opens. Click the Overview tab if another tab is showing.",
+     "kind": "tab"
+    },
     {
      "screen": "overview-3",
      "rect": [
@@ -3303,7 +5028,8 @@ window.DATA = {
       611,
       85
      ],
-     "label": "Liens and Care: the Care Coordination record"
+     "text": "Here it is: Liens and Care: the Care Coordination record.",
+     "kind": "field"
     }
    ]
   },
@@ -3322,7 +5048,29 @@ window.DATA = {
    "where": "Overview tab: Medical Follow-up Destination",
    "how": "Pick HPH (after Complete Engagement the task \"Ask the hospital team to book the HPH appointment\" follows). For Northwestern pick Other Network Provider and name it (confirm with supervisor).",
    "kind": "One pick from a list",
-   "targets": [
+   "steps": [
+    {
+     "screen": "patients-list",
+     "rect": [
+      276,
+      289,
+      142,
+      26
+     ],
+     "text": "Open ICT Patients in the left menu and click the patient's name.",
+     "kind": "open"
+    },
+    {
+     "screen": "overview-1",
+     "rect": [
+      535,
+      93,
+      102,
+      38
+     ],
+     "text": "The patient page opens. Click the Overview tab if another tab is showing.",
+     "kind": "tab"
+    },
     {
      "screen": "overview-3",
      "rect": [
@@ -3331,7 +5079,8 @@ window.DATA = {
       280,
       36
      ],
-     "label": "Medical Follow-up Destination"
+     "text": "Here it is: Medical Follow-up Destination.",
+     "kind": "field"
     }
    ]
   },
@@ -3350,7 +5099,29 @@ window.DATA = {
    "where": "Task \"Confirm handoff receipt\"; Initial Appointment card",
    "how": "Mark the task done when they confirm, and enter the appointment once it is booked.",
    "kind": "Done in another place",
-   "targets": [
+   "steps": [
+    {
+     "screen": "patients-list",
+     "rect": [
+      276,
+      289,
+      142,
+      26
+     ],
+     "text": "Open ICT Patients in the left menu and click the patient's name.",
+     "kind": "open"
+    },
+    {
+     "screen": "overview-1",
+     "rect": [
+      535,
+      93,
+      102,
+      38
+     ],
+     "text": "The patient page opens. Click the Overview tab if another tab is showing.",
+     "kind": "tab"
+    },
     {
      "screen": "overview-3",
      "rect": [
@@ -3359,7 +5130,8 @@ window.DATA = {
       575,
       140
      ],
-     "label": "Initial Appointment"
+     "text": "Here it is: Initial Appointment.",
+     "kind": "field"
     }
    ]
   },
@@ -3378,7 +5150,18 @@ window.DATA = {
    "where": "Left card: Nimbly Patient Link",
    "how": "Paste the link to the patient's Nimbly file. A filled link is the tick, and it opens the file.",
    "kind": "Same fact, one field",
-   "targets": [
+   "steps": [
+    {
+     "screen": "patients-list",
+     "rect": [
+      276,
+      289,
+      142,
+      26
+     ],
+     "text": "Open ICT Patients in the left menu and click the patient's name.",
+     "kind": "open"
+    },
     {
      "screen": "overview-3",
      "rect": [
@@ -3387,7 +5170,8 @@ window.DATA = {
       260,
       55
      ],
-     "label": "Nimbly Patient Link"
+     "text": "Here it is: Nimbly Patient Link. It is on the left card, whichever tab is open.",
+     "kind": "field"
     }
    ]
   },
@@ -3406,7 +5190,7 @@ window.DATA = {
    "where": "No field",
    "how": "Not needed: every hospital's patients are in the one ICT Patients list (All ICT Patients). (confirm with supervisor)",
    "kind": "Not in HubSpot",
-   "targets": []
+   "steps": []
   },
   {
    "id": 74,
@@ -3423,7 +5207,29 @@ window.DATA = {
    "where": "Hospital EMR tab, Hospital EMR Tracker: H1, BI Added Date",
    "how": "Enter the date it was added. The date is the tick.",
    "kind": "Same fact, one field",
-   "targets": [
+   "steps": [
+    {
+     "screen": "patients-list",
+     "rect": [
+      276,
+      289,
+      142,
+      26
+     ],
+     "text": "Open ICT Patients in the left menu and click the patient's name.",
+     "kind": "open"
+    },
+    {
+     "screen": "overview-1",
+     "rect": [
+      637,
+      93,
+      120,
+      38
+     ],
+     "text": "On the patient page, click the Hospital EMR tab.",
+     "kind": "tab"
+    },
     {
      "screen": "tracker-1",
      "rect": [
@@ -3432,7 +5238,8 @@ window.DATA = {
       48,
       20
      ],
-     "label": "H1 BI"
+     "text": "Here it is: H1 BI.",
+     "kind": "field"
     },
     {
      "screen": "overview-3",
@@ -3442,7 +5249,8 @@ window.DATA = {
       200,
       36
      ],
-     "label": "BI Added Date"
+     "text": "Here it is: BI Added Date. It is on the left card, whichever tab is open.",
+     "kind": "field"
     }
    ]
   },
@@ -3459,7 +5267,29 @@ window.DATA = {
    "where": "Hospital EMR Tracker: H2 Coverage Added to Hospital EMR",
    "how": "Enter TPL/WC Insurance Added to Hospital Date (and the attorney and own auto dates when those are verified). The task \"Add billing indicator and insurance in hospital EMR\" comes 2 minutes after the insurance is verified. (confirm with supervisor)",
    "kind": "Same fact, one field",
-   "targets": [
+   "steps": [
+    {
+     "screen": "patients-list",
+     "rect": [
+      276,
+      289,
+      142,
+      26
+     ],
+     "text": "Open ICT Patients in the left menu and click the patient's name.",
+     "kind": "open"
+    },
+    {
+     "screen": "overview-1",
+     "rect": [
+      637,
+      93,
+      120,
+      38
+     ],
+     "text": "On the patient page, click the Hospital EMR tab.",
+     "kind": "tab"
+    },
     {
      "screen": "tracker-1",
      "rect": [
@@ -3468,7 +5298,8 @@ window.DATA = {
       297,
       274
      ],
-     "label": "H2 Coverage Added to Hospital EMR"
+     "text": "Here it is: H2 Coverage Added to Hospital EMR.",
+     "kind": "field"
     }
    ]
   },
@@ -3485,7 +5316,29 @@ window.DATA = {
    "where": "Insurance and Verification tab: No TPL / No Case Confirmation",
    "how": "Fill the date, who confirmed it and the reason (see NO TPL/NO CASE in part 4).",
    "kind": "An entry in a card",
-   "targets": [
+   "steps": [
+    {
+     "screen": "patients-list",
+     "rect": [
+      276,
+      289,
+      142,
+      26
+     ],
+     "text": "Open ICT Patients in the left menu and click the patient's name.",
+     "kind": "open"
+    },
+    {
+     "screen": "tabs-more",
+     "rect": [
+      945,
+      152,
+      160,
+      24
+     ],
+     "text": "On the patient page, click More, then Insurance and Verification. (On a wide screen the tab is in the row itself.)",
+     "kind": "tab"
+    },
     {
      "screen": "insurance-notpl",
      "rect": [
@@ -3494,7 +5347,8 @@ window.DATA = {
       611,
       198
      ],
-     "label": "No TPL / No Case Confirmation"
+     "text": "Here it is: No TPL / No Case Confirmation.",
+     "kind": "field"
     }
    ]
   },
@@ -3511,7 +5365,29 @@ window.DATA = {
    "where": "Hospital EMR Tracker: No TPL Discovered: Close Account",
    "how": "On the deadline (15 days for Humboldt Park, 30 for other hospitals, counted from the DOS) the hospital team gets \"Hospital processing period ended\". Click the red button, or record Reason Kept Open Past Deadline. The weekly reviews stop.",
    "kind": "A stage or status",
-   "targets": [
+   "steps": [
+    {
+     "screen": "patients-list",
+     "rect": [
+      276,
+      289,
+      142,
+      26
+     ],
+     "text": "Open ICT Patients in the left menu and click the patient's name.",
+     "kind": "open"
+    },
+    {
+     "screen": "overview-1",
+     "rect": [
+      637,
+      93,
+      120,
+      38
+     ],
+     "text": "On the patient page, click the Hospital EMR tab.",
+     "kind": "tab"
+    },
     {
      "screen": "tracker-3",
      "rect": [
@@ -3520,7 +5396,8 @@ window.DATA = {
       611,
       248
      ],
-     "label": "No TPL Discovered: Close the Account"
+     "text": "Here it is: No TPL Discovered: Close the Account.",
+     "kind": "field"
     },
     {
      "screen": "tracker-1",
@@ -3530,7 +5407,8 @@ window.DATA = {
       170,
       20
      ],
-     "label": "The hospital deadline"
+     "text": "Here it is: The hospital deadline.",
+     "kind": "field"
     }
    ]
   },
@@ -3547,7 +5425,29 @@ window.DATA = {
    "where": "Hospital EMR Tracker: Hospital Account Closed Date, BI Removed Date",
    "how": "Set by the Close Account button with your name and the date. Then take our billing indicator off in the hospital EMR and enter BI Removed Date.",
    "kind": "Filled by the system",
-   "targets": [
+   "steps": [
+    {
+     "screen": "patients-list",
+     "rect": [
+      276,
+      289,
+      142,
+      26
+     ],
+     "text": "Open ICT Patients in the left menu and click the patient's name.",
+     "kind": "open"
+    },
+    {
+     "screen": "overview-1",
+     "rect": [
+      637,
+      93,
+      120,
+      38
+     ],
+     "text": "On the patient page, click the Hospital EMR tab.",
+     "kind": "tab"
+    },
     {
      "screen": "tracker-3",
      "rect": [
@@ -3556,7 +5456,8 @@ window.DATA = {
       611,
       248
      ],
-     "label": "No TPL Discovered: Close the Account"
+     "text": "Here it is: No TPL Discovered: Close the Account.",
+     "kind": "field"
     }
    ]
   },
@@ -3574,7 +5475,29 @@ window.DATA = {
    "where": "Hospital EMR Tracker: H5, MR&B Requested Date and MR&B Sent Date. On a lien: Lien Track, + Records Request",
    "how": "Enter the day it was asked for and the day it went out. The itemized bill and the medical notes are uploaded on the bill (Super Bill, Medical Notes) on the Lien and Collection tab.",
    "kind": "Same fact, one field",
-   "targets": [
+   "steps": [
+    {
+     "screen": "patients-list",
+     "rect": [
+      276,
+      289,
+      142,
+      26
+     ],
+     "text": "Open ICT Patients in the left menu and click the patient's name.",
+     "kind": "open"
+    },
+    {
+     "screen": "overview-1",
+     "rect": [
+      637,
+      93,
+      120,
+      38
+     ],
+     "text": "On the patient page, click the Hospital EMR tab.",
+     "kind": "tab"
+    },
     {
      "screen": "tracker-2",
      "rect": [
@@ -3583,7 +5506,8 @@ window.DATA = {
       297,
       190
      ],
-     "label": "H5 Medical Records and Bill (MR&B)"
+     "text": "Here it is: H5 Medical Records and Bill (MR&B).",
+     "kind": "field"
     }
    ]
   },
@@ -3598,7 +5522,29 @@ window.DATA = {
    "where": "Lien and Collection tab",
    "how": "+ Add Hospital Bill, + Create Lien (pick who it goes to and attach the bills), then Lien Sent, Lien Delivery, + Follow-up and + Payment on the bill. Each lien shows its stage and what comes next.",
    "kind": "An entry in a card",
-   "targets": [
+   "steps": [
+    {
+     "screen": "patients-list",
+     "rect": [
+      276,
+      289,
+      142,
+      26
+     ],
+     "text": "Open ICT Patients in the left menu and click the patient's name.",
+     "kind": "open"
+    },
+    {
+     "screen": "overview-1",
+     "rect": [
+      637,
+      93,
+      120,
+      38
+     ],
+     "text": "On the patient page, click the Hospital EMR tab.",
+     "kind": "tab"
+    },
     {
      "screen": "tracker-2",
      "rect": [
@@ -3607,7 +5553,8 @@ window.DATA = {
       297,
       190
      ],
-     "label": "H4 Lien: made on the Lien and Collection tab"
+     "text": "Here it is: H4 Lien: made on the Lien and Collection tab.",
+     "kind": "field"
     }
    ]
   },
@@ -3626,7 +5573,7 @@ window.DATA = {
    "where": "No field",
    "how": "Not carried over.",
    "kind": "Not in HubSpot",
-   "targets": []
+   "steps": []
   },
   {
    "id": 82,
@@ -3641,7 +5588,7 @@ window.DATA = {
    "where": "Handbook, chapter 16 Abbreviations and chapter 17 Words we use",
    "how": "Look the word up in the handbook.",
    "kind": "Done in another place",
-   "targets": []
+   "steps": []
   },
   {
    "id": 83,
@@ -3658,199 +5605,101 @@ window.DATA = {
    "where": "Stages, tags and boards",
    "how": "See the Colors table.",
    "kind": "Done in another place",
-   "targets": []
+   "steps": []
   }
  ],
  "screens": [
   {
    "id": "new-patient",
-   "title": "New ICT Patient page",
-   "group": "Create the patient"
+   "title": "New ICT Patient page"
   },
   {
    "id": "overview-1",
-   "title": "Patient page: Overview tab",
-   "group": "Open the patient"
+   "title": "Patient page: Overview tab"
   },
   {
    "id": "overview-3",
-   "title": "Overview tab: Medical Follow-up, and the left card",
-   "group": "Open the patient"
+   "title": "Overview tab: Medical Follow-up, and the left card"
   },
   {
    "id": "demographics-1",
-   "title": "Patient Demographics tab: Patient",
-   "group": "Patient Demographics"
+   "title": "Patient Demographics tab: Patient"
   },
   {
    "id": "demographics-2",
-   "title": "Patient Demographics tab: Contact and Address",
-   "group": "Patient Demographics"
+   "title": "Patient Demographics tab: Contact and Address"
   },
   {
    "id": "demographics-3",
-   "title": "Patient Demographics tab: Emergency Contacts, Parent / Guardian",
-   "group": "Patient Demographics"
+   "title": "Patient Demographics tab: Emergency Contacts, Parent / Guardian"
   },
   {
    "id": "ed-visit",
-   "title": "Hospital EMR tab: ED Visit",
-   "group": "Hospital EMR"
+   "title": "Hospital EMR tab: ED Visit"
   },
   {
    "id": "ed-notes",
-   "title": "Hospital EMR tab: ED Visit Notes",
-   "group": "Hospital EMR"
+   "title": "Hospital EMR tab: ED Visit Notes"
   },
   {
    "id": "tracker-1",
-   "title": "Hospital EMR tab: Hospital EMR Tracker",
-   "group": "Hospital EMR"
+   "title": "Hospital EMR tab: Hospital EMR Tracker"
   },
   {
    "id": "tracker-2",
-   "title": "Hospital EMR Tracker: lien, records, review, settlement",
-   "group": "Hospital EMR"
+   "title": "Hospital EMR Tracker: lien, records, review, settlement"
   },
   {
    "id": "tracker-3",
-   "title": "Hospital EMR Tracker: closing the account",
-   "group": "Hospital EMR"
+   "title": "Hospital EMR Tracker: closing the account"
   },
   {
    "id": "log-call",
-   "title": "Log a Call",
-   "group": "Calls"
+   "title": "Log a Call"
   },
   {
    "id": "insurance-top",
-   "title": "Insurance and Verification tab",
-   "group": "Insurance"
+   "title": "Insurance and Verification tab"
   },
   {
    "id": "insurance-form",
-   "title": "Insurance card: New Insurance",
-   "group": "Insurance"
+   "title": "Insurance card: New Insurance"
   },
   {
    "id": "insurance-policy",
-   "title": "Insurance card: a saved policy",
-   "group": "Insurance"
+   "title": "Insurance card: a saved policy"
   },
   {
    "id": "insurance-verify",
-   "title": "Insurance card: Verify a policy",
-   "group": "Insurance"
+   "title": "Insurance card: Verify a policy"
   },
   {
    "id": "insurance-notpl",
-   "title": "Insurance tab: Health Insurance, No TPL / No Case Confirmation",
-   "group": "Insurance"
+   "title": "Insurance tab: Health Insurance, No TPL / No Case Confirmation"
   },
   {
    "id": "attorney-top",
-   "title": "Patient Attorney tab",
-   "group": "Attorney"
+   "title": "Patient Attorney tab"
   },
   {
    "id": "attorney-form",
-   "title": "Attorneys card: New Attorney",
-   "group": "Attorney"
+   "title": "Attorneys card: New Attorney"
   },
   {
    "id": "attorney-verify",
-   "title": "Attorneys card: Add New Verification",
-   "group": "Attorney"
-  }
- ],
- "colors": [
-  {
-   "color": "Pink",
-   "meant": "Needs an appointment",
-   "now": "Medical Follow-up = Requests Coordination. The Care record is in Referral Received or Contacting Patient and has the task \"Book first visit\".",
-   "where": "Care Coordinations list; Overview tab, Medical Follow-up"
+   "title": "Attorneys card: Add New Verification"
   },
   {
-   "color": "Yellow",
-   "meant": "Appointment scheduled",
-   "now": "Initial Appointment saved: the Care stage is Appointment Scheduled.",
-   "where": "Care Coordinations list; Overview tab, Initial Appointment"
+   "id": "patients-list",
+   "title": "ICT Patients list"
   },
   {
-   "color": "Red",
-   "meant": "Do not call, no case",
-   "now": "Stage No Case (with a No Case Reason) or No Response (Patient Refused). The patient leaves the boards.",
-   "where": "ICT Patients, stage column"
+   "id": "tabs-more",
+   "title": "Patient page: the More tabs"
   },
   {
-   "color": "Green",
-   "meant": "Has a case / agreed to speak to an attorney",
-   "now": "Case Type is PI, WC or PI and WC; Attorney Status = Wants Referral or Referred to Attorney.",
-   "where": "Verification Board; Patient Attorney tab"
-  },
-  {
-   "color": "Orange",
-   "meant": "Undecided / a named person is to call",
-   "now": "Case Type = Possible TPL or Unknown, or Attorney Status = Undecided. \"Someone is to call\" is the Owner plus a follow-up task.",
-   "where": "Call Team Board; What's Left"
-  },
-  {
-   "color": "Blue",
-   "meant": "Agreement sent, not returned",
-   "now": "Referred to Attorney Date is filled and Attorney Signed Date is empty.",
-   "where": "Patient Attorney tab; list column Attorney Signed Date"
-  },
-  {
-   "color": "Grey",
-   "meant": "Left a message or text / callback",
-   "now": "Stage Attempted with the last Call outcome; a callback is a follow-up task, shown as Callback Time.",
-   "where": "Call Team Board; Callback Queue"
-  },
-  {
-   "color": "White",
-   "meant": "Sent to another attorney",
-   "now": "Attorney Status = Own Attorney with the attorney on the Attorneys card.",
-   "where": "Patient Attorney tab"
-  },
-  {
-   "color": "Purple",
-   "meant": "Follow up later",
-   "now": "A follow-up task from Log a Call (Callback Time). For a patient seeing their own doctor: Medical Follow-up = Own Doctor - Call Back Later with a Follow-up Call Date.",
-   "where": "Callback Queue; your task list"
-  }
- ],
- "differences": [
-  {
-   "before": "One row per patient, 70 to 80 columns",
-   "now": "One page per patient with tabs: Overview, Hospital EMR, Patient Demographics, Activities, Insurance and Verification, Patient Attorney, Lien and Collection."
-  },
-  {
-   "before": "One sheet per hospital",
-   "now": "One ICT Patients list for every hospital; Hospital Facility says which one."
-  },
-  {
-   "before": "A tick box for each status",
-   "now": "One pick from a list (Case Type, Attorney Status, Medical Follow-up) or a date: a filled date is the tick."
-  },
-  {
-   "before": "One growing cell for every call, with typed dates and initials",
-   "now": "Each call is logged on its own with a Call outcome; your name, the time and the count are added by the system."
-  },
-  {
-   "before": "Insurance and attorney details in one long cell",
-   "now": "One entry per policy and per attorney, each with its own boxes, verification and files."
-  },
-  {
-   "before": "Row colors",
-   "now": "Stages, tags and boards (see Colors)."
-  },
-  {
-   "before": "Typing who did it and when",
-   "now": "Recorded by the system: Created By, Owner, Last Call By, Verified By, and the history of every field."
-  },
-  {
-   "before": "Remembering what to do next",
-   "now": "Next Step on the Overview, What's Left under Reminders, and tasks that come by themselves."
+   "id": "activities-menu",
+   "title": "Patient page: Add activities"
   }
  ]
 };

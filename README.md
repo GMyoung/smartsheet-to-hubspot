@@ -2,8 +2,8 @@
 
 A picture dictionary for staff moving from the two Smartsheet logs (Patient Intake (MAIN) and NM Patient Log) to HubSpot.
 
-- Click the column you used to fill, then **Show me in HubSpot**: the place is circled on a screenshot, with what to do now.
-- **HubSpot pages** works the other way round: every box on a screenshot says which Smartsheet column it used to be.
+- The page looks like the old sheet. Click the column you used to fill; the bar at the bottom says what it was and has the button **Walk me through it in HubSpot**.
+- The walkthrough starts on the ICT Patients list, goes into the patient, to the right tab and to the field, one step at a time, with the place circled on a screenshot.
 
 Every patient, phone number and address here is made up; the screenshots are from the test sandbox.
 

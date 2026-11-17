@@ -36,6 +36,9 @@ SCREENS = [
     ('attorney-top', 'Patient Attorney tab', 'Attorney'),
     ('attorney-form', 'Attorneys card: New Attorney', 'Attorney'),
     ('attorney-verify', 'Attorneys card: Add New Verification', 'Attorney'),
+    ('patients-list', 'ICT Patients list', 'Open the patient'),
+    ('tabs-more', 'Patient page: the More tabs', 'Open the patient'),
+    ('activities-menu', 'Patient page: Add activities', 'Calls'),
 ]
 
 CASE_TYPE = ('insurance-top', [573, 199, 270, 36], 'Case Type')
@@ -51,8 +54,9 @@ OUTCOME = ('log-call', [1008, 352, 75, 40], 'Call outcome')
 
 TARGETS = {
     'Date / Intake DATE': [('overview-3', [233, 380, 200, 36], 'ICT Intake Date'), ('ed-visit', [772, 607, 190, 36], 'ICT Intake Date')],
-    'LAST NAME (GUARDIAN)': [('new-patient', [532, 187, 170, 53], 'Last Name'), ('demographics-3', [555, 449, 611, 231], 'Parent / Guardian')],
-    'FIRST NAME': [('new-patient', [352, 187, 170, 53], 'First Name')],
+    'LAST NAME (GUARDIAN)': [('new-patient', [532, 187, 170, 53], 'Last Name'), ('demographics-1', [974, 304, 180, 36], 'Last Name'),
+                             ('demographics-3', [555, 449, 611, 231], 'Parent / Guardian (for a patient under 18)')],
+    'FIRST NAME': [('new-patient', [352, 187, 170, 53], 'First Name'), ('demographics-1', [571, 304, 190, 36], 'First Name')],
     'DOB': [('new-patient', [352, 328, 370, 53], 'Date of Birth'), ('demographics-1', [571, 417, 190, 36], 'Date of Birth')],
     'Language / LANGUAGE': [('new-patient', [352, 398, 97, 53], 'Patient Language'), ('demographics-1', [974, 417, 180, 36], 'Patient Language'),
                             ('demographics-1', [571, 474, 190, 36], 'Interpreter Needed')],
@@ -132,6 +136,60 @@ TARGETS = {
 }
 
 
+# ---- The walkthrough (user, 2026-11-16: "walk through 是从点进那个病人开始"): the ICT Patients list, the patient, the tab,
+# the click that opens a form, then the field. A field typed when the patient is created comes last, on the New ICT Patient page.
+LIST_STEP = ('patients-list', [276, 289, 142, 26], "Open ICT Patients in the left menu and click the patient's name.")
+WIDE = ' (On a wide screen the tab is in the row itself.)'
+TAB_STEP = {
+    'Overview': ('overview-1', [535, 93, 102, 38], 'The patient page opens. Click the Overview tab if another tab is showing.'),
+    'Hospital EMR': ('overview-1', [637, 93, 120, 38], 'On the patient page, click the Hospital EMR tab.'),
+    'Patient Demographics': ('overview-1', [757, 93, 168, 38], 'On the patient page, click the Patient Demographics tab.'),
+    'Insurance and Verification': ('tabs-more', [945, 152, 160, 24], 'On the patient page, click More, then Insurance and Verification.' + WIDE),
+    'Patient Attorney': ('tabs-more', [945, 185, 160, 24], 'On the patient page, click More, then Patient Attorney.' + WIDE),
+    'Log a Call': ('activities-menu', [1298, 294, 190, 24],
+                   'On the patient page, click Add activities, then Log a call. (The Call button under the patient name does the same.)'),
+}
+TAB_OF = {'overview': 'Overview', 'demographics': 'Patient Demographics', 'ed': 'Hospital EMR', 'tracker': 'Hospital EMR',
+          'insurance': 'Insurance and Verification', 'attorney': 'Patient Attorney', 'log': 'Log a Call'}
+BEFORE = {
+    'insurance-form': ('insurance-top', [634, 494, 116, 29], 'Click + Add Insurance and pick the Coverage Type.'),
+    'insurance-verify': ('insurance-notpl', [573, 180, 61, 27], 'On the policy, click Verify.'),
+    'attorney-form': ('attorney-top', [634, 239, 111, 27], 'Click + Add Attorney.'),
+}
+
+
+def walk(targets):
+    page = [t for t in targets if t[0] != 'new-patient']
+    steps, tab = [], None
+    if page:
+        steps.append(LIST_STEP + ('open',))
+    for screen, rect, label in page:
+        left = rect[0] < 520
+        name = TAB_OF[screen.split('-')[0]]
+        if not left and name != tab:
+            steps.append(TAB_STEP[name] + ('tab',))
+            tab = name
+        if screen in BEFORE and BEFORE[screen] + ('click',) not in steps:
+            steps.append(BEFORE[screen] + ('click',))
+        steps.append((screen, rect, f'Here it is: {label}.' + (' It is on the left card, whichever tab is open.' if left else ''), 'field'))
+    for screen, rect, label in targets:
+        if screen == 'new-patient':
+            steps.append((screen, rect, (f'For a new patient you type it first, on the New ICT Patient page: {label}.' if page
+                                         else f'On the New ICT Patient page: {label}.'), 'create'))
+    return [{'screen': a, 'rect': b, 'text': c, 'kind': k} for a, b, c, k in steps]
+
+
+# Row colours as staff used them (the sheet's Color Keys column); the first rule that fits.
+ROW_RULES = [('red', ['NO CALL/Pt REFUSED', 'NO TPL/NO CASE']), ('blue', ["Agreement sent/ PT's not sent back yet"]),
+             ('green', ['AgreeD to speak to IN network Atty', 'Signed with Atty']), ('white', ['Patient has own Atty']),
+             ('grey', ['LTM/LVM', 'No Answer/ No contact']), ('yellow', ['Appt Scheduled', 'Apoointment Scheduled']), ('pink', ['Needs Appt', 'NEEDS APPOINTMENT'])]
+
+
+def row_colors(sheet):
+    at = {h: i for i, h in enumerate(sheet['header'])}
+    return [next((color for color, heads in ROW_RULES if any(h in at and row[at[h]] is True for h in heads)), 'white') for row in sheet['rows']]
+
+
 def shift_dates(text, days=160):
     """The first fake patient's 2026 dates moved to the month of the HubSpot screenshots (the birth date stays)."""
     def moved(m, sep, order):
@@ -165,6 +223,7 @@ def main():
     sheets['hph']['hospital'], sheets['nm']['hospital'] = 'Humboldt Park', 'Northwestern'
     for s in sheets.values():
         s['letters'] = letters(len(s['header']))
+        s['rowColors'] = row_colors(s)
     columns, names = [], set()
     for group, rows in d.GROUPS:
         for name, hph, nm, was, where, how, kind in rows:
@@ -172,18 +231,21 @@ def main():
             columns.append({'id': len(columns), 'group': group, 'name': name.replace('(new) ', ''), 'isNew': name.startswith('(new)'),
                             'hph': [x.strip() for x in hph.split(',') if x.strip()], 'nm': [x.strip() for x in nm.split(',') if x.strip()],
                             'was': was, 'where': where, 'how': how, 'kind': kind,
-                            'targets': [{'screen': s, 'rect': r, 'label': label} for s, r, label in TARGETS.get(name, [])]})
+                            'steps': walk(TARGETS.get(name, []))})
     assert not set(TARGETS) - names, set(TARGETS) - names
     screens = {s for s, _, _ in SCREENS}
-    assert all(t['screen'] in screens for c in columns for t in c['targets'])
+    assert all(t['screen'] in screens for c in columns for t in c['steps'])
     for s, _, _ in SCREENS:
         assert os.path.exists(os.path.join(HERE, 'img', s + '.jpg')), s
-    data = {'sheets': sheets, 'columns': columns, 'screens': [{'id': s, 'title': t, 'group': g} for s, t, g in SCREENS],
-            'colors': [dict(zip(('color', 'meant', 'now', 'where'), row)) for row in d.COLORS],
-            'differences': [dict(zip(('before', 'now'), row)) for row in d.DIFFERENCES]}
+    data = {'sheets': sheets, 'columns': columns, 'screens': [{'id': s, 'title': t} for s, t, g in SCREENS]}
     with open(os.path.join(HERE, 'data.js'), 'w', encoding='utf-8', newline='\n') as f:
         f.write('window.DATA = ' + json.dumps(data, ensure_ascii=False, indent=1) + ';\n')
-    print(len(columns), 'dictionary rows;', sum(1 for c in columns if c['targets']), 'with a screenshot;', len(SCREENS), 'screenshots')
+    print(len(columns), 'dictionary rows;', sum(1 for c in columns if c['steps']), 'with a walkthrough;', sum(len(c['steps']) for c in columns), 'steps;',
+          len(SCREENS), 'screenshots')
+    for name in ('MRN', 'Insurance / Responsible Payer', 'LTM/LVM', 'Added to Nimbly', 'Came Back to ER'):
+        c = next(c for c in columns if c['name'] == name)
+        print(' ', name, '->', ' | '.join(f"{s['kind']}:{s['screen']}" for s in c['steps']))
+    print('row colours:', sheets['hph']['rowColors'], sheets['nm']['rowColors'])
     print('first fake patient:', [v for v in sheets['hph']['rows'][0][:20] if v != ''][:9])
 
 
