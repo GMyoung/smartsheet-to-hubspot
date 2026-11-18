@@ -2186,7 +2186,7 @@ window.DATA = {
    "nm": [],
    "was": "The provider's notes, copied in.",
    "where": "Hospital EMR tab, ED Visit card: ED Visit Notes",
-   "how": "Three notes, each on its own tab: Triage Notes (nurse at registration), Admission Notes (provider), Discharge Notes (discharge summary and instructions). Add Note or Edit Note on the right.",
+   "how": "Three notes, each on its own tab: Triage Notes (nurse at registration), HPI Notes (the doctor, History of Present Illness; was Admission Notes), Discharge Notes (discharge summary and instructions). Add Note or Edit Note on the right.",
    "kind": "Same fact, one field",
    "steps": [
     {
@@ -3723,7 +3723,7 @@ window.DATA = {
    ],
    "was": "One long cell: police report, insurer, claim number, policy number, billing address, adjuster, phone, email.",
    "where": "Insurance and Verification tab, Insurance card: + Add Insurance",
-   "how": "One entry per policy. Pick the type (Third-Party Liability, Workers' Compensation, First-Party Auto, MedPay, Health, Other) and fill its boxes: Insurance Company, Claim Number, Policy Number, Whose Policy, Other Driver Name, Adjuster Name, Phone, Fax, Email, Billing Address, Notes. A WC policy also has the employer name, address and phone. The police report itself is uploaded under Police / Crash Report at the top of the card; its number can go in the policy Notes.",
+   "how": "One entry per policy. Pick the type (Third-Party Liability, Workers' Compensation, First-Party Auto, MedPay, Health, Other) and fill its boxes: Insurance Company, Claim Number, Policy Number, Whose Policy, Insurance Holder Name, Adjuster Name, Phone, Fax, Email, Billing Address, Notes. A WC policy also has the employer name, address and phone. The policies are one list in the order they are billed (Payer Order): the top one is the Primary; Move Up and Move Down change the order. The police report itself is uploaded under Police / Crash Report at the top of the card; its number can go in the policy Notes.",
    "kind": "An entry in a card",
    "steps": [
     {
@@ -3907,7 +3907,7 @@ window.DATA = {
    ],
    "was": "Tick: the third-party insurance is confirmed.",
    "where": "Insurance card: Verify on the policy",
-   "how": "Call the carrier, then click Verify on that policy and pick the Verification Method and the Result. The policy shows a green Verified tag; who verified and when are recorded by the system. What the patient says is not a verification.",
+   "how": "Call the carrier, then click Verify on that policy and pick the Verification Method and the Result. The policy shows a green Verified tag; who verified and when are recorded by the system. What the patient says is not a verification. On boards the field TPL Confirmed says Yes with the payer named once a verified policy has its claim number (or the attorney is verified).",
    "kind": "An entry in a card",
    "steps": [
     {
