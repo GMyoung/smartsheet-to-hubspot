@@ -3184,7 +3184,7 @@ window.DATA = {
    ],
    "was": "Tick: nobody to bill, no case.",
    "where": "Overview tab, Case box: Case Type = No TPL / No Case; then Insurance and Verification tab: No TPL / No Case Confirmation at the bottom",
-   "how": "Pick the case type, then fill the confirmation: date, who confirmed it and the reason. The tabs then say so in red and the hospital team closes the account. If the patient simply does not qualify, close the stage as No Case with a No Case Reason.",
+   "how": "Pick the case type, then click Confirm No TPL / No Case (it shows right there in the Case box, and at the bottom of the Insurance tab), pick the reason and confirm; the date and your name are recorded. The tabs then say so in red and the hospital team closes the account. If the patient simply does not qualify, close the stage as No Case with a No Case Reason.",
    "kind": "One pick from a list",
    "steps": [
     {
@@ -5314,7 +5314,7 @@ window.DATA = {
    ],
    "was": "Tick: confirmed no third-party coverage.",
    "where": "Insurance and Verification tab: No TPL / No Case Confirmation",
-   "how": "Fill the date, who confirmed it and the reason (see NO TPL/NO CASE in part 4).",
+   "how": "Click Confirm No TPL / No Case, pick the reason and confirm; the date and your name are recorded (see NO TPL/NO CASE in part 4).",
    "kind": "An entry in a card",
    "steps": [
     {
