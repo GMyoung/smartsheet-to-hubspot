@@ -2979,7 +2979,7 @@ window.DATA = {
     "W"
    ],
    "was": "Tick: personal injury.",
-   "where": "Insurance and Verification tab: Case Type",
+   "where": "Overview tab, Case box: Case Type",
    "how": "Pick PI. One pick replaces the row of tick boxes; it decides which insurance the case needs.",
    "kind": "One pick from a list",
    "steps": [
@@ -3030,7 +3030,7 @@ window.DATA = {
     "V"
    ],
    "was": "Tick: workers' compensation.",
-   "where": "Insurance and Verification tab: Case Type",
+   "where": "Overview tab, Case box: Case Type",
    "how": "Pick WC, or PI and WC when both apply.",
    "kind": "One pick from a list",
    "steps": [
@@ -3081,7 +3081,7 @@ window.DATA = {
     "X"
    ],
    "was": "Tick: a third party may be liable.",
-   "where": "Insurance and Verification tab: Case Type",
+   "where": "Overview tab, Case box: Case Type",
    "how": "Pick Possible TPL while it is being checked.",
    "kind": "One pick from a list",
    "steps": [
@@ -3132,7 +3132,7 @@ window.DATA = {
     "Z"
    ],
    "was": "Tick: the patient caused the accident.",
-   "where": "Insurance and Verification tab: Case Type",
+   "where": "Overview tab, Case box: Case Type",
    "how": "Pick At-fault Driver. The case then needs the patient's own auto policy, and the Overview asks Filing Through Own Insurance?",
    "kind": "One pick from a list",
    "steps": [
@@ -3183,7 +3183,7 @@ window.DATA = {
     "Y"
    ],
    "was": "Tick: nobody to bill, no case.",
-   "where": "Insurance and Verification tab: Case Type = No TPL / No Case, and No TPL / No Case Confirmation at the bottom",
+   "where": "Overview tab, Case box: Case Type = No TPL / No Case; then Insurance and Verification tab: No TPL / No Case Confirmation at the bottom",
    "how": "Pick the case type, then fill the confirmation: date, who confirmed it and the reason. The tabs then say so in red and the hospital team closes the account. If the patient simply does not qualify, close the stage as No Case with a No Case Reason.",
    "kind": "One pick from a list",
    "steps": [
@@ -3245,7 +3245,7 @@ window.DATA = {
     "BS"
    ],
    "was": "Tick: not decided yet.",
-   "where": "Insurance and Verification tab: Case Type",
+   "where": "Overview tab, Case box: Case Type",
    "how": "Leave Case Type at Unknown (nothing known) or pick Possible TPL (something to check). What is still missing shows under What's Left.",
    "kind": "One pick from a list",
    "steps": [
