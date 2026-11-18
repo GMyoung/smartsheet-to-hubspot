@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Smartsheet to HubSpot</title>
-<meta name="description" content="Click a column of the old Smartsheet log and get walked through where it is in HubSpot now.">
+<meta name="description" content="Click a column of the old Smartsheet log and get walked through where it is in HubSpot now, or pick a task (How do I...) and get the steps.">
 <style>
   :root { --rail:#1f5fd6; --ink:#2b2b2b; --soft:#6b6f76; --line:#e1e3e6; --head:#f5f5f4; --rule:#4a5a85; --orange:#ff7a59; --navy:#0b2a4a; --sel:#d6e6ff; }
   * { box-sizing: border-box; }
@@ -55,6 +55,27 @@
   tr td.rn { background: #fff !important; }
   .grid .sel { background: var(--sel) !important; }
   .grid th.sel { box-shadow: inset 0 4px 0 #1f5fd6; }
+
+  /* ---- the mode switch (top of the page) and the task list ("How do I...") */
+  #modes { flex: none; display: flex; align-items: center; gap: 8px; padding: 8px 14px; background: #f2f5fb; border-bottom: 1px solid var(--line); flex-wrap: wrap; }
+  #modes .lbl { color: var(--soft); font-size: 12px; margin-right: 4px; }
+  #modes button { border: 1px solid #c9ced6; background: #fff; border-radius: 18px; padding: 7px 16px; font-size: 14px; font-weight: 700; color: #3b4452; }
+  #modes button:hover { background: #eef4ff; }
+  #modes button[aria-pressed="true"] { background: var(--rail); border-color: var(--rail); color: #fff; }
+  #tasks { display: none; flex: 1; min-height: 0; overflow: auto; background: #fff; }
+  body.taskmode #tasks { display: block; }
+  body.taskmode #menu, body.taskmode #tools, body.taskmode #gridwrap { display: none; }
+  #tasks .inner { max-width: 1060px; margin: 0 auto; padding: 26px 24px 40px; }
+  #tasks h1 { margin: 0 0 6px; font-size: 28px; color: #1f2937; }
+  #tasks .lead { margin: 0 0 22px; font-size: 16px; color: #454b54; max-width: 720px; }
+  #tasks .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 14px; }
+  #tasks .card { text-align: left; background: #fff; border: 1px solid var(--line); border-left: 5px solid var(--rail); border-radius: 10px; padding: 14px 16px 12px; color: var(--ink); display: block; width: 100%; }
+  #tasks .card:hover, #tasks .card:focus { background: var(--sel); outline: none; }
+  #tasks .card b { display: block; font-size: 17px; color: #1b3a6b; margin-bottom: 4px; }
+  #tasks .card span { display: block; font-size: 14px; color: #454b54; }
+  #tasks .card small { display: block; margin-top: 8px; color: var(--soft); font-size: 12px; }
+  #tasks .foot { margin-top: 26px; color: var(--soft); font-size: 14px; }
+  #tasks .foot a { color: var(--rail); font-weight: 700; cursor: pointer; text-decoration: underline; }
 
   /* ---- the bottom bar: always there, says what to do next */
   #bar { flex: none; background: var(--navy); color: #fff; padding: 12px 18px; display: flex; align-items: center; gap: 16px; min-height: 74px; box-shadow: 0 -4px 14px rgba(0,0,0,.18); }
@@ -114,6 +135,11 @@
   <div><svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 100 18 9 9 0 000-18zm1 4v5l4 2-1 2-5-3V7z"/></svg>Recents</div>
 </nav>
 <div id="app">
+  <div id="modes" role="group" aria-label="What do you want to do?">
+    <span class="lbl">What do you want to do?</span>
+    <button id="m-sheet" type="button" aria-pressed="true">Find an old Smartsheet column in HubSpot</button>
+    <button id="m-task" type="button" aria-pressed="false">How do I&hellip; (steps for a task)</button>
+  </div>
   <div id="menu">
     <span>File</span><span>Automation</span><span>Forms</span><span>Connections</span><span>Dynamic View</span>
     <div class="title"><svg viewBox="0 0 18 20"><path d="M2 1h11l4 4v14H2z" fill="#fff" stroke="#3b7dd8" stroke-width="1.6"/><path d="M12 13h5v6h-5z" fill="#3b7dd8"/></svg><b id="title"></b><span class="star">&#9733;</span>
@@ -127,9 +153,15 @@
     <i>&#9636;</i><i>&#128397;</i><span class="sep"></span><i>&#128279;</i><i>&#128444;</i><i>&#9109;</i><span class="sep"></span><span>&Sigma; &#9662;</span><span>$ &#9662;</span><span>%</span><span>,</span><span>.0</span><span>.00</span><span>&#128197; &#9662;</span>
   </div>
   <div id="gridwrap"></div>
+  <div id="tasks"><div class="inner">
+    <h1>How do I&hellip;</h1>
+    <p class="lead">Pick what you want to do. You get a few steps. Each step is one picture of HubSpot with the place circled, and one short sentence.</p>
+    <div class="cards" id="cards"></div>
+    <p class="foot">Looking for a column of the old Smartsheet? <a id="to-sheet" tabindex="0">Switch to the sheet</a>.</p>
+  </div></div>
   <div id="bar" aria-live="polite"></div>
 </div>
-<div id="finder"><input id="find" type="search" placeholder="Find a column, for example MRN" aria-label="Find a column"><div id="found"></div></div>
+<div id="finder"><input id="find" type="search" placeholder="Find a column or a task, for example MRN or verify" aria-label="Find a column or a task"><div id="found"></div></div>
 <div id="walk" role="dialog" aria-modal="true" aria-label="Walkthrough in HubSpot">
   <div id="wtop"><h2 id="wtitle"></h2><div id="dots"></div><button id="wzoom">Whole page</button><button id="wclose">Back to the sheet (Esc)</button></div>
   <div id="say"><div class="n" id="wn"></div><div><p class="k" id="wk"></p><p class="t" id="wt"></p><p class="h" id="wh"></p></div></div>
@@ -143,10 +175,14 @@
   var D = window.DATA, W = 1568;
   var $ = function (id) { return document.getElementById(id); };
   var esc = function (s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); };
-  var state = { sheet: 'hph', letter: '', row: 0 };
+  var state = { mode: 'sheet', sheet: 'hph', letter: '', row: 0 };
+  var TASKS = D.tasks || [], bySlug = {};
+  TASKS.forEach(function (t) { bySlug[t.slug] = t; });
   var byLetter = { hph: {}, nm: {} };
   D.columns.forEach(function (c) { ['hph', 'nm'].forEach(function (k) { c[k].forEach(function (l) { byLetter[k][l] = c; }); }); });
   var KIND = { open: 'Start in HubSpot', tab: 'Go to the tab', click: 'Open the form', field: 'Here it is', create: 'When you add a patient' };
+  // The steps of a task use their own words for the click, and a few more kinds.
+  var TKIND = { look: 'Look here', tab: 'Go to the tab', click: 'Click', pick: 'Pick', type: 'Fill in', save: 'Save', field: 'Here it is' };
 
   // ---- the sheet
   function isBox(sheet, i) {
@@ -195,6 +231,7 @@
   function current() { return state.letter ? byLetter[state.sheet][state.letter] : null; }
   function drawBar() {
     var c = current(), s = D.sheets[state.sheet];
+    if (state.mode === 'task') { $('bar').innerHTML = '<div class="hint"><span>&#9757;</span>Pick a task. Then I show you each step in HubSpot, with the place circled.</div>'; return; }
     if (!c) { $('bar').innerHTML = '<div class="hint"><span>&#9757;</span>Click any column in the sheet. Then I walk you through where it is in HubSpot.</div>'; return; }
     var i = s.letters.indexOf(state.letter), v = s.rows[state.row][i];
     var sample = v === true ? 'ticked' : v === '' ? 'empty' : String(v).replace(/\s+/g, ' ');
@@ -207,11 +244,22 @@
   };
 
   // ---- the walkthrough: ICT Patients list, the patient, the tab, the field
-  var V = { c: null, i: 0, zoom: true };
-  function openWalk(c) { V.c = c; V.i = 0; V.zoom = true; $('walk').className = 'on'; drawWalk(); $('wnext').focus(); }
+  var V = { c: null, i: 0, zoom: true, task: false };
+  function openWalk(c, isTask) {
+    V.c = c; V.i = 0; V.zoom = true; V.task = !!isTask; $('walk').className = 'on';
+    $('wclose').textContent = isTask ? 'Back to the tasks (Esc)' : 'Back to the sheet (Esc)';
+    drawWalk(); $('wnext').focus();
+  }
+  function openTask(slug, quiet) {
+    var t = bySlug[slug];
+    if (!t) return false;
+    if (!quiet) history.replaceState(null, '', '#task/' + slug);
+    openWalk(t, true);
+    return true;
+  }
   function drawWalk() {
     var c = V.c, n = c.steps.length, s = D.sheets[state.sheet], name = s.header[s.letters.indexOf(state.letter)] || c.name;
-    $('wtitle').innerHTML = 'Smartsheet column <b>' + esc(name) + '</b> in HubSpot';
+    $('wtitle').innerHTML = V.task ? 'How do I&hellip; <b>' + esc(c.title) + '</b>' : 'Smartsheet column <b>' + esc(name) + '</b> in HubSpot';
     if (!n) {
       $('dots').innerHTML = ''; $('say').style.display = 'none'; $('wstage').style.display = 'none'; $('wzoom').style.display = 'none';
       $('wtext').style.display = 'block'; $('wtext').innerHTML = '<p style="font-weight:700;font-size:20px;margin-top:0">' + esc(c.where) + '</p><p>' + esc(c.how) + '</p>';
@@ -220,17 +268,21 @@
     var st = c.steps[V.i], r = st.rect, stage = $('wstage'), last = V.i === n - 1;
     $('say').style.display = 'flex'; stage.style.display = 'block'; $('wtext').style.display = 'none'; $('wzoom').style.display = ''; $('wback').style.display = '';
     $('dots').innerHTML = c.steps.map(function (_, k) { return '<i class="' + (k === V.i ? 'on' : k < V.i ? 'done' : '') + '"></i>'; }).join('');
-    $('wn').textContent = V.i + 1; $('wk').textContent = KIND[st.kind]; $('wt').textContent = st.text;
-    $('wh').textContent = st.kind === 'field' || st.kind === 'create' ? c.how : ''; $('wh').style.display = $('wh').textContent ? '' : 'none';
+    $('wn').textContent = V.i + 1; $('wk').textContent = (V.task ? TKIND : KIND)[st.kind]; $('wt').textContent = st.text;
+    $('wh').textContent = V.task ? st.help : (st.kind === 'field' || st.kind === 'create' ? c.how : ''); $('wh').style.display = $('wh').textContent ? '' : 'none';
     $('wcount').textContent = 'Step ' + (V.i + 1) + ' of ' + n;
-    $('wback').disabled = V.i === 0; $('wnext').innerHTML = last ? 'Done: back to the sheet' : 'Next &rarr;';
+    $('wback').disabled = V.i === 0; $('wnext').innerHTML = last ? (V.task ? 'Done: back to the tasks' : 'Done: back to the sheet') : 'Next &rarr;';
     $('wzoom').textContent = V.zoom ? 'Whole page' : 'Zoom in';
     var fit = stage.clientWidth, z = V.zoom ? Math.max(fit, Math.min(W * 1.2, fit * 1.7)) : fit, k = z / W;
     $('wcanvas').style.width = z + 'px'; $('wimg').src = 'img/' + st.screen + '.jpg';
     $('ring').style.cssText = 'left:' + (r[0] * k - 7) + 'px;top:' + (r[1] * k - 7) + 'px;width:' + (r[2] * k + 14) + 'px;height:' + (r[3] * k + 14) + 'px';
     stage.scrollLeft = (r[0] + r[2] / 2) * k - stage.clientWidth / 2; stage.scrollTop = (r[1] + r[3] / 2) * k - stage.clientHeight / 2;
   }
-  function closeWalk() { $('walk').className = ''; }
+  function closeWalk() {
+    var was = $('walk').className === 'on';
+    $('walk').className = '';
+    if (was && V.task && state.mode === 'task') history.replaceState(null, '', '#task');
+  }
   function step(by) {
     var n = V.c.steps.length;
     if (by > 0 && V.i >= n - 1) { closeWalk(); return; }
@@ -244,23 +296,62 @@
   });
   window.addEventListener('resize', function () { if ($('walk').className === 'on') drawWalk(); });
 
-  // ---- find a column (the Search button in the left rail)
+  // ---- the second mode: How do I... (tasks)
+  function drawTasks() {
+    $('cards').innerHTML = TASKS.map(function (t) {
+      return '<button class="card" type="button" data-slug="' + esc(t.slug) + '"><b>' + esc(t.title) + '</b><span>' + esc(t.about) + '</span><small>' + t.steps.length + ' steps</small></button>';
+    }).join('');
+  }
+  $('cards').onclick = function (e) { var b = e.target.closest('[data-slug]'); if (b) openTask(b.dataset.slug); };
+  function setMode(mode, quiet) {
+    state.mode = mode;
+    document.body.className = mode === 'task' ? 'taskmode' : '';
+    $('m-sheet').setAttribute('aria-pressed', mode === 'sheet'); $('m-task').setAttribute('aria-pressed', mode === 'task');
+    if (mode === 'task') { drawTasks(); } else { drawGrid(); }
+    drawBar();
+    if (!quiet) history.replaceState(null, '', mode === 'task' ? '#task' : '#' + state.sheet + (state.letter ? '/' + state.letter : ''));
+    $('finder').className = '';
+  }
+  $('m-sheet').onclick = function () { closeWalk(); setMode('sheet'); };
+  $('m-task').onclick = function () { closeWalk(); setMode('task'); };
+  $('to-sheet').onclick = function () { setMode('sheet'); };
+
+  // ---- find a column or a task (the Search button in the left rail)
   $('searchbtn').onclick = function () { $('finder').className = $('finder').className ? '' : 'on'; $('find').value = ''; $('found').innerHTML = ''; $('find').focus(); };
   $('find').oninput = function () {
     var q = this.value.trim().toLowerCase(), out = [];
+    if (q) TASKS.forEach(function (t) {
+      if ((t.title + ' ' + t.about + ' ' + t.words).toLowerCase().indexOf(q) >= 0 && out.length < 6)
+        out.push('<button data-go="task/' + t.slug + '">' + esc(t.title) + ' <small>How do I&hellip;</small></button>');
+    });
     if (q) ['hph', 'nm'].forEach(function (k) { D.sheets[k].header.forEach(function (name, i) {
       if (name.toLowerCase().indexOf(q) >= 0 && out.length < 14) out.push('<button data-go="' + k + '/' + D.sheets[k].letters[i] + '">' + esc(name) + ' <small>' + esc(D.sheets[k].name) + '</small></button>');
     }); });
     $('found').innerHTML = out.join('') || (q ? '<button disabled>No column with that name</button>' : '');
   };
-  $('found').onclick = function (e) { var b = e.target.closest('[data-go]'); if (!b) return; var p = b.dataset.go.split('/'); $('finder').className = ''; state.sheet = p[0]; drawGrid(); pick(p[1], undefined, true); };
+  $('found').onclick = function (e) {
+    var b = e.target.closest('[data-go]'); if (!b) return;
+    var p = b.dataset.go.split('/'); $('finder').className = '';
+    if (p[0] === 'task') { setMode('task'); openTask(p[1]); return; }
+    setMode('sheet', true); state.sheet = p[0]; drawGrid(); pick(p[1], undefined, true);
+  };
   document.addEventListener('click', function (e) { if (!e.target.closest('#finder') && !e.target.closest('#searchbtn')) $('finder').className = ''; });
 
-  // ---- start (a link such as #hph/J opens that column)
-  var start = location.hash.slice(1).split('/');
-  if (start[0] === 'nm') state.sheet = 'nm';
-  drawGrid(); drawBar();
-  if (start[1] && byLetter[state.sheet][start[1]]) pick(start[1], undefined, true);
+  // ---- start (a link such as #hph/J opens that column, #task/verify-insurance opens that task, #task lists the tasks)
+  function route() {
+    var start = location.hash.slice(1).split('/');
+    $('walk').className = '';
+    if (start[0] === 'task') {
+      setMode('task', true);
+      if (start[1]) openTask(start[1], true);
+      return;
+    }
+    state.sheet = start[0] === 'nm' ? 'nm' : 'hph'; state.letter = '';
+    setMode('sheet', true);
+    if (start[1] && byLetter[state.sheet][start[1]]) pick(start[1], undefined, true);
+  }
+  window.addEventListener('hashchange', route);
+  route();
 })();
 </script>
 </body>

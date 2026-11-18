@@ -1167,9 +1167,9 @@ window.DATA = {
      "screen": "overview-3",
      "rect": [
       233,
-      380,
+      478,
       200,
-      36
+      40
      ],
      "text": "Here it is: ICT Intake Date. It is on the left card, whichever tab is open.",
      "kind": "field"
@@ -1189,9 +1189,9 @@ window.DATA = {
      "screen": "ed-visit",
      "rect": [
       772,
-      607,
+      448,
       190,
-      36
+      38
      ],
      "text": "Here it is: ICT Intake Date.",
      "kind": "field"
@@ -1733,12 +1733,12 @@ window.DATA = {
      "kind": "tab"
     },
     {
-     "screen": "ed-visit",
+     "screen": "ed-notes",
      "rect": [
       571,
-      277,
+      584,
       190,
-      36
+      38
      ],
      "text": "Here it is: MRN.",
      "kind": "field"
@@ -1795,12 +1795,12 @@ window.DATA = {
      "kind": "tab"
     },
     {
-     "screen": "ed-visit",
+     "screen": "ed-notes",
      "rect": [
       772,
-      277,
+      584,
       190,
-      36
+      38
      ],
      "text": "Here it is: Hospital Account Number.",
      "kind": "field"
@@ -1858,9 +1858,9 @@ window.DATA = {
      "screen": "ed-visit",
      "rect": [
       571,
-      467,
+      308,
       190,
-      36
+      38
      ],
      "text": "Here it is: Hospital Facility.",
      "kind": "field"
@@ -1934,10 +1934,10 @@ window.DATA = {
     {
      "screen": "overview-1",
      "rect": [
-      573,
-      465,
-      270,
-      36
+      881,
+      468,
+      200,
+      40
      ],
      "text": "Here it is: Owner.",
      "kind": "field"
@@ -1986,33 +1986,33 @@ window.DATA = {
      "screen": "ed-visit",
      "rect": [
       974,
-      467,
+      308,
       180,
-      36
+      38
      ],
      "text": "Here it is: Date of Injury.",
      "kind": "field"
     },
     {
-     "screen": "tabs-more",
+     "screen": "overview-1",
      "rect": [
-      945,
-      152,
-      160,
-      24
+      535,
+      93,
+      102,
+      38
      ],
-     "text": "On the patient page, click More, then Insurance and Verification. (On a wide screen the tab is in the row itself.)",
+     "text": "The patient page opens. Click the Overview tab if another tab is showing.",
      "kind": "tab"
     },
     {
-     "screen": "insurance-top",
+     "screen": "overview-1",
      "rect": [
-      573,
-      255,
+      572,
+      543,
       270,
-      36
+      44
      ],
-     "text": "Here it is: Date of Injury.",
+     "text": "Here it is: Date of Injury (Overview tab, Case box).",
      "kind": "field"
     }
    ]
@@ -2055,9 +2055,9 @@ window.DATA = {
      "screen": "ed-visit",
      "rect": [
       772,
-      467,
+      308,
       190,
-      36
+      38
      ],
      "text": "Here it is: Date of Service (DOS).",
      "kind": "field"
@@ -2115,9 +2115,9 @@ window.DATA = {
      "screen": "ed-visit",
      "rect": [
       571,
-      607,
+      448,
       190,
-      36
+      38
      ],
      "text": "Here it is: BIBA.",
      "kind": "field"
@@ -2166,9 +2166,9 @@ window.DATA = {
      "screen": "ed-visit",
      "rect": [
       571,
-      524,
+      362,
       590,
-      66
+      72
      ],
      "text": "Here it is: Incident Type, Injured Body Parts, Other Injury Notes.",
      "kind": "field"
@@ -2212,14 +2212,14 @@ window.DATA = {
      "kind": "tab"
     },
     {
-     "screen": "ed-notes",
+     "screen": "ed-notes-hpi",
      "rect": [
-      555,
-      435,
-      611,
-      245
+      571,
+      333,
+      575,
+      191
      ],
-     "text": "Here it is: ED Visit Notes.",
+     "text": "Here it is: HPI Notes: the doctor's notes, in ED Visit Notes.",
      "kind": "field"
     }
    ]
@@ -2265,10 +2265,10 @@ window.DATA = {
     {
      "screen": "ed-notes",
      "rect": [
-      555,
-      435,
-      611,
-      245
+      554,
+      252,
+      612,
+      253
      ],
      "text": "Here it is: What the hospital wrote: ED Visit Notes.",
      "kind": "field"
@@ -2277,9 +2277,9 @@ window.DATA = {
      "screen": "activities-menu",
      "rect": [
       1298,
-      294,
+      293,
       190,
-      24
+      26
      ],
      "text": "On the patient page, click Add activities, then Log a call. (The Call button under the patient name does the same.)",
      "kind": "tab"
@@ -2288,33 +2288,33 @@ window.DATA = {
      "screen": "log-call",
      "rect": [
       927,
-      430,
       492,
-      45
+      490,
+      55
      ],
      "text": "Here it is: What the patient told us: the notes of the call.",
      "kind": "field"
     },
     {
-     "screen": "tabs-more",
+     "screen": "overview-1",
      "rect": [
-      945,
-      152,
-      160,
-      24
+      535,
+      93,
+      102,
+      38
      ],
-     "text": "On the patient page, click More, then Insurance and Verification. (On a wide screen the tab is in the row itself.)",
+     "text": "The patient page opens. Click the Overview tab if another tab is showing.",
      "kind": "tab"
     },
     {
-     "screen": "insurance-top",
+     "screen": "overview-1",
      "rect": [
-      573,
-      199,
+      572,
+      488,
       270,
-      36
+      44
      ],
-     "text": "Here it is: Case Type.",
+     "text": "Here it is: Case Type (Overview tab, Case box).",
      "kind": "field"
     }
    ]
@@ -2359,9 +2359,9 @@ window.DATA = {
      "screen": "ed-visit",
      "rect": [
       974,
-      607,
+      448,
       180,
-      36
+      38
      ],
      "text": "Here it is: ER Bill Amount.",
      "kind": "field"
@@ -2397,9 +2397,9 @@ window.DATA = {
      "screen": "activities-menu",
      "rect": [
       1298,
-      294,
+      293,
       190,
-      24
+      26
      ],
      "text": "On the patient page, click Add activities, then Log a call. (The Call button under the patient name does the same.)",
      "kind": "tab"
@@ -2408,9 +2408,9 @@ window.DATA = {
      "screen": "log-call",
      "rect": [
       927,
-      580,
-      390,
-      22
+      621,
+      380,
+      26
      ],
      "text": "Here it is: A follow-up task: its time is the Callback Time.",
      "kind": "field"
@@ -2505,9 +2505,9 @@ window.DATA = {
     {
      "screen": "overview-1",
      "rect": [
-      555,
-      358,
-      611,
+      554,
+      361,
+      612,
       62
      ],
      "text": "Here it is: All Files.",
@@ -2517,9 +2517,9 @@ window.DATA = {
      "screen": "tabs-more",
      "rect": [
       945,
-      152,
+      150,
       160,
-      24
+      26
      ],
      "text": "On the patient page, click More, then Insurance and Verification. (On a wide screen the tab is in the row itself.)",
      "kind": "tab"
@@ -2527,10 +2527,10 @@ window.DATA = {
     {
      "screen": "insurance-top",
      "rect": [
-      573,
-      312,
+      572,
+      303,
       270,
-      110
+      112
      ],
      "text": "Here it is: Police / Crash Report, Case Files.",
      "kind": "field"
@@ -2603,10 +2603,10 @@ window.DATA = {
     {
      "screen": "overview-1",
      "rect": [
-      573,
-      465,
-      270,
-      36
+      881,
+      468,
+      200,
+      40
      ],
      "text": "Here it is: Owner.",
      "kind": "field"
@@ -2650,12 +2650,12 @@ window.DATA = {
      "kind": "tab"
     },
     {
-     "screen": "overview-1",
+     "screen": "overview-2",
      "rect": [
-      866,
-      443,
+      556,
+      206,
       298,
-      135
+      158
      ],
      "text": "Here it is: Last Contact: who called.",
      "kind": "field"
@@ -2701,12 +2701,12 @@ window.DATA = {
      "kind": "tab"
     },
     {
-     "screen": "overview-1",
+     "screen": "overview-2",
      "rect": [
-      866,
-      443,
+      556,
+      206,
       298,
-      135
+      158
      ],
      "text": "Here it is: Last Contact: when, and how many attempts.",
      "kind": "field"
@@ -2715,9 +2715,9 @@ window.DATA = {
      "screen": "activities-menu",
      "rect": [
       1298,
-      294,
+      293,
       190,
-      24
+      26
      ],
      "text": "On the patient page, click Add activities, then Log a call. (The Call button under the patient name does the same.)",
      "kind": "tab"
@@ -2725,10 +2725,10 @@ window.DATA = {
     {
      "screen": "log-call",
      "rect": [
-      1228,
-      352,
-      170,
-      55
+      927,
+      415,
+      172,
+      56
      ],
      "text": "Here it is: Activity date.",
      "kind": "field"
@@ -2766,9 +2766,9 @@ window.DATA = {
      "screen": "activities-menu",
      "rect": [
       1298,
-      294,
+      293,
       190,
-      24
+      26
      ],
      "text": "On the patient page, click Add activities, then Log a call. (The Call button under the patient name does the same.)",
      "kind": "tab"
@@ -2777,9 +2777,9 @@ window.DATA = {
      "screen": "log-call",
      "rect": [
       927,
-      430,
       492,
-      45
+      490,
+      55
      ],
      "text": "Here it is: The notes of the call.",
      "kind": "field"
@@ -2839,9 +2839,9 @@ window.DATA = {
      "screen": "activities-menu",
      "rect": [
       1298,
-      294,
+      293,
       190,
-      24
+      26
      ],
      "text": "On the patient page, click Add activities, then Log a call. (The Call button under the patient name does the same.)",
      "kind": "tab"
@@ -2850,9 +2850,9 @@ window.DATA = {
      "screen": "log-call",
      "rect": [
       1008,
-      352,
-      75,
-      40
+      358,
+      125,
+      48
      ],
      "text": "Here it is: Call outcome.",
      "kind": "field"
@@ -2890,9 +2890,9 @@ window.DATA = {
      "screen": "activities-menu",
      "rect": [
       1298,
-      294,
+      293,
       190,
-      24
+      26
      ],
      "text": "On the patient page, click Add activities, then Log a call. (The Call button under the patient name does the same.)",
      "kind": "tab"
@@ -2901,9 +2901,9 @@ window.DATA = {
      "screen": "log-call",
      "rect": [
       1008,
-      352,
-      75,
-      40
+      358,
+      125,
+      48
      ],
      "text": "Here it is: Call outcome.",
      "kind": "field"
@@ -2995,25 +2995,25 @@ window.DATA = {
      "kind": "open"
     },
     {
-     "screen": "tabs-more",
+     "screen": "overview-1",
      "rect": [
-      945,
-      152,
-      160,
-      24
+      535,
+      93,
+      102,
+      38
      ],
-     "text": "On the patient page, click More, then Insurance and Verification. (On a wide screen the tab is in the row itself.)",
+     "text": "The patient page opens. Click the Overview tab if another tab is showing.",
      "kind": "tab"
     },
     {
-     "screen": "insurance-top",
+     "screen": "overview-1",
      "rect": [
-      573,
-      199,
+      572,
+      488,
       270,
-      36
+      44
      ],
-     "text": "Here it is: Case Type.",
+     "text": "Here it is: Case Type (Overview tab, Case box).",
      "kind": "field"
     }
    ]
@@ -3046,25 +3046,25 @@ window.DATA = {
      "kind": "open"
     },
     {
-     "screen": "tabs-more",
+     "screen": "overview-1",
      "rect": [
-      945,
-      152,
-      160,
-      24
+      535,
+      93,
+      102,
+      38
      ],
-     "text": "On the patient page, click More, then Insurance and Verification. (On a wide screen the tab is in the row itself.)",
+     "text": "The patient page opens. Click the Overview tab if another tab is showing.",
      "kind": "tab"
     },
     {
-     "screen": "insurance-top",
+     "screen": "overview-1",
      "rect": [
-      573,
-      199,
+      572,
+      488,
       270,
-      36
+      44
      ],
-     "text": "Here it is: Case Type.",
+     "text": "Here it is: Case Type (Overview tab, Case box).",
      "kind": "field"
     }
    ]
@@ -3097,25 +3097,25 @@ window.DATA = {
      "kind": "open"
     },
     {
-     "screen": "tabs-more",
+     "screen": "overview-1",
      "rect": [
-      945,
-      152,
-      160,
-      24
+      535,
+      93,
+      102,
+      38
      ],
-     "text": "On the patient page, click More, then Insurance and Verification. (On a wide screen the tab is in the row itself.)",
+     "text": "The patient page opens. Click the Overview tab if another tab is showing.",
      "kind": "tab"
     },
     {
-     "screen": "insurance-top",
+     "screen": "overview-1",
      "rect": [
-      573,
-      199,
+      572,
+      488,
       270,
-      36
+      44
      ],
-     "text": "Here it is: Case Type.",
+     "text": "Here it is: Case Type (Overview tab, Case box).",
      "kind": "field"
     }
    ]
@@ -3148,25 +3148,25 @@ window.DATA = {
      "kind": "open"
     },
     {
-     "screen": "tabs-more",
+     "screen": "overview-1",
      "rect": [
-      945,
-      152,
-      160,
-      24
+      535,
+      93,
+      102,
+      38
      ],
-     "text": "On the patient page, click More, then Insurance and Verification. (On a wide screen the tab is in the row itself.)",
+     "text": "The patient page opens. Click the Overview tab if another tab is showing.",
      "kind": "tab"
     },
     {
-     "screen": "insurance-top",
+     "screen": "overview-1",
      "rect": [
-      573,
-      199,
+      572,
+      488,
       270,
-      36
+      44
      ],
-     "text": "Here it is: Case Type.",
+     "text": "Here it is: Case Type (Overview tab, Case box).",
      "kind": "field"
     }
    ]
@@ -3199,34 +3199,45 @@ window.DATA = {
      "kind": "open"
     },
     {
+     "screen": "overview-1",
+     "rect": [
+      535,
+      93,
+      102,
+      38
+     ],
+     "text": "The patient page opens. Click the Overview tab if another tab is showing.",
+     "kind": "tab"
+    },
+    {
+     "screen": "overview-1",
+     "rect": [
+      572,
+      488,
+      270,
+      44
+     ],
+     "text": "Here it is: Case Type (Overview tab, Case box).",
+     "kind": "field"
+    },
+    {
      "screen": "tabs-more",
      "rect": [
       945,
-      152,
+      150,
       160,
-      24
+      26
      ],
      "text": "On the patient page, click More, then Insurance and Verification. (On a wide screen the tab is in the row itself.)",
      "kind": "tab"
     },
     {
-     "screen": "insurance-top",
-     "rect": [
-      573,
-      199,
-      270,
-      36
-     ],
-     "text": "Here it is: Case Type.",
-     "kind": "field"
-    },
-    {
      "screen": "insurance-notpl",
      "rect": [
-      555,
-      373,
-      611,
-      198
+      554,
+      402,
+      612,
+      100
      ],
      "text": "Here it is: No TPL / No Case Confirmation.",
      "kind": "field"
@@ -3261,25 +3272,25 @@ window.DATA = {
      "kind": "open"
     },
     {
-     "screen": "tabs-more",
+     "screen": "overview-1",
      "rect": [
-      945,
-      152,
-      160,
-      24
+      535,
+      93,
+      102,
+      38
      ],
-     "text": "On the patient page, click More, then Insurance and Verification. (On a wide screen the tab is in the row itself.)",
+     "text": "The patient page opens. Click the Overview tab if another tab is showing.",
      "kind": "tab"
     },
     {
-     "screen": "insurance-top",
+     "screen": "overview-1",
      "rect": [
-      573,
-      199,
+      572,
+      488,
       270,
-      36
+      44
      ],
-     "text": "Here it is: Case Type.",
+     "text": "Here it is: Case Type (Overview tab, Case box).",
      "kind": "field"
     }
    ]
@@ -3313,9 +3324,9 @@ window.DATA = {
      "screen": "tabs-more",
      "rect": [
       945,
-      185,
+      182,
       160,
-      24
+      26
      ],
      "text": "On the patient page, click More, then Patient Attorney. (On a wide screen the tab is in the row itself.)",
      "kind": "tab"
@@ -3324,9 +3335,9 @@ window.DATA = {
      "screen": "attorney-top",
      "rect": [
       571,
-      336,
+      343,
       190,
-      36
+      40
      ],
      "text": "Here it is: Attorney Status.",
      "kind": "field"
@@ -3402,33 +3413,33 @@ window.DATA = {
      "screen": "tabs-more",
      "rect": [
       945,
-      152,
+      150,
       160,
-      24
+      26
      ],
      "text": "On the patient page, click More, then Insurance and Verification. (On a wide screen the tab is in the row itself.)",
      "kind": "tab"
     },
     {
-     "screen": "insurance-notpl",
+     "screen": "insurance-top",
      "rect": [
-      555,
-      262,
-      611,
-      70
+      635,
+      542,
+      117,
+      31
      ],
-     "text": "Here it is: Health Insurance.",
+     "text": "Here it is: + Add Insurance.",
      "kind": "field"
     },
     {
-     "screen": "insurance-top",
+     "screen": "insurance-coverage-type",
      "rect": [
-      634,
-      494,
-      116,
-      29
+      573,
+      537,
+      570,
+      32
      ],
-     "text": "Here it is: + Add Insurance.",
+     "text": "Here it is: Health Insurance (in the Coverage Type list).",
      "kind": "field"
     }
    ]
@@ -3464,9 +3475,9 @@ window.DATA = {
      "screen": "tabs-more",
      "rect": [
       945,
-      152,
+      150,
       160,
-      24
+      26
      ],
      "text": "On the patient page, click More, then Insurance and Verification. (On a wide screen the tab is in the row itself.)",
      "kind": "tab"
@@ -3474,10 +3485,10 @@ window.DATA = {
     {
      "screen": "insurance-top",
      "rect": [
-      634,
-      494,
-      116,
-      29
+      635,
+      542,
+      117,
+      31
      ],
      "text": "Here it is: + Add Insurance.",
      "kind": "field"
@@ -3526,9 +3537,9 @@ window.DATA = {
      "screen": "ed-visit",
      "rect": [
       571,
-      524,
+      362,
       590,
-      66
+      72
      ],
      "text": "Here it is: Incident Type, Injured Body Parts, Other Injury Notes.",
      "kind": "field"
@@ -3577,9 +3588,9 @@ window.DATA = {
      "screen": "ed-visit",
      "rect": [
       571,
-      524,
+      362,
       590,
-      66
+      72
      ],
      "text": "Here it is: Incident Type, Injured Body Parts, Other Injury Notes.",
      "kind": "field"
@@ -3614,12 +3625,34 @@ window.DATA = {
      "kind": "open"
     },
     {
+     "screen": "overview-1",
+     "rect": [
+      535,
+      93,
+      102,
+      38
+     ],
+     "text": "The patient page opens. Click the Overview tab if another tab is showing.",
+     "kind": "tab"
+    },
+    {
+     "screen": "overview-1",
+     "rect": [
+      572,
+      488,
+      270,
+      44
+     ],
+     "text": "Here it is: Case Type (Overview tab, Case box).",
+     "kind": "field"
+    },
+    {
      "screen": "tabs-more",
      "rect": [
       945,
-      152,
+      150,
       160,
-      24
+      26
      ],
      "text": "On the patient page, click More, then Insurance and Verification. (On a wide screen the tab is in the row itself.)",
      "kind": "tab"
@@ -3627,21 +3660,10 @@ window.DATA = {
     {
      "screen": "insurance-top",
      "rect": [
-      573,
-      199,
-      270,
-      36
-     ],
-     "text": "Here it is: Case Type.",
-     "kind": "field"
-    },
-    {
-     "screen": "insurance-top",
-     "rect": [
-      634,
-      494,
-      116,
-      29
+      635,
+      542,
+      117,
+      31
      ],
      "text": "Here it is: + Add Insurance.",
      "kind": "field"
@@ -3676,12 +3698,34 @@ window.DATA = {
      "kind": "open"
     },
     {
+     "screen": "overview-1",
+     "rect": [
+      535,
+      93,
+      102,
+      38
+     ],
+     "text": "The patient page opens. Click the Overview tab if another tab is showing.",
+     "kind": "tab"
+    },
+    {
+     "screen": "overview-1",
+     "rect": [
+      572,
+      488,
+      270,
+      44
+     ],
+     "text": "Here it is: Case Type (Overview tab, Case box).",
+     "kind": "field"
+    },
+    {
      "screen": "tabs-more",
      "rect": [
       945,
-      152,
+      150,
       160,
-      24
+      26
      ],
      "text": "On the patient page, click More, then Insurance and Verification. (On a wide screen the tab is in the row itself.)",
      "kind": "tab"
@@ -3689,21 +3733,10 @@ window.DATA = {
     {
      "screen": "insurance-top",
      "rect": [
-      573,
-      199,
-      270,
-      36
-     ],
-     "text": "Here it is: Case Type.",
-     "kind": "field"
-    },
-    {
-     "screen": "insurance-top",
-     "rect": [
-      634,
-      494,
-      116,
-      29
+      635,
+      542,
+      117,
+      31
      ],
      "text": "Here it is: + Add Insurance.",
      "kind": "field"
@@ -3741,9 +3774,9 @@ window.DATA = {
      "screen": "tabs-more",
      "rect": [
       945,
-      152,
+      150,
       160,
-      24
+      26
      ],
      "text": "On the patient page, click More, then Insurance and Verification. (On a wide screen the tab is in the row itself.)",
      "kind": "tab"
@@ -3751,10 +3784,10 @@ window.DATA = {
     {
      "screen": "insurance-top",
      "rect": [
-      634,
-      494,
-      116,
-      29
+      635,
+      542,
+      117,
+      31
      ],
      "text": "Click + Add Insurance and pick the Coverage Type.",
      "kind": "click"
@@ -3763,9 +3796,9 @@ window.DATA = {
      "screen": "insurance-form",
      "rect": [
       555,
-      145,
+      268,
       611,
-      581
+      458
      ],
      "text": "Here it is: New Insurance: one box per fact.",
      "kind": "field"
@@ -3774,20 +3807,20 @@ window.DATA = {
      "screen": "insurance-policy",
      "rect": [
       555,
-      463,
+      173,
       611,
-      263
+      330
      ],
-     "text": "Here it is: The saved policy.",
+     "text": "Here it is: The saved policy, first in the Payer Order.",
      "kind": "field"
     },
     {
      "screen": "insurance-top",
      "rect": [
-      573,
-      312,
+      572,
+      303,
       270,
-      48
+      55
      ],
      "text": "Here it is: Police / Crash Report.",
      "kind": "field"
@@ -3823,22 +3856,33 @@ window.DATA = {
      "screen": "tabs-more",
      "rect": [
       945,
-      152,
+      150,
       160,
-      24
+      26
      ],
      "text": "On the patient page, click More, then Insurance and Verification. (On a wide screen the tab is in the row itself.)",
      "kind": "tab"
     },
     {
-     "screen": "insurance-notpl",
+     "screen": "insurance-top",
      "rect": [
-      555,
-      262,
-      611,
-      70
+      635,
+      542,
+      117,
+      31
      ],
-     "text": "Here it is: Health Insurance.",
+     "text": "Here it is: + Add Insurance.",
+     "kind": "field"
+    },
+    {
+     "screen": "insurance-coverage-type",
+     "rect": [
+      573,
+      537,
+      570,
+      32
+     ],
+     "text": "Here it is: Health Insurance (in the Coverage Type list).",
      "kind": "field"
     }
    ]
@@ -3874,9 +3918,9 @@ window.DATA = {
      "screen": "tabs-more",
      "rect": [
       945,
-      152,
+      150,
       160,
-      24
+      26
      ],
      "text": "On the patient page, click More, then Insurance and Verification. (On a wide screen the tab is in the row itself.)",
      "kind": "tab"
@@ -3884,12 +3928,23 @@ window.DATA = {
     {
      "screen": "insurance-top",
      "rect": [
-      634,
-      494,
-      116,
-      29
+      635,
+      542,
+      117,
+      31
      ],
      "text": "Here it is: + Add Insurance.",
+     "kind": "field"
+    },
+    {
+     "screen": "insurance-coverage-type",
+     "rect": [
+      573,
+      505,
+      570,
+      32
+     ],
+     "text": "Here it is: MedPay (in the Coverage Type list).",
      "kind": "field"
     }
    ]
@@ -3925,20 +3980,20 @@ window.DATA = {
      "screen": "tabs-more",
      "rect": [
       945,
-      152,
+      150,
       160,
-      24
+      26
      ],
      "text": "On the patient page, click More, then Insurance and Verification. (On a wide screen the tab is in the row itself.)",
      "kind": "tab"
     },
     {
-     "screen": "insurance-notpl",
+     "screen": "insurance-policy",
      "rect": [
-      573,
-      180,
-      61,
-      27
+      572,
+      641,
+      60,
+      32
      ],
      "text": "On the policy, click Verify.",
      "kind": "click"
@@ -3946,10 +4001,10 @@ window.DATA = {
     {
      "screen": "insurance-verify",
      "rect": [
-      573,
-      397,
-      571,
-      300
+      572,
+      255,
+      572,
+      445
      ],
      "text": "Here it is: Verify.",
      "kind": "field"
@@ -3958,9 +4013,9 @@ window.DATA = {
      "screen": "insurance-policy",
      "rect": [
       632,
-      512,
-      58,
-      18
+      224,
+      62,
+      22
      ],
      "text": "Here it is: Verified.",
      "kind": "field"
@@ -3998,31 +4053,20 @@ window.DATA = {
      "screen": "tabs-more",
      "rect": [
       945,
-      152,
+      150,
       160,
-      24
+      26
      ],
      "text": "On the patient page, click More, then Insurance and Verification. (On a wide screen the tab is in the row itself.)",
      "kind": "tab"
     },
     {
-     "screen": "insurance-notpl",
+     "screen": "insurance-policy",
      "rect": [
-      573,
-      180,
-      61,
-      27
-     ],
-     "text": "On the policy, click Verify.",
-     "kind": "click"
-    },
-    {
-     "screen": "insurance-verify",
-     "rect": [
-      574,
-      242,
-      350,
-      36
+      572,
+      462,
+      420,
+      40
      ],
      "text": "Here it is: Added On, Last Verified On.",
      "kind": "field"
@@ -4060,33 +4104,22 @@ window.DATA = {
      "screen": "tabs-more",
      "rect": [
       945,
-      152,
+      150,
       160,
-      24
+      26
      ],
      "text": "On the patient page, click More, then Insurance and Verification. (On a wide screen the tab is in the row itself.)",
      "kind": "tab"
     },
     {
-     "screen": "insurance-notpl",
+     "screen": "insurance-policy",
      "rect": [
-      573,
-      180,
-      61,
-      27
+      572,
+      520,
+      400,
+      24
      ],
-     "text": "On the policy, click Verify.",
-     "kind": "click"
-    },
-    {
-     "screen": "insurance-verify",
-     "rect": [
-      573,
-      355,
-      216,
-      20
-     ],
-     "text": "Here it is: Verification History: who verified.",
+     "text": "Here it is: Verification line: who verified, and when.",
      "kind": "field"
     }
    ]
@@ -4133,9 +4166,9 @@ window.DATA = {
      "screen": "tracker-1",
      "rect": [
       574,
-      457,
+      405,
       270,
-      36
+      40
      ],
      "text": "Here it is: TPL/WC Insurance Added to Hospital Date.",
      "kind": "field"
@@ -4173,9 +4206,9 @@ window.DATA = {
      "screen": "tabs-more",
      "rect": [
       945,
-      185,
+      182,
       160,
-      24
+      26
      ],
      "text": "On the patient page, click More, then Patient Attorney. (On a wide screen the tab is in the row itself.)",
      "kind": "tab"
@@ -4184,9 +4217,9 @@ window.DATA = {
      "screen": "attorney-top",
      "rect": [
       571,
-      336,
+      343,
       190,
-      36
+      40
      ],
      "text": "Here it is: Attorney Status.",
      "kind": "field"
@@ -4225,9 +4258,9 @@ window.DATA = {
      "screen": "tabs-more",
      "rect": [
       945,
-      185,
+      182,
       160,
-      24
+      26
      ],
      "text": "On the patient page, click More, then Patient Attorney. (On a wide screen the tab is in the row itself.)",
      "kind": "tab"
@@ -4236,9 +4269,9 @@ window.DATA = {
      "screen": "attorney-top",
      "rect": [
       772,
-      336,
+      343,
       190,
-      36
+      40
      ],
      "text": "Here it is: Referred to Attorney Date.",
      "kind": "field"
@@ -4276,9 +4309,9 @@ window.DATA = {
      "screen": "tabs-more",
      "rect": [
       945,
-      185,
+      182,
       160,
-      24
+      26
      ],
      "text": "On the patient page, click More, then Patient Attorney. (On a wide screen the tab is in the row itself.)",
      "kind": "tab"
@@ -4286,10 +4319,10 @@ window.DATA = {
     {
      "screen": "attorney-top",
      "rect": [
-      634,
-      239,
-      111,
-      27
+      635,
+      243,
+      112,
+      30
      ],
      "text": "Click + Add Attorney.",
      "kind": "click"
@@ -4297,10 +4330,10 @@ window.DATA = {
     {
      "screen": "attorney-form",
      "rect": [
-      573,
-      137,
-      571,
-      148
+      572,
+      222,
+      572,
+      152
      ],
      "text": "Here it is: Attorney Name, Law Firm.",
      "kind": "field"
@@ -4308,10 +4341,10 @@ window.DATA = {
     {
      "screen": "attorney-top",
      "rect": [
-      555,
-      583,
-      611,
-      130
+      554,
+      478,
+      612,
+      248
      ],
      "text": "Here it is: Current Patient Attorney.",
      "kind": "field"
@@ -4349,9 +4382,9 @@ window.DATA = {
      "screen": "tabs-more",
      "rect": [
       945,
-      185,
+      182,
       160,
-      24
+      26
      ],
      "text": "On the patient page, click More, then Patient Attorney. (On a wide screen the tab is in the row itself.)",
      "kind": "tab"
@@ -4359,10 +4392,10 @@ window.DATA = {
     {
      "screen": "attorney-top",
      "rect": [
-      634,
-      239,
-      111,
-      27
+      635,
+      243,
+      112,
+      30
      ],
      "text": "Click + Add Attorney.",
      "kind": "click"
@@ -4370,10 +4403,10 @@ window.DATA = {
     {
      "screen": "attorney-form",
      "rect": [
-      573,
-      312,
-      571,
-      256
+      572,
+      478,
+      572,
+      248
      ],
      "text": "Here it is: Phone, Fax, Email, Address.",
      "kind": "field"
@@ -4411,9 +4444,9 @@ window.DATA = {
      "screen": "tabs-more",
      "rect": [
       945,
-      185,
+      182,
       160,
-      24
+      26
      ],
      "text": "On the patient page, click More, then Patient Attorney. (On a wide screen the tab is in the row itself.)",
      "kind": "tab"
@@ -4422,9 +4455,9 @@ window.DATA = {
      "screen": "attorney-top",
      "rect": [
       772,
-      336,
+      343,
       382,
-      36
+      40
      ],
      "text": "Here it is: Referred date filled, Signed date still empty.",
      "kind": "field"
@@ -4464,9 +4497,9 @@ window.DATA = {
      "screen": "tabs-more",
      "rect": [
       945,
-      185,
+      182,
       160,
-      24
+      26
      ],
      "text": "On the patient page, click More, then Patient Attorney. (On a wide screen the tab is in the row itself.)",
      "kind": "tab"
@@ -4475,9 +4508,9 @@ window.DATA = {
      "screen": "attorney-top",
      "rect": [
       974,
-      336,
+      343,
       180,
-      36
+      40
      ],
      "text": "Here it is: Attorney Signed Date.",
      "kind": "field"
@@ -4515,9 +4548,9 @@ window.DATA = {
      "screen": "tabs-more",
      "rect": [
       945,
-      185,
+      182,
       160,
-      24
+      26
      ],
      "text": "On the patient page, click More, then Patient Attorney. (On a wide screen the tab is in the row itself.)",
      "kind": "tab"
@@ -4526,9 +4559,9 @@ window.DATA = {
      "screen": "attorney-top",
      "rect": [
       571,
-      393,
+      399,
       190,
-      36
+      40
      ],
      "text": "Here it is: Attorney Rejected Date.",
      "kind": "field"
@@ -4566,9 +4599,9 @@ window.DATA = {
      "screen": "tabs-more",
      "rect": [
       945,
-      185,
+      182,
       160,
-      24
+      26
      ],
      "text": "On the patient page, click More, then Patient Attorney. (On a wide screen the tab is in the row itself.)",
      "kind": "tab"
@@ -4577,9 +4610,9 @@ window.DATA = {
      "screen": "attorney-top",
      "rect": [
       571,
-      336,
+      343,
       190,
-      36
+      40
      ],
      "text": "Here it is: Attorney Status.",
      "kind": "field"
@@ -4621,9 +4654,9 @@ window.DATA = {
      "screen": "tabs-more",
      "rect": [
       945,
-      185,
+      182,
       160,
-      24
+      26
      ],
      "text": "On the patient page, click More, then Patient Attorney. (On a wide screen the tab is in the row itself.)",
      "kind": "tab"
@@ -4631,10 +4664,10 @@ window.DATA = {
     {
      "screen": "attorney-top",
      "rect": [
-      634,
-      239,
-      111,
-      27
+      635,
+      243,
+      112,
+      30
      ],
      "text": "Click + Add Attorney.",
      "kind": "click"
@@ -4642,10 +4675,10 @@ window.DATA = {
     {
      "screen": "attorney-form",
      "rect": [
-      573,
-      137,
-      571,
-      431
+      572,
+      143,
+      572,
+      583
      ],
      "text": "Here it is: New Attorney.",
      "kind": "field"
@@ -4683,20 +4716,31 @@ window.DATA = {
      "screen": "tabs-more",
      "rect": [
       945,
-      185,
+      182,
       160,
-      24
+      26
      ],
      "text": "On the patient page, click More, then Patient Attorney. (On a wide screen the tab is in the row itself.)",
      "kind": "tab"
     },
     {
+     "screen": "attorney-current",
+     "rect": [
+      571,
+      620,
+      145,
+      32
+     ],
+     "text": "On the current attorney, click Add New Verification.",
+     "kind": "click"
+    },
+    {
      "screen": "attorney-verify",
      "rect": [
       572,
-      397,
+      388,
       572,
-      300
+      305
      ],
      "text": "Here it is: Add New Verification.",
      "kind": "field"
@@ -4705,9 +4749,9 @@ window.DATA = {
      "screen": "attorney-top",
      "rect": [
       573,
-      632,
+      566,
       133,
-      19
+      22
      ],
      "text": "Here it is: Representing (Verified).",
      "kind": "field"
@@ -4756,9 +4800,9 @@ window.DATA = {
      "screen": "overview-3",
      "rect": [
       581,
-      425,
+      271,
       190,
-      36
+      40
      ],
      "text": "Here it is: Medical Follow-up.",
      "kind": "field"
@@ -4807,9 +4851,9 @@ window.DATA = {
      "screen": "overview-3",
      "rect": [
       581,
-      563,
+      414,
       575,
-      140
+      250
      ],
      "text": "Here it is: Initial Appointment.",
      "kind": "field"
@@ -4858,9 +4902,9 @@ window.DATA = {
      "screen": "overview-3",
      "rect": [
       581,
-      511,
-      572,
-      36
+      360,
+      575,
+      40
      ],
      "text": "Here it is: Medical Follow-up Destination, Provider Name and Location.",
      "kind": "field"
@@ -4909,9 +4953,9 @@ window.DATA = {
      "screen": "overview-3",
      "rect": [
       581,
-      563,
+      414,
       575,
-      140
+      250
      ],
      "text": "Here it is: Initial Appointment.",
      "kind": "field"
@@ -4920,9 +4964,9 @@ window.DATA = {
      "screen": "overview-3",
      "rect": [
       776,
-      425,
+      271,
       190,
-      36
+      40
      ],
      "text": "Here it is: Medical Follow-up Note.",
      "kind": "field"
@@ -4968,12 +5012,12 @@ window.DATA = {
      "kind": "tab"
     },
     {
-     "screen": "overview-3",
+     "screen": "overview-4",
      "rect": [
-      555,
-      257,
-      611,
-      85
+      554,
+      391,
+      612,
+      82
      ],
      "text": "Here it is: Liens and Care: the Care Coordination record.",
      "kind": "field"
@@ -5021,12 +5065,12 @@ window.DATA = {
      "kind": "tab"
     },
     {
-     "screen": "overview-3",
+     "screen": "overview-4",
      "rect": [
-      555,
-      257,
-      611,
-      85
+      554,
+      391,
+      612,
+      82
      ],
      "text": "Here it is: Liens and Care: the Care Coordination record.",
      "kind": "field"
@@ -5075,9 +5119,9 @@ window.DATA = {
      "screen": "overview-3",
      "rect": [
       581,
-      511,
+      360,
       280,
-      36
+      40
      ],
      "text": "Here it is: Medical Follow-up Destination.",
      "kind": "field"
@@ -5126,9 +5170,9 @@ window.DATA = {
      "screen": "overview-3",
      "rect": [
       581,
-      563,
+      414,
       575,
-      140
+      250
      ],
      "text": "Here it is: Initial Appointment.",
      "kind": "field"
@@ -5166,9 +5210,9 @@ window.DATA = {
      "screen": "overview-3",
      "rect": [
       233,
-      567,
+      666,
       260,
-      55
+      58
      ],
      "text": "Here it is: Nimbly Patient Link. It is on the left card, whichever tab is open.",
      "kind": "field"
@@ -5233,21 +5277,32 @@ window.DATA = {
     {
      "screen": "tracker-1",
      "rect": [
-      556,
-      279,
-      48,
-      20
+      554,
+      228,
+      52,
+      22
      ],
      "text": "Here it is: H1 BI.",
+     "kind": "field"
+    },
+    {
+     "screen": "tracker-2",
+     "rect": [
+      574,
+      574,
+      590,
+      115
+     ],
+     "text": "Here it is: H1 BI: BI Added Date (under Completed).",
      "kind": "field"
     },
     {
      "screen": "overview-3",
      "rect": [
       233,
-      520,
+      620,
       200,
-      36
+      40
      ],
      "text": "Here it is: BI Added Date. It is on the left card, whichever tab is open.",
      "kind": "field"
@@ -5293,10 +5348,10 @@ window.DATA = {
     {
      "screen": "tracker-1",
      "rect": [
-      558,
-      353,
+      556,
+      298,
       297,
-      274
+      280
      ],
      "text": "Here it is: H2 Coverage Added to Hospital EMR.",
      "kind": "field"
@@ -5332,9 +5387,9 @@ window.DATA = {
      "screen": "tabs-more",
      "rect": [
       945,
-      152,
+      150,
       160,
-      24
+      26
      ],
      "text": "On the patient page, click More, then Insurance and Verification. (On a wide screen the tab is in the row itself.)",
      "kind": "tab"
@@ -5342,10 +5397,10 @@ window.DATA = {
     {
      "screen": "insurance-notpl",
      "rect": [
-      555,
-      373,
-      611,
-      198
+      554,
+      402,
+      612,
+      100
      ],
      "text": "Here it is: No TPL / No Case Confirmation.",
      "kind": "field"
@@ -5391,10 +5446,10 @@ window.DATA = {
     {
      "screen": "tracker-3",
      "rect": [
-      555,
-      362,
-      611,
-      248
+      554,
+      475,
+      612,
+      250
      ],
      "text": "Here it is: No TPL Discovered: Close the Account.",
      "kind": "field"
@@ -5402,10 +5457,10 @@ window.DATA = {
     {
      "screen": "tracker-1",
      "rect": [
-      554,
-      238,
+      555,
+      187,
       170,
-      20
+      22
      ],
      "text": "Here it is: The hospital deadline.",
      "kind": "field"
@@ -5451,10 +5506,10 @@ window.DATA = {
     {
      "screen": "tracker-3",
      "rect": [
-      555,
-      362,
-      611,
-      248
+      554,
+      475,
+      612,
+      250
      ],
      "text": "Here it is: No TPL Discovered: Close the Account.",
      "kind": "field"
@@ -5499,12 +5554,12 @@ window.DATA = {
      "kind": "tab"
     },
     {
-     "screen": "tracker-2",
+     "screen": "tracker-mid",
      "rect": [
-      866,
-      231,
+      864,
+      343,
       297,
-      190
+      196
      ],
      "text": "Here it is: H5 Medical Records and Bill (MR&B).",
      "kind": "field"
@@ -5546,14 +5601,36 @@ window.DATA = {
      "kind": "tab"
     },
     {
-     "screen": "tracker-2",
+     "screen": "tracker-mid",
      "rect": [
-      558,
-      231,
+      556,
+      343,
       297,
-      190
+      196
      ],
      "text": "Here it is: H4 Lien: made on the Lien and Collection tab.",
+     "kind": "field"
+    },
+    {
+     "screen": "tabs-more",
+     "rect": [
+      945,
+      214,
+      160,
+      26
+     ],
+     "text": "On the patient page, click More, then Lien and Collection. (On a wide screen the tab is in the row itself.)",
+     "kind": "tab"
+    },
+    {
+     "screen": "lien-top",
+     "rect": [
+      554,
+      293,
+      624,
+      122
+     ],
+     "text": "Here it is: Lien and Collection: Liens, Hospital Bills.",
      "kind": "field"
     }
    ]
@@ -5608,6 +5685,1008 @@ window.DATA = {
    "steps": []
   }
  ],
+ "tasks": [
+  {
+   "slug": "find-hidden-tab",
+   "title": "Find a tab that is under More",
+   "about": "Insurance and Verification, Patient Attorney and Lien and Collection are not in the row of tabs.",
+   "words": "tab hidden more where is insurance attorney lien collection",
+   "steps": [
+    {
+     "screen": "overview-1",
+     "rect": [
+      535,
+      93,
+      578,
+      38
+     ],
+     "text": "Look at the row of tabs on the patient page: Overview, Hospital EMR, Patient Demographics, Activities.",
+     "kind": "look",
+     "help": "The tabs you do not see here are under More."
+    },
+    {
+     "screen": "overview-1",
+     "rect": [
+      1028,
+      93,
+      84,
+      38
+     ],
+     "text": "Click More, to the right of the tabs.",
+     "kind": "click",
+     "help": ""
+    },
+    {
+     "screen": "tabs-more",
+     "rect": [
+      945,
+      150,
+      160,
+      26
+     ],
+     "text": "Insurance and Verification: the policies, the Payer Order, Verify.",
+     "kind": "tab",
+     "help": ""
+    },
+    {
+     "screen": "tabs-more",
+     "rect": [
+      945,
+      182,
+      160,
+      26
+     ],
+     "text": "Patient Attorney: Attorney Status, the attorneys, Add New Verification.",
+     "kind": "tab",
+     "help": ""
+    },
+    {
+     "screen": "tabs-more",
+     "rect": [
+      945,
+      214,
+      160,
+      26
+     ],
+     "text": "Lien and Collection: the liens and the hospital bills.",
+     "kind": "tab",
+     "help": "The tab you open moves into the row, so the next time More may list other tabs (for example Overview)."
+    }
+   ]
+  },
+  {
+   "slug": "case-type-and-injury-date",
+   "title": "Pick the Case Type and Date of Injury",
+   "about": "Both are in the Case box on the Overview tab. They save at once.",
+   "words": "case type pi wc possible tpl unknown date of injury doi overview case box",
+   "steps": [
+    {
+     "screen": "overview-1",
+     "rect": [
+      535,
+      93,
+      102,
+      38
+     ],
+     "text": "Click the Overview tab.",
+     "kind": "tab",
+     "help": ""
+    },
+    {
+     "screen": "overview-1",
+     "rect": [
+      556,
+      446,
+      298,
+      158
+     ],
+     "text": "Find the Case box. It has Case Type and Date of Injury.",
+     "kind": "look",
+     "help": ""
+    },
+    {
+     "screen": "overview-1",
+     "rect": [
+      572,
+      488,
+      270,
+      44
+     ],
+     "text": "Click Case Type.",
+     "kind": "click",
+     "help": ""
+    },
+    {
+     "screen": "overview-casetype",
+     "rect": [
+      573,
+      545,
+      260,
+      175
+     ],
+     "text": "Pick the Case Type from the list, for example PI, WC, PI and WC or Possible TPL.",
+     "kind": "pick",
+     "help": "Pick the final Case Type as soon as you know it. Possible TPL means it is still being checked. Unknown is not proof of no coverage."
+    },
+    {
+     "screen": "overview-1",
+     "rect": [
+      572,
+      543,
+      270,
+      44
+     ],
+     "text": "Click Date of Injury and pick the day.",
+     "kind": "field",
+     "help": ""
+    },
+    {
+     "screen": "insurance-top",
+     "rect": [
+      572,
+      247,
+      270,
+      48
+     ],
+     "text": "The Insurance and Verification tab shows the Case Type but you do not change it there. It says: Change it on the Overview tab (Case box).",
+     "kind": "look",
+     "help": ""
+    }
+   ]
+  },
+  {
+   "slug": "add-insurance",
+   "title": "Add an insurance",
+   "about": "A new policy goes to the end of the Payer Order list on the Insurance and Verification tab.",
+   "words": "add insurance policy coverage type insurance company claim number policy number third-party liability workers compensation own auto medpay health",
+   "steps": [
+    {
+     "screen": "tabs-more",
+     "rect": [
+      945,
+      150,
+      160,
+      26
+     ],
+     "text": "Click More, then Insurance and Verification.",
+     "kind": "tab",
+     "help": "If Insurance and Verification is already in the row of tabs, just click it."
+    },
+    {
+     "screen": "insurance-top",
+     "rect": [
+      635,
+      542,
+      117,
+      31
+     ],
+     "text": "Click + Add Insurance.",
+     "kind": "click",
+     "help": ""
+    },
+    {
+     "screen": "insurance-coverage-type",
+     "rect": [
+      573,
+      405,
+      570,
+      180
+     ],
+     "text": "Pick the Coverage Type.",
+     "kind": "pick",
+     "help": "Third-Party Liability (TPL) is the other party's insurer. Workers' Compensation (WC) is for a work injury. Own Auto / Vehicle Insurance is the patient's own auto policy."
+    },
+    {
+     "screen": "insurance-form",
+     "rect": [
+      572,
+      423,
+      572,
+      70
+     ],
+     "text": "In Insurance Company, type part of the name and pick it from the list.",
+     "kind": "type",
+     "help": "A name that is not in the list becomes a Company when you save."
+    },
+    {
+     "screen": "insurance-form",
+     "rect": [
+      572,
+      517,
+      352,
+      56
+     ],
+     "text": "Fill in the Claim Number. Add the Policy Number if you have it.",
+     "kind": "type",
+     "help": "Whose Policy, Insurance Holder Name, the adjuster and the Billing Address are optional."
+    },
+    {
+     "screen": "insurance-form-save",
+     "rect": [
+      572,
+      563,
+      126,
+      34
+     ],
+     "text": "Click Save Insurance.",
+     "kind": "save",
+     "help": ""
+    },
+    {
+     "screen": "insurance-second",
+     "rect": [
+      572,
+      348,
+      272,
+      24
+     ],
+     "text": "The new policy is in the Payer Order list. It says Not Verified.",
+     "kind": "look",
+     "help": "What the patient tells you is not a verification. Call the insurance company, then click Verify on the policy."
+    }
+   ]
+  },
+  {
+   "slug": "verify-insurance",
+   "title": "Verify an insurance policy",
+   "about": "After you call the insurance company. Each policy is verified on its own.",
+   "words": "verify verification method result verified attempt to verify failed wrong info phone reference confirmation number",
+   "steps": [
+    {
+     "screen": "tabs-more",
+     "rect": [
+      945,
+      150,
+      160,
+      26
+     ],
+     "text": "Click More, then Insurance and Verification.",
+     "kind": "tab",
+     "help": "If Insurance and Verification is already in the row of tabs, just click it."
+    },
+    {
+     "screen": "insurance-policy",
+     "rect": [
+      572,
+      641,
+      60,
+      32
+     ],
+     "text": "Find the policy in the Payer Order list and click Verify on it.",
+     "kind": "click",
+     "help": ""
+    },
+    {
+     "screen": "insurance-verify",
+     "rect": [
+      572,
+      296,
+      572,
+      56
+     ],
+     "text": "Pick the Verification Method, for example Phone.",
+     "kind": "pick",
+     "help": "Call the insurance company first. What the patient tells you is not a verification."
+    },
+    {
+     "screen": "insurance-verify",
+     "rect": [
+      572,
+      366,
+      572,
+      126
+     ],
+     "text": "Add the number you called and a Reference / Confirmation Number if you like.",
+     "kind": "type",
+     "help": "Only the Verification Method and the Result are required."
+    },
+    {
+     "screen": "insurance-verify",
+     "rect": [
+      572,
+      507,
+      572,
+      56
+     ],
+     "text": "Leave Result on Verified.",
+     "kind": "pick",
+     "help": ""
+    },
+    {
+     "screen": "insurance-verify",
+     "rect": [
+      572,
+      662,
+      138,
+      34
+     ],
+     "text": "Click Save Verification. The policy shows Verified.",
+     "kind": "save",
+     "help": "Your name and the time are recorded by the system."
+    },
+    {
+     "screen": "insurance-verify-result",
+     "rect": [
+      573,
+      596,
+      570,
+      128
+     ],
+     "text": "If the insurance company says the claim is not the patient's, pick Attempt to Verify Failed (Wrong Info) as the Result.",
+     "kind": "pick",
+     "help": ""
+    },
+    {
+     "screen": "insurance-verify-failed",
+     "rect": [
+      572,
+      577,
+      572,
+      78
+     ],
+     "text": "Write what was wrong in Notes: What Was Wrong (Required). Then click Save Verification.",
+     "kind": "type",
+     "help": "The policy then shows Verification Failed and does not count. Click Edit to correct it, then verify again."
+    }
+   ]
+  },
+  {
+   "slug": "change-payer-order",
+   "title": "Change which insurance is billed first",
+   "about": "The Payer Order list on the Insurance and Verification tab is in the order the policies are billed.",
+   "words": "payer order primary secondary move up move down billed first order insurance",
+   "steps": [
+    {
+     "screen": "tabs-more",
+     "rect": [
+      945,
+      150,
+      160,
+      26
+     ],
+     "text": "Click More, then Insurance and Verification.",
+     "kind": "tab",
+     "help": "If Insurance and Verification is already in the row of tabs, just click it."
+    },
+    {
+     "screen": "insurance-policy",
+     "rect": [
+      573,
+      224,
+      120,
+      22
+     ],
+     "text": "In Payer Order the top policy is tagged Primary. The next one is Secondary.",
+     "kind": "look",
+     "help": ""
+    },
+    {
+     "screen": "insurance-policy",
+     "rect": [
+      701,
+      641,
+      106,
+      32
+     ],
+     "text": "Click Move Down on a policy to move it down.",
+     "kind": "click",
+     "help": "Nothing reorders the list by itself. Every move is kept in the history."
+    },
+    {
+     "screen": "insurance-moveup",
+     "rect": [
+      701,
+      244,
+      92,
+      32
+     ],
+     "text": "Click Move Up on a policy to move it up.",
+     "kind": "click",
+     "help": ""
+    },
+    {
+     "screen": "insurance-moved",
+     "rect": [
+      554,
+      160,
+      612,
+      52
+     ],
+     "text": "A green message says what changed, for example Progressive is now Primary.",
+     "kind": "look",
+     "help": "With two policies of one type, the higher one is used for the verification and the lien."
+    }
+   ]
+  },
+  {
+   "slug": "confirm-no-tpl-no-case",
+   "title": "Confirm No TPL / No Case",
+   "about": "When there is no insurance and no case. It is one button.",
+   "words": "no tpl no case confirm confirmation undo reason hospital close account billing indicator",
+   "steps": [
+    {
+     "screen": "overview-1",
+     "rect": [
+      572,
+      488,
+      270,
+      44
+     ],
+     "text": "Overview tab, Case box: click Case Type and pick No TPL / No Case.",
+     "kind": "pick",
+     "help": "The button Confirm No TPL / No Case then shows in the same box. (It is not in this picture because this patient is not set to No TPL / No Case.)"
+    },
+    {
+     "screen": "tabs-more",
+     "rect": [
+      945,
+      150,
+      160,
+      26
+     ],
+     "text": "Click More, then Insurance and Verification.",
+     "kind": "tab",
+     "help": "If Insurance and Verification is already in the row of tabs, just click it."
+    },
+    {
+     "screen": "insurance-notpl",
+     "rect": [
+      571,
+      457,
+      174,
+      26
+     ],
+     "text": "Or click Confirm No TPL / No Case at the bottom of the Insurance and Verification tab.",
+     "kind": "click",
+     "help": ""
+    },
+    {
+     "screen": "insurance-notpl-reason",
+     "rect": [
+      589,
+      500,
+      536,
+      142
+     ],
+     "text": "Pick the Reason: No Case, No Response, TPL Case: No Coverage or Patient at Fault: No MedPay.",
+     "kind": "pick",
+     "help": ""
+    },
+    {
+     "screen": "insurance-notpl-form",
+     "rect": [
+      588,
+      644,
+      174,
+      28
+     ],
+     "text": "Add a note if you like. Click Confirm No TPL / No Case.",
+     "kind": "save",
+     "help": "Today's date and your name are recorded. The hospital team is told to remove the billing indicator and close the account. The Case Type is then locked."
+    },
+    {
+     "screen": "insurance-notpl",
+     "rect": [
+      554,
+      402,
+      612,
+      100
+     ],
+     "text": "To undo it, click Undo Confirmation in this box at the bottom of the Insurance and Verification tab.",
+     "kind": "look",
+     "help": "Use it if it was a mistake or a payer was found after all. Only then can the Case Type be changed. (The button shows only once No TPL / No Case is confirmed, so it is not in this picture.)"
+    }
+   ]
+  },
+  {
+   "slug": "attorney",
+   "title": "Set Attorney Status, add the attorney and verify",
+   "about": "All on the Patient Attorney tab.",
+   "words": "attorney status own attorney referred declined wants referral undecided add attorney law firm verify representing add new verification",
+   "steps": [
+    {
+     "screen": "tabs-more",
+     "rect": [
+      945,
+      182,
+      160,
+      26
+     ],
+     "text": "Click More, then Patient Attorney.",
+     "kind": "tab",
+     "help": "If Patient Attorney is already in the row of tabs, just click it."
+    },
+    {
+     "screen": "attorney-top",
+     "rect": [
+      571,
+      343,
+      190,
+      40
+     ],
+     "text": "Under Does the Patient Have an Attorney?, click Attorney Status.",
+     "kind": "click",
+     "help": ""
+    },
+    {
+     "screen": "attorney-status",
+     "rect": [
+      572,
+      388,
+      170,
+      180
+     ],
+     "text": "Pick the status: Own Attorney, Referred to Attorney, Declined Attorney, Wants Referral or Undecided.",
+     "kind": "pick",
+     "help": "The dates that fit the status show next to it: Referred to Attorney Date, Attorney Signed Date, Attorney Rejected Date."
+    },
+    {
+     "screen": "attorney-top",
+     "rect": [
+      635,
+      243,
+      112,
+      30
+     ],
+     "text": "Click + Add Attorney.",
+     "kind": "click",
+     "help": ""
+    },
+    {
+     "screen": "attorney-form",
+     "rect": [
+      572,
+      143,
+      572,
+      56
+     ],
+     "text": "Pick the Role. The patient's own lawyer is the Current Patient Attorney.",
+     "kind": "pick",
+     "help": "This test patient already has a current attorney, so this picture lists only Previous Attorney on This Case and Defense Attorney (Insurance Side). To change the current attorney use Replace Attorney."
+    },
+    {
+     "screen": "attorney-form",
+     "rect": [
+      572,
+      223,
+      572,
+      150
+     ],
+     "text": "Type the Attorney Name (required) and pick the Law Firm.",
+     "kind": "type",
+     "help": "A law firm that is not in the list becomes a Company when you save."
+    },
+    {
+     "screen": "attorney-form",
+     "rect": [
+      572,
+      478,
+      572,
+      60
+     ],
+     "text": "Add the Phone, and the Fax or Email if you have them.",
+     "kind": "type",
+     "help": ""
+    },
+    {
+     "screen": "attorney-form-save",
+     "rect": [
+      572,
+      443,
+      122,
+      34
+     ],
+     "text": "Click Save Attorney.",
+     "kind": "save",
+     "help": ""
+    },
+    {
+     "screen": "attorney-current",
+     "rect": [
+      571,
+      620,
+      145,
+      32
+     ],
+     "text": "After you call the law office, click Add New Verification on the attorney.",
+     "kind": "click",
+     "help": ""
+    },
+    {
+     "screen": "attorney-verify-method",
+     "rect": [
+      573,
+      550,
+      570,
+      142
+     ],
+     "text": "Pick the Verification Method: Phone, Email, Written Confirmation or Other.",
+     "kind": "pick",
+     "help": ""
+    },
+    {
+     "screen": "attorney-verify-result",
+     "rect": [
+      573,
+      467,
+      570,
+      112
+     ],
+     "text": "Pick the Result: Representing, Not Representing or Attempt to Verify Failed (Wrong Info).",
+     "kind": "pick",
+     "help": "A failed attempt needs a note saying what was wrong."
+    },
+    {
+     "screen": "attorney-verify",
+     "rect": [
+      572,
+      653,
+      138,
+      32
+     ],
+     "text": "Click Save Verification. The attorney shows Representing (Verified).",
+     "kind": "save",
+     "help": ""
+    }
+   ]
+  },
+  {
+   "slug": "log-call",
+   "title": "Log a call",
+   "about": "Every call is logged with its Call outcome.",
+   "words": "call log a call outcome no answer voicemail connected wrong number follow up task callback",
+   "steps": [
+    {
+     "screen": "activities-menu",
+     "rect": [
+      1332,
+      160,
+      85,
+      28
+     ],
+     "text": "On the right side, click Add activities.",
+     "kind": "click",
+     "help": ""
+    },
+    {
+     "screen": "activities-menu",
+     "rect": [
+      1298,
+      293,
+      190,
+      26
+     ],
+     "text": "Click Log a call.",
+     "kind": "click",
+     "help": "The Call button under the patient name also logs a call."
+    },
+    {
+     "screen": "log-call",
+     "rect": [
+      1008,
+      358,
+      125,
+      48
+     ],
+     "text": "Click Call outcome.",
+     "kind": "click",
+     "help": "A call saved without a Call outcome is not counted."
+    },
+    {
+     "screen": "log-call-outcome",
+     "rect": [
+      1010,
+      425,
+      160,
+      222
+     ],
+     "text": "Pick the outcome. No answer if nobody picked up, Left voicemail if you left one, Connected if you spoke with the patient.",
+     "kind": "pick",
+     "help": ""
+    },
+    {
+     "screen": "log-call",
+     "rect": [
+      927,
+      492,
+      490,
+      55
+     ],
+     "text": "Write a short note about the call.",
+     "kind": "type",
+     "help": ""
+    },
+    {
+     "screen": "log-call",
+     "rect": [
+      927,
+      621,
+      380,
+      26
+     ],
+     "text": "To call back later, tick Create a To-do task to follow up and pick the day and time.",
+     "kind": "click",
+     "help": ""
+    },
+    {
+     "screen": "log-call",
+     "rect": [
+      927,
+      668,
+      82,
+      32
+     ],
+     "text": "Click Log call.",
+     "kind": "save",
+     "help": "Within a few seconds the Call Team box on the Overview tab shows the call."
+    }
+   ]
+  },
+  {
+   "slug": "hospital-dates",
+   "title": "Enter the hospital dates",
+   "about": "On the Hospital EMR tab: read the ED Visit, then enter the dates in the Hospital EMR Tracker.",
+   "words": "hospital emr ed visit notes triage hpi discharge tracker h1 bi added date h2 tpl wc insurance added to hospital date attorney added billing indicator",
+   "steps": [
+    {
+     "screen": "overview-1",
+     "rect": [
+      637,
+      93,
+      120,
+      38
+     ],
+     "text": "Click the Hospital EMR tab.",
+     "kind": "tab",
+     "help": ""
+    },
+    {
+     "screen": "ed-notes",
+     "rect": [
+      554,
+      252,
+      612,
+      253
+     ],
+     "text": "The ED Visit is first on the tab, and its ED Visit Notes come first: Triage Notes, HPI Notes, Discharge Notes.",
+     "kind": "look",
+     "help": "Click a note tab to read the whole note."
+    },
+    {
+     "screen": "ed-notes-hpi",
+     "rect": [
+      763,
+      272,
+      190,
+      102
+     ],
+     "text": "HPI Notes are the doctor's notes (History of Present Illness). Triage Notes are the nurse's notes.",
+     "kind": "look",
+     "help": ""
+    },
+    {
+     "screen": "ed-visit",
+     "rect": [
+      554,
+      248,
+      612,
+      255
+     ],
+     "text": "Under the notes: Hospital Facility, Date of Service (DOS), Date of Injury, Incident Type, BIBA, ICT Intake Date, ER Bill Amount.",
+     "kind": "look",
+     "help": "Click a value to change it. It saves at once."
+    },
+    {
+     "screen": "tracker-1",
+     "rect": [
+      555,
+      228,
+      508,
+      22
+     ],
+     "text": "The Hospital EMR Tracker has one chip for each step, H1 to H7.",
+     "kind": "look",
+     "help": ""
+    },
+    {
+     "screen": "tracker-2",
+     "rect": [
+      574,
+      574,
+      590,
+      115
+     ],
+     "text": "H1 BI (Billing Indicator): enter BI Added Date, the day the billing indicator was added in the hospital EMR.",
+     "kind": "field",
+     "help": "When H1 is done it folds into Completed (1): H1. Click that line to open it."
+    },
+    {
+     "screen": "tracker-1",
+     "rect": [
+      574,
+      405,
+      270,
+      40
+     ],
+     "text": "H2 Coverage Added to Hospital EMR: click TPL/WC Insurance Added to Hospital Date and pick the day.",
+     "kind": "field",
+     "help": "It saves by itself. The date is the tick."
+    },
+    {
+     "screen": "tracker-mid",
+     "rect": [
+      574,
+      215,
+      270,
+      40
+     ],
+     "text": "When the patient attorney is verified, enter Patient Attorney Added to Hospital Date the same way.",
+     "kind": "field",
+     "help": "Patient Own Auto Insurance Added to Hospital Date is for a verified own auto policy."
+    }
+   ]
+  },
+  {
+   "slug": "create-lien",
+   "title": "Create a lien",
+   "about": "On the Lien and Collection tab, once the insurance is verified.",
+   "words": "lien create send the lien to attach bills lien letter confirm and create lien hospital bill",
+   "steps": [
+    {
+     "screen": "tabs-more",
+     "rect": [
+      945,
+      214,
+      160,
+      26
+     ],
+     "text": "Click More, then Lien and Collection.",
+     "kind": "tab",
+     "help": "If Lien and Collection is already in the row of tabs, just click it."
+    },
+    {
+     "screen": "lien-top",
+     "rect": [
+      572,
+      343,
+      95,
+      26
+     ],
+     "text": "Under Liens, click + Create Lien.",
+     "kind": "click",
+     "help": "If there is no hospital bill yet, click + Add Hospital Bill first."
+    },
+    {
+     "screen": "lien-form",
+     "rect": [
+      588,
+      436,
+      538,
+      56
+     ],
+     "text": "Pick who the lien goes to in Send the Lien To.",
+     "kind": "pick",
+     "help": "The insurer is offered only when the policy is verified and has a claim number and a full billing address. Otherwise the form says what is missing."
+    },
+    {
+     "screen": "lien-form",
+     "rect": [
+      588,
+      540,
+      538,
+      50
+     ],
+     "text": "Tick the bills the lien is for under Attach Bills.",
+     "kind": "pick",
+     "help": ""
+    },
+    {
+     "screen": "lien-form",
+     "rect": [
+      588,
+      652,
+      180,
+      30
+     ],
+     "text": "Click Confirm and Create Lien. Nothing is sent yet.",
+     "kind": "save",
+     "help": ""
+    },
+    {
+     "screen": "lien-top",
+     "rect": [
+      554,
+      293,
+      624,
+      122
+     ],
+     "text": "Then upload the Lien Letter on that lien. The lien team sends it.",
+     "kind": "look",
+     "help": ""
+    }
+   ]
+  },
+  {
+   "slug": "next-step-and-whats-left",
+   "title": "Read Next Step and What's Left",
+   "about": "They tell you what to do now and where to do it.",
+   "words": "next step whats left what to do now progress steps overview team boxes engagement",
+   "steps": [
+    {
+     "screen": "overview-1",
+     "rect": [
+      535,
+      93,
+      102,
+      38
+     ],
+     "text": "Click the Overview tab.",
+     "kind": "tab",
+     "help": ""
+    },
+    {
+     "screen": "overview-1",
+     "rect": [
+      554,
+      251,
+      612,
+      90
+     ],
+     "text": "Next Step, the blue box at the top, says what to do now. It starts with where to go.",
+     "kind": "look",
+     "help": "For example: \"Overview tab, Initial Appointment:\". Once the patient is reached it can show an insurance line and an attorney line together, because the two do not wait for each other."
+    },
+    {
+     "screen": "overview-2",
+     "rect": [
+      556,
+      448,
+      609,
+      142
+     ],
+     "text": "Where each team stands: Call Team, Insurance, Attorney and Hospital EMR, each with its steps and a progress bar.",
+     "kind": "look",
+     "help": ""
+    },
+    {
+     "screen": "overview-2",
+     "rect": [
+      572,
+      548,
+      100,
+      26
+     ],
+     "text": "Click What's Left to see every step.",
+     "kind": "click",
+     "help": "It is also in Reminders on the right side."
+    },
+    {
+     "screen": "whats-left",
+     "rect": [
+      817,
+      110,
+      714,
+      100
+     ],
+     "text": "Still Needed lists each open step, with what to do and where.",
+     "kind": "look",
+     "help": ""
+    },
+    {
+     "screen": "whats-left",
+     "rect": [
+      817,
+      243,
+      714,
+      340
+     ],
+     "text": "Completed lists what is done, with the result.",
+     "kind": "look",
+     "help": ""
+    }
+   ]
+  }
+ ],
  "screens": [
   {
    "id": "new-patient",
@@ -5615,11 +6694,27 @@ window.DATA = {
   },
   {
    "id": "overview-1",
-   "title": "Patient page: Overview tab"
+   "title": "Patient page: Overview tab, Next Step and the Case box"
+  },
+  {
+   "id": "overview-casetype",
+   "title": "Overview tab: the Case Type list"
+  },
+  {
+   "id": "overview-2",
+   "title": "Overview tab: Last Contact, Letters, Where each team stands"
   },
   {
    "id": "overview-3",
    "title": "Overview tab: Medical Follow-up, and the left card"
+  },
+  {
+   "id": "overview-4",
+   "title": "Overview tab: Liens and Care, Medical Follow-up"
+  },
+  {
+   "id": "whats-left",
+   "title": "Engagement Steps: What's Left"
   },
   {
    "id": "demographics-1",
@@ -5634,20 +6729,28 @@ window.DATA = {
    "title": "Patient Demographics tab: Emergency Contacts, Parent / Guardian"
   },
   {
-   "id": "ed-visit",
-   "title": "Hospital EMR tab: ED Visit"
+   "id": "ed-notes",
+   "title": "Hospital EMR tab: ED Visit and its notes (first on the tab)"
   },
   {
-   "id": "ed-notes",
-   "title": "Hospital EMR tab: ED Visit Notes"
+   "id": "ed-notes-hpi",
+   "title": "Hospital EMR tab: ED Visit Notes, HPI Notes"
+  },
+  {
+   "id": "ed-visit",
+   "title": "Hospital EMR tab: ED Visit, Visit"
   },
   {
    "id": "tracker-1",
-   "title": "Hospital EMR tab: Hospital EMR Tracker"
+   "title": "Hospital EMR tab: Hospital EMR Tracker, H2 and H3"
+  },
+  {
+   "id": "tracker-mid",
+   "title": "Hospital EMR Tracker: H2 dates, H4, H5, H6, H7"
   },
   {
    "id": "tracker-2",
-   "title": "Hospital EMR Tracker: lien, records, review, settlement"
+   "title": "Hospital EMR Tracker: Completed (1): H1, BI Added Date"
   },
   {
    "id": "tracker-3",
@@ -5658,36 +6761,104 @@ window.DATA = {
    "title": "Log a Call"
   },
   {
+   "id": "log-call-outcome",
+   "title": "Log a Call: the Call outcome list"
+  },
+  {
    "id": "insurance-top",
-   "title": "Insurance and Verification tab"
+   "title": "Insurance and Verification tab: Case Documents"
+  },
+  {
+   "id": "insurance-coverage-type",
+   "title": "Insurance card: New Insurance, Coverage Type"
   },
   {
    "id": "insurance-form",
    "title": "Insurance card: New Insurance"
   },
   {
+   "id": "insurance-form-save",
+   "title": "Insurance card: New Insurance, Save Insurance"
+  },
+  {
    "id": "insurance-policy",
-   "title": "Insurance card: a saved policy"
+   "title": "Payer Order: the first policy"
+  },
+  {
+   "id": "insurance-second",
+   "title": "Payer Order: the second policy"
+  },
+  {
+   "id": "insurance-moveup",
+   "title": "Payer Order: Move Up"
+  },
+  {
+   "id": "insurance-moved",
+   "title": "Payer Order: after Move Up"
   },
   {
    "id": "insurance-verify",
    "title": "Insurance card: Verify a policy"
   },
   {
+   "id": "insurance-verify-result",
+   "title": "Verify: the Result list"
+  },
+  {
+   "id": "insurance-verify-failed",
+   "title": "Verify: a failed result needs a note"
+  },
+  {
    "id": "insurance-notpl",
-   "title": "Insurance tab: Health Insurance, No TPL / No Case Confirmation"
+   "title": "Insurance tab: No TPL / No Case Confirmation"
+  },
+  {
+   "id": "insurance-notpl-form",
+   "title": "Insurance tab: Confirm No TPL / No Case"
+  },
+  {
+   "id": "insurance-notpl-reason",
+   "title": "Confirm No TPL / No Case: the Reason list"
   },
   {
    "id": "attorney-top",
    "title": "Patient Attorney tab"
   },
   {
+   "id": "attorney-status",
+   "title": "Patient Attorney tab: the Attorney Status list"
+  },
+  {
    "id": "attorney-form",
    "title": "Attorneys card: New Attorney"
   },
   {
+   "id": "attorney-form-save",
+   "title": "Attorneys card: New Attorney, Save Attorney"
+  },
+  {
+   "id": "attorney-current",
+   "title": "Attorneys card: Current Patient Attorney"
+  },
+  {
    "id": "attorney-verify",
    "title": "Attorneys card: Add New Verification"
+  },
+  {
+   "id": "attorney-verify-method",
+   "title": "Add New Verification: the Verification Method list"
+  },
+  {
+   "id": "attorney-verify-result",
+   "title": "Add New Verification: the Result list"
+  },
+  {
+   "id": "lien-top",
+   "title": "Lien and Collection tab"
+  },
+  {
+   "id": "lien-form",
+   "title": "Lien and Collection tab: New Lien"
   },
   {
    "id": "patients-list",
