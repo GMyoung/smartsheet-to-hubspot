@@ -1956,7 +1956,7 @@ window.DATA = {
     "Q"
    ],
    "was": "Date of injury.",
-   "where": "Hospital EMR tab, ED Visit card: DOI. Also at the top of the Insurance card",
+   "where": "Overview tab, Case box: Date of Injury. Also on the Hospital EMR tab, ED Visit card",
    "how": "Click the value and type the date.",
    "kind": "Same fact, one field",
    "steps": [
@@ -3756,7 +3756,7 @@ window.DATA = {
    ],
    "was": "One long cell: police report, insurer, claim number, policy number, billing address, adjuster, phone, email.",
    "where": "Insurance and Verification tab, Insurance card: + Add Insurance",
-   "how": "One entry per policy. Pick the type (Third-Party Liability, Workers' Compensation, First-Party Auto, MedPay, Health, Other) and fill its boxes: Insurance Company, Claim Number, Policy Number, Whose Policy, Insurance Holder Name, Adjuster Name, Phone, Fax, Email, Billing Address, Notes. A WC policy also has the employer name, address and phone. The policies are one list in the order they are billed (Payer Order): the top one is the Primary; Move Up and Move Down change the order. The police report itself is uploaded under Police / Crash Report at the top of the card; its number can go in the policy Notes.",
+   "how": "One entry per policy. Pick the Coverage Type (Third-Party Liability (TPL), Workers' Compensation (WC), Own Auto / Vehicle Insurance, MedPay, Health Insurance, Other) and fill its boxes: Insurance Company, Claim Number, Policy Number, Whose Policy, Insurance Holder Name, Adjuster Name, Phone, Fax, Email, Billing Address, Notes. A WC policy also has the employer name, address and phone. The policies are one list in the order they are billed (Payer Order): the top one is the Primary; Move Up and Move Down change the order. The police report itself is uploaded under Police / Crash Report at the top of the card; its number can go in the policy Notes.",
    "kind": "An entry in a card",
    "steps": [
     {
@@ -3900,7 +3900,7 @@ window.DATA = {
    ],
    "was": "Tick: has MedPay or UIM coverage.",
    "where": "Insurance card: + Add Insurance, type MedPay",
-   "how": "Add a MedPay policy with its amount; it needs a billing address like the others if a lien goes to it. UIM is part of the patient's own auto policy: add it as First-Party Auto and say so in Notes (confirm with supervisor).",
+   "how": "Add a MedPay policy with its amount; it needs a billing address like the others if a lien goes to it. UIM is part of the patient's own auto policy: add it as Own Auto / Vehicle Insurance and say so in Notes (confirm with supervisor).",
    "kind": "An entry in a card",
    "steps": [
     {
@@ -6094,7 +6094,7 @@ window.DATA = {
      ],
      "text": "A green message says what changed, for example Progressive is now Primary.",
      "kind": "look",
-     "help": "With two policies of one type, the higher one is used for the verification and the lien."
+     "help": "With two policies of one type, the higher one is that type's Primary: the case verification looks at it."
     }
    ]
   },

@@ -273,7 +273,7 @@ TASKS = [
           'Nothing reorders the list by itself. Every move is kept in the history.'),
          ('insurance-moveup', [701, 244, 92, 32], 'Click Move Up on a policy to move it up.', 'click'),
          ('insurance-moved', [554, 160, 612, 52], 'A green message says what changed, for example Progressive is now Primary.', 'look',
-          'With two policies of one type, the higher one is used for the verification and the lien.'),
+          "With two policies of one type, the higher one is that type's Primary: the case verification looks at it."),
      ]},
     {'slug': 'confirm-no-tpl-no-case', 'title': 'Confirm No TPL / No Case',
      'about': 'When there is no insurance and no case. It is one button.',
