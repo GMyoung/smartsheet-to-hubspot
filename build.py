@@ -160,7 +160,7 @@ TARGETS = {
     'Billing Indicator Added to HPH / EPIC': [('tracker-1', [556, 210, 52, 22], 'H1 BI'), ('tracker-2', [576, 601, 590, 115], 'H1 BI: BI Added Date (under Completed)'),
                                               ('overview-3', [233, 574, 200, 40], 'BI Added Date')],
     'Billing Added To EPIC': [('tracker-1', [556, 282, 297, 280], 'H2 Coverage Added to Hospital EMR')],
-    'No TPL Coverage': [NO_TPL],
+    'Atty info added to Epic': [('tracker-1', [556, 282, 297, 280], 'H2: Patient Attorney Added to Hospital Date')],
     'No Discovery - Closed after 30 days': [CLOSE, ('tracker-1', [553, 169, 170, 22], 'The hospital deadline')],
     'Account Closed': [CLOSE],
     'MR & BILLING SENT; MR & BILLING DETAILS': [('tracker-mid', [866, 325, 297, 196], 'H5 Medical Records and Bill (MR&B)')],

@@ -196,19 +196,24 @@
     var w = s.header.map(function (_, i) { return isBox(s, i) ? 'w1' : s.rows.some(function (r) { return String(r[i]).length > 60; }) ? 'w3' : 'w2'; });
     var frozen = s.header.indexOf('FIRST NAME');
     var cls = function (i, l) { return w[i] + (i === frozen ? ' frozen' : '') + (l === state.letter ? ' sel' : ''); };
+    // A sheet can carry its own column widths and one colour per column (the NM log: its sections are coloured by column, not by row).
+    var sty = function (i, fill) {
+      var t = (s.widths ? 'min-width:' + s.widths[i] + 'px;max-width:' + s.widths[i] + 'px;' : '') + (fill && s.fills && s.fills[i] ? 'background:#' + s.fills[i] + ';' : '');
+      return t ? ' style="' + t + '"' : '';
+    };
     var h = '<table class="grid"><thead><tr><th class="rn">&#128206; &#128172; &#9644; i</th>';
-    s.header.forEach(function (name, i) { var l = s.letters[i]; h += '<th class="' + cls(i, l) + '" data-l="' + l + '" tabindex="0">' + esc(name) + '</th>'; });
+    s.header.forEach(function (name, i) { var l = s.letters[i]; h += '<th class="' + cls(i, l) + '"' + sty(i, false) + ' data-l="' + l + '" tabindex="0">' + esc(name) + '</th>'; });
     h += '</tr></thead><tbody>';
     s.rows.forEach(function (row, r) {
-      h += '<tr class="' + s.rowColors[r] + '"><td class="rn">' + (r + 1) + '</td>';
+      h += '<tr class="' + (s.fills ? '' : s.rowColors[r]) + '"><td class="rn">' + (r + 1) + '</td>';
       row.forEach(function (v, i) {
         var l = s.letters[i];
-        h += '<td class="' + cls(i, l) + '" data-l="' + l + '" data-r="' + r + '">' +
+        h += '<td class="' + cls(i, l) + '"' + sty(i, true) + ' data-l="' + l + '" data-r="' + r + '">' +
           (w[i] === 'w1' ? '<span class="box' + (v === true ? ' y' : '') + '"></span>' : '<div>' + esc(v === true ? 'Yes' : v) + '</div>') + '</td>';
       });
       h += '</tr>';
     });
-    for (var e = 0; e < 14; e++) h += '<tr><td class="rn">' + (s.rows.length + e + 1) + '</td>' + s.header.map(function (_, i) { return '<td class="' + w[i] + (i === frozen ? ' frozen' : '') + '"></td>'; }).join('') + '</tr>';
+    for (var e = 0; e < 14; e++) h += '<tr><td class="rn">' + (s.rows.length + e + 1) + '</td>' + s.header.map(function (_, i) { return '<td class="' + w[i] + (i === frozen ? ' frozen' : '') + '"' + sty(i, false) + '></td>'; }).join('') + '</tr>';
     $('gridwrap').innerHTML = h + '</tbody></table>';
   }
   function pick(letter, row, scroll) {

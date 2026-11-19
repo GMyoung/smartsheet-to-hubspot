@@ -32,6 +32,10 @@ Then:
 2. Look at the changed column in a browser. Serve the folder (`python -I -m http.server 8765 --bind 127.0.0.1`) and open `http://127.0.0.1:8765/#hph/J` (sheet / column letter); a file opened straight from disk does not load in the test browser.
 3. Commit and push; GitHub Pages publishes `main` in about a minute.
 
+### The two sheets
+
+`sheets.json` holds the header and the made-up rows of both logs. The NM sheet is the user's own template (`NM_Patient_Log_TEMPLATE_5_sample_patients.xlsx`, 2026-11-19): the same 73 headers in the same order, its five sample patients (555 phone numbers, example.com addresses), one colour per column (`fills`) and its column widths (`widths`). A sheet with `fills` is coloured by column; a sheet without (Humboldt Park) is coloured by row from the tick columns (`ROW_RULES` in `build.py`). To take over a new template, convert it the same way and keep every column letter covered in `smartsheet_dictionary.py`.
+
 ### Screenshots
 
 All are 1568 x 726 (`build.py` stops on any other size, and on a picture in `img/` that is not listed in `SCREENS`), taken in the sandbox (portal 52133122) on the demo patient Brenda Castellanos, a made-up person (the first fake row of the Humboldt Park sheet). Circles are `[x, y, width, height]` in pixels of the screenshot. Never use a screenshot from production or of a real patient.
