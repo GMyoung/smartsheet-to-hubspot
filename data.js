@@ -2412,7 +2412,7 @@ window.DATA = {
       270,
       42
      ],
-     "text": "Here it is: Callback Time, under Last Contact.",
+     "text": "Here it is: Callback Time, under Last Contact: click it and pick the day and time.",
      "kind": "field"
     },
     {
@@ -6428,7 +6428,7 @@ window.DATA = {
      ],
      "text": "To call back later, tick Create a To-do task to follow up and pick the day and time.",
      "kind": "click",
-     "help": "The time shows as Callback Time on the Overview tab, under Last Contact."
+     "help": "The time shows as Callback Time on the Overview tab, under Last Contact. You can also set it there directly."
     },
     {
      "screen": "log-call",
