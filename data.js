@@ -1167,7 +1167,7 @@ window.DATA = {
      "screen": "overview-3",
      "rect": [
       233,
-      478,
+      432,
       200,
       40
      ],
@@ -1175,21 +1175,21 @@ window.DATA = {
      "kind": "field"
     },
     {
-     "screen": "overview-1",
+     "screen": "tabs-more",
      "rect": [
-      637,
-      93,
-      120,
-      38
+      960,
+      150,
+      150,
+      26
      ],
-     "text": "On the patient page, click the Hospital EMR tab.",
+     "text": "On the patient page, click More, then Hospital EMR. (On a wide screen it can be in the row itself.)",
      "kind": "tab"
     },
     {
      "screen": "ed-visit",
      "rect": [
       772,
-      448,
+      431,
       190,
       38
      ],
@@ -1226,14 +1226,14 @@ window.DATA = {
      "kind": "open"
     },
     {
-     "screen": "overview-1",
+     "screen": "tabs-more",
      "rect": [
-      757,
-      93,
-      168,
-      38
+      960,
+      183,
+      150,
+      26
      ],
-     "text": "On the patient page, click the Patient Demographics tab.",
+     "text": "On the patient page, click More, then Patient Demographics. (On a wide screen it can be in the row itself.)",
      "kind": "tab"
     },
     {
@@ -1262,7 +1262,7 @@ window.DATA = {
      "screen": "new-patient",
      "rect": [
       532,
-      187,
+      182,
       170,
       53
      ],
@@ -1299,14 +1299,14 @@ window.DATA = {
      "kind": "open"
     },
     {
-     "screen": "overview-1",
+     "screen": "tabs-more",
      "rect": [
-      757,
-      93,
-      168,
-      38
+      960,
+      183,
+      150,
+      26
      ],
-     "text": "On the patient page, click the Patient Demographics tab.",
+     "text": "On the patient page, click More, then Patient Demographics. (On a wide screen it can be in the row itself.)",
      "kind": "tab"
     },
     {
@@ -1324,7 +1324,7 @@ window.DATA = {
      "screen": "new-patient",
      "rect": [
       352,
-      187,
+      182,
       170,
       53
      ],
@@ -1361,14 +1361,14 @@ window.DATA = {
      "kind": "open"
     },
     {
-     "screen": "overview-1",
+     "screen": "tabs-more",
      "rect": [
-      757,
-      93,
-      168,
-      38
+      960,
+      183,
+      150,
+      26
      ],
-     "text": "On the patient page, click the Patient Demographics tab.",
+     "text": "On the patient page, click More, then Patient Demographics. (On a wide screen it can be in the row itself.)",
      "kind": "tab"
     },
     {
@@ -1386,7 +1386,7 @@ window.DATA = {
      "screen": "new-patient",
      "rect": [
       352,
-      328,
+      323,
       370,
       53
      ],
@@ -1423,14 +1423,14 @@ window.DATA = {
      "kind": "open"
     },
     {
-     "screen": "overview-1",
+     "screen": "tabs-more",
      "rect": [
-      757,
-      93,
-      168,
-      38
+      960,
+      183,
+      150,
+      26
      ],
-     "text": "On the patient page, click the Patient Demographics tab.",
+     "text": "On the patient page, click More, then Patient Demographics. (On a wide screen it can be in the row itself.)",
      "kind": "tab"
     },
     {
@@ -1459,7 +1459,7 @@ window.DATA = {
      "screen": "new-patient",
      "rect": [
       352,
-      398,
+      393,
       97,
       53
      ],
@@ -1496,14 +1496,14 @@ window.DATA = {
      "kind": "open"
     },
     {
-     "screen": "overview-1",
+     "screen": "tabs-more",
      "rect": [
-      757,
-      93,
-      168,
-      38
+      960,
+      183,
+      150,
+      26
      ],
-     "text": "On the patient page, click the Patient Demographics tab.",
+     "text": "On the patient page, click More, then Patient Demographics. (On a wide screen it can be in the row itself.)",
      "kind": "tab"
     },
     {
@@ -1521,7 +1521,7 @@ window.DATA = {
      "screen": "new-patient",
      "rect": [
       352,
-      257,
+      252,
       170,
       53
      ],
@@ -1558,14 +1558,14 @@ window.DATA = {
      "kind": "open"
     },
     {
-     "screen": "overview-1",
+     "screen": "tabs-more",
      "rect": [
-      757,
-      93,
-      168,
-      38
+      960,
+      183,
+      150,
+      26
      ],
-     "text": "On the patient page, click the Patient Demographics tab.",
+     "text": "On the patient page, click More, then Patient Demographics. (On a wide screen it can be in the row itself.)",
      "kind": "tab"
     },
     {
@@ -1620,14 +1620,14 @@ window.DATA = {
      "kind": "open"
     },
     {
-     "screen": "overview-1",
+     "screen": "tabs-more",
      "rect": [
-      757,
-      93,
-      168,
-      38
+      960,
+      183,
+      150,
+      26
      ],
-     "text": "On the patient page, click the Patient Demographics tab.",
+     "text": "On the patient page, click More, then Patient Demographics. (On a wide screen it can be in the row itself.)",
      "kind": "tab"
     },
     {
@@ -1671,14 +1671,14 @@ window.DATA = {
      "kind": "open"
     },
     {
-     "screen": "overview-1",
+     "screen": "tabs-more",
      "rect": [
-      757,
-      93,
-      168,
-      38
+      960,
+      183,
+      150,
+      26
      ],
-     "text": "On the patient page, click the Patient Demographics tab.",
+     "text": "On the patient page, click More, then Patient Demographics. (On a wide screen it can be in the row itself.)",
      "kind": "tab"
     },
     {
@@ -1722,21 +1722,21 @@ window.DATA = {
      "kind": "open"
     },
     {
-     "screen": "overview-1",
+     "screen": "tabs-more",
      "rect": [
-      637,
-      93,
-      120,
-      38
+      960,
+      150,
+      150,
+      26
      ],
-     "text": "On the patient page, click the Hospital EMR tab.",
+     "text": "On the patient page, click More, then Hospital EMR. (On a wide screen it can be in the row itself.)",
      "kind": "tab"
     },
     {
      "screen": "ed-notes",
      "rect": [
       571,
-      584,
+      571,
       190,
       38
      ],
@@ -1747,7 +1747,7 @@ window.DATA = {
      "screen": "new-patient",
      "rect": [
       352,
-      468,
+      463,
       170,
       53
      ],
@@ -1784,21 +1784,21 @@ window.DATA = {
      "kind": "open"
     },
     {
-     "screen": "overview-1",
+     "screen": "tabs-more",
      "rect": [
-      637,
-      93,
-      120,
-      38
+      960,
+      150,
+      150,
+      26
      ],
-     "text": "On the patient page, click the Hospital EMR tab.",
+     "text": "On the patient page, click More, then Hospital EMR. (On a wide screen it can be in the row itself.)",
      "kind": "tab"
     },
     {
      "screen": "ed-notes",
      "rect": [
       772,
-      584,
+      571,
       190,
       38
      ],
@@ -1809,7 +1809,7 @@ window.DATA = {
      "screen": "new-patient",
      "rect": [
       532,
-      468,
+      463,
       170,
       53
      ],
@@ -1844,21 +1844,21 @@ window.DATA = {
      "kind": "open"
     },
     {
-     "screen": "overview-1",
+     "screen": "tabs-more",
      "rect": [
-      637,
-      93,
-      120,
-      38
+      960,
+      150,
+      150,
+      26
      ],
-     "text": "On the patient page, click the Hospital EMR tab.",
+     "text": "On the patient page, click More, then Hospital EMR. (On a wide screen it can be in the row itself.)",
      "kind": "tab"
     },
     {
      "screen": "ed-visit",
      "rect": [
       571,
-      308,
+      292,
       190,
       38
      ],
@@ -1869,7 +1869,7 @@ window.DATA = {
      "screen": "new-patient",
      "rect": [
       459,
-      398,
+      393,
       170,
       53
      ],
@@ -1923,19 +1923,19 @@ window.DATA = {
     {
      "screen": "overview-1",
      "rect": [
-      535,
+      534,
       93,
-      102,
+      152,
       38
      ],
-     "text": "The patient page opens. Click the Overview tab if another tab is showing.",
+     "text": "The patient page opens. Click the Overview tab. If another tab is showing and Overview is not in the row, click More, then Overview.",
      "kind": "tab"
     },
     {
      "screen": "overview-1",
      "rect": [
       881,
-      468,
+      465,
       200,
       40
      ],
@@ -1972,21 +1972,21 @@ window.DATA = {
      "kind": "open"
     },
     {
-     "screen": "overview-1",
+     "screen": "tabs-more",
      "rect": [
-      637,
-      93,
-      120,
-      38
+      960,
+      150,
+      150,
+      26
      ],
-     "text": "On the patient page, click the Hospital EMR tab.",
+     "text": "On the patient page, click More, then Hospital EMR. (On a wide screen it can be in the row itself.)",
      "kind": "tab"
     },
     {
      "screen": "ed-visit",
      "rect": [
       974,
-      308,
+      292,
       180,
       38
      ],
@@ -1996,19 +1996,19 @@ window.DATA = {
     {
      "screen": "overview-1",
      "rect": [
-      535,
+      534,
       93,
-      102,
+      152,
       38
      ],
-     "text": "The patient page opens. Click the Overview tab if another tab is showing.",
+     "text": "The patient page opens. Click the Overview tab. If another tab is showing and Overview is not in the row, click More, then Overview.",
      "kind": "tab"
     },
     {
      "screen": "overview-1",
      "rect": [
       572,
-      543,
+      540,
       270,
       44
      ],
@@ -2041,21 +2041,21 @@ window.DATA = {
      "kind": "open"
     },
     {
-     "screen": "overview-1",
+     "screen": "tabs-more",
      "rect": [
-      637,
-      93,
-      120,
-      38
+      960,
+      150,
+      150,
+      26
      ],
-     "text": "On the patient page, click the Hospital EMR tab.",
+     "text": "On the patient page, click More, then Hospital EMR. (On a wide screen it can be in the row itself.)",
      "kind": "tab"
     },
     {
      "screen": "ed-visit",
      "rect": [
       772,
-      308,
+      292,
       190,
       38
      ],
@@ -2066,7 +2066,7 @@ window.DATA = {
      "screen": "new-patient",
      "rect": [
       352,
-      539,
+      534,
       370,
       53
      ],
@@ -2101,21 +2101,21 @@ window.DATA = {
      "kind": "open"
     },
     {
-     "screen": "overview-1",
+     "screen": "tabs-more",
      "rect": [
-      637,
-      93,
-      120,
-      38
+      960,
+      150,
+      150,
+      26
      ],
-     "text": "On the patient page, click the Hospital EMR tab.",
+     "text": "On the patient page, click More, then Hospital EMR. (On a wide screen it can be in the row itself.)",
      "kind": "tab"
     },
     {
      "screen": "ed-visit",
      "rect": [
       571,
-      448,
+      432,
       190,
       38
      ],
@@ -2152,21 +2152,21 @@ window.DATA = {
      "kind": "open"
     },
     {
-     "screen": "overview-1",
+     "screen": "tabs-more",
      "rect": [
-      637,
-      93,
-      120,
-      38
+      960,
+      150,
+      150,
+      26
      ],
-     "text": "On the patient page, click the Hospital EMR tab.",
+     "text": "On the patient page, click More, then Hospital EMR. (On a wide screen it can be in the row itself.)",
      "kind": "tab"
     },
     {
      "screen": "ed-visit",
      "rect": [
       571,
-      362,
+      346,
       590,
       72
      ],
@@ -2201,21 +2201,21 @@ window.DATA = {
      "kind": "open"
     },
     {
-     "screen": "overview-1",
+     "screen": "tabs-more",
      "rect": [
-      637,
-      93,
-      120,
-      38
+      960,
+      150,
+      150,
+      26
      ],
-     "text": "On the patient page, click the Hospital EMR tab.",
+     "text": "On the patient page, click More, then Hospital EMR. (On a wide screen it can be in the row itself.)",
      "kind": "tab"
     },
     {
      "screen": "ed-notes-hpi",
      "rect": [
-      571,
-      333,
+      569,
+      325,
       575,
       191
      ],
@@ -2252,21 +2252,21 @@ window.DATA = {
      "kind": "open"
     },
     {
-     "screen": "overview-1",
+     "screen": "tabs-more",
      "rect": [
-      637,
-      93,
-      120,
-      38
+      960,
+      150,
+      150,
+      26
      ],
-     "text": "On the patient page, click the Hospital EMR tab.",
+     "text": "On the patient page, click More, then Hospital EMR. (On a wide screen it can be in the row itself.)",
      "kind": "tab"
     },
     {
      "screen": "ed-notes",
      "rect": [
       554,
-      252,
+      245,
       612,
       253
      ],
@@ -2276,8 +2276,8 @@ window.DATA = {
     {
      "screen": "activities-menu",
      "rect": [
-      1298,
-      293,
+      1305,
+      281,
       190,
       26
      ],
@@ -2288,7 +2288,7 @@ window.DATA = {
      "screen": "log-call",
      "rect": [
       927,
-      492,
+      450,
       490,
       55
      ],
@@ -2298,19 +2298,19 @@ window.DATA = {
     {
      "screen": "overview-1",
      "rect": [
-      535,
+      534,
       93,
-      102,
+      152,
       38
      ],
-     "text": "The patient page opens. Click the Overview tab if another tab is showing.",
+     "text": "The patient page opens. Click the Overview tab. If another tab is showing and Overview is not in the row, click More, then Overview.",
      "kind": "tab"
     },
     {
      "screen": "overview-1",
      "rect": [
       572,
-      488,
+      485,
       270,
       44
      ],
@@ -2345,21 +2345,21 @@ window.DATA = {
      "kind": "open"
     },
     {
-     "screen": "overview-1",
+     "screen": "tabs-more",
      "rect": [
-      637,
-      93,
-      120,
-      38
+      960,
+      150,
+      150,
+      26
      ],
-     "text": "On the patient page, click the Hospital EMR tab.",
+     "text": "On the patient page, click More, then Hospital EMR. (On a wide screen it can be in the row itself.)",
      "kind": "tab"
     },
     {
      "screen": "ed-visit",
      "rect": [
       974,
-      448,
+      432,
       180,
       38
      ],
@@ -2394,10 +2394,32 @@ window.DATA = {
      "kind": "open"
     },
     {
+     "screen": "overview-1",
+     "rect": [
+      534,
+      93,
+      152,
+      38
+     ],
+     "text": "The patient page opens. Click the Overview tab. If another tab is showing and Overview is not in the row, click More, then Overview.",
+     "kind": "tab"
+    },
+    {
+     "screen": "overview-2",
+     "rect": [
+      572,
+      306,
+      270,
+      42
+     ],
+     "text": "Here it is: Callback Time, under Last Contact.",
+     "kind": "field"
+    },
+    {
      "screen": "activities-menu",
      "rect": [
-      1298,
-      293,
+      1305,
+      281,
       190,
       26
      ],
@@ -2408,7 +2430,7 @@ window.DATA = {
      "screen": "log-call",
      "rect": [
       927,
-      621,
+      579,
       380,
       26
      ],
@@ -2445,12 +2467,12 @@ window.DATA = {
     {
      "screen": "overview-1",
      "rect": [
-      535,
+      534,
       93,
-      102,
+      152,
       38
      ],
-     "text": "The patient page opens. Click the Overview tab if another tab is showing.",
+     "text": "The patient page opens. Click the Overview tab. If another tab is showing and Overview is not in the row, click More, then Overview.",
      "kind": "tab"
     },
     {
@@ -2494,19 +2516,19 @@ window.DATA = {
     {
      "screen": "overview-1",
      "rect": [
-      535,
+      534,
       93,
-      102,
+      152,
       38
      ],
-     "text": "The patient page opens. Click the Overview tab if another tab is showing.",
+     "text": "The patient page opens. Click the Overview tab. If another tab is showing and Overview is not in the row, click More, then Overview.",
      "kind": "tab"
     },
     {
      "screen": "overview-1",
      "rect": [
       554,
-      361,
+      358,
       612,
       62
      ],
@@ -2514,21 +2536,21 @@ window.DATA = {
      "kind": "field"
     },
     {
-     "screen": "tabs-more",
+     "screen": "overview-1",
      "rect": [
-      945,
-      150,
-      160,
-      26
+      687,
+      93,
+      188,
+      38
      ],
-     "text": "On the patient page, click More, then Insurance and Verification. (On a wide screen the tab is in the row itself.)",
+     "text": "On the patient page, click the Insurance and Verification tab. (On a narrow screen it can be under More.)",
      "kind": "tab"
     },
     {
      "screen": "insurance-top",
      "rect": [
       572,
-      303,
+      416,
       270,
       112
      ],
@@ -2555,7 +2577,7 @@ window.DATA = {
      "screen": "new-patient",
      "rect": [
       352,
-      539,
+      534,
       370,
       53
      ],
@@ -2592,19 +2614,19 @@ window.DATA = {
     {
      "screen": "overview-1",
      "rect": [
-      535,
+      534,
       93,
-      102,
+      152,
       38
      ],
-     "text": "The patient page opens. Click the Overview tab if another tab is showing.",
+     "text": "The patient page opens. Click the Overview tab. If another tab is showing and Overview is not in the row, click More, then Overview.",
      "kind": "tab"
     },
     {
      "screen": "overview-1",
      "rect": [
       881,
-      468,
+      465,
       200,
       40
      ],
@@ -2641,21 +2663,21 @@ window.DATA = {
     {
      "screen": "overview-1",
      "rect": [
-      535,
+      534,
       93,
-      102,
+      152,
       38
      ],
-     "text": "The patient page opens. Click the Overview tab if another tab is showing.",
+     "text": "The patient page opens. Click the Overview tab. If another tab is showing and Overview is not in the row, click More, then Overview.",
      "kind": "tab"
     },
     {
      "screen": "overview-2",
      "rect": [
       556,
-      206,
+      203,
       298,
-      158
+      167
      ],
      "text": "Here it is: Last Contact: who called.",
      "kind": "field"
@@ -2692,21 +2714,21 @@ window.DATA = {
     {
      "screen": "overview-1",
      "rect": [
-      535,
+      534,
       93,
-      102,
+      152,
       38
      ],
-     "text": "The patient page opens. Click the Overview tab if another tab is showing.",
+     "text": "The patient page opens. Click the Overview tab. If another tab is showing and Overview is not in the row, click More, then Overview.",
      "kind": "tab"
     },
     {
      "screen": "overview-2",
      "rect": [
       556,
-      206,
+      203,
       298,
-      158
+      167
      ],
      "text": "Here it is: Last Contact: when, and how many attempts.",
      "kind": "field"
@@ -2714,8 +2736,8 @@ window.DATA = {
     {
      "screen": "activities-menu",
      "rect": [
-      1298,
-      293,
+      1305,
+      281,
       190,
       26
      ],
@@ -2726,7 +2748,7 @@ window.DATA = {
      "screen": "log-call",
      "rect": [
       927,
-      415,
+      373,
       172,
       56
      ],
@@ -2765,8 +2787,8 @@ window.DATA = {
     {
      "screen": "activities-menu",
      "rect": [
-      1298,
-      293,
+      1305,
+      281,
       190,
       26
      ],
@@ -2777,7 +2799,7 @@ window.DATA = {
      "screen": "log-call",
      "rect": [
       927,
-      492,
+      450,
       490,
       55
      ],
@@ -2787,12 +2809,12 @@ window.DATA = {
     {
      "screen": "overview-1",
      "rect": [
-      535,
+      534,
       93,
-      102,
+      152,
       38
      ],
-     "text": "The patient page opens. Click the Overview tab if another tab is showing.",
+     "text": "The patient page opens. Click the Overview tab. If another tab is showing and Overview is not in the row, click More, then Overview.",
      "kind": "tab"
     },
     {
@@ -2838,8 +2860,8 @@ window.DATA = {
     {
      "screen": "activities-menu",
      "rect": [
-      1298,
-      293,
+      1305,
+      281,
       190,
       26
      ],
@@ -2850,7 +2872,7 @@ window.DATA = {
      "screen": "log-call",
      "rect": [
       1008,
-      358,
+      315,
       125,
       48
      ],
@@ -2889,8 +2911,8 @@ window.DATA = {
     {
      "screen": "activities-menu",
      "rect": [
-      1298,
-      293,
+      1305,
+      281,
       190,
       26
      ],
@@ -2901,7 +2923,7 @@ window.DATA = {
      "screen": "log-call",
      "rect": [
       1008,
-      358,
+      315,
       125,
       48
      ],
@@ -2997,19 +3019,19 @@ window.DATA = {
     {
      "screen": "overview-1",
      "rect": [
-      535,
+      534,
       93,
-      102,
+      152,
       38
      ],
-     "text": "The patient page opens. Click the Overview tab if another tab is showing.",
+     "text": "The patient page opens. Click the Overview tab. If another tab is showing and Overview is not in the row, click More, then Overview.",
      "kind": "tab"
     },
     {
      "screen": "overview-1",
      "rect": [
       572,
-      488,
+      485,
       270,
       44
      ],
@@ -3048,19 +3070,19 @@ window.DATA = {
     {
      "screen": "overview-1",
      "rect": [
-      535,
+      534,
       93,
-      102,
+      152,
       38
      ],
-     "text": "The patient page opens. Click the Overview tab if another tab is showing.",
+     "text": "The patient page opens. Click the Overview tab. If another tab is showing and Overview is not in the row, click More, then Overview.",
      "kind": "tab"
     },
     {
      "screen": "overview-1",
      "rect": [
       572,
-      488,
+      485,
       270,
       44
      ],
@@ -3099,19 +3121,19 @@ window.DATA = {
     {
      "screen": "overview-1",
      "rect": [
-      535,
+      534,
       93,
-      102,
+      152,
       38
      ],
-     "text": "The patient page opens. Click the Overview tab if another tab is showing.",
+     "text": "The patient page opens. Click the Overview tab. If another tab is showing and Overview is not in the row, click More, then Overview.",
      "kind": "tab"
     },
     {
      "screen": "overview-1",
      "rect": [
       572,
-      488,
+      485,
       270,
       44
      ],
@@ -3150,19 +3172,19 @@ window.DATA = {
     {
      "screen": "overview-1",
      "rect": [
-      535,
+      534,
       93,
-      102,
+      152,
       38
      ],
-     "text": "The patient page opens. Click the Overview tab if another tab is showing.",
+     "text": "The patient page opens. Click the Overview tab. If another tab is showing and Overview is not in the row, click More, then Overview.",
      "kind": "tab"
     },
     {
      "screen": "overview-1",
      "rect": [
       572,
-      488,
+      485,
       270,
       44
      ],
@@ -3201,19 +3223,19 @@ window.DATA = {
     {
      "screen": "overview-1",
      "rect": [
-      535,
+      534,
       93,
-      102,
+      152,
       38
      ],
-     "text": "The patient page opens. Click the Overview tab if another tab is showing.",
+     "text": "The patient page opens. Click the Overview tab. If another tab is showing and Overview is not in the row, click More, then Overview.",
      "kind": "tab"
     },
     {
      "screen": "overview-1",
      "rect": [
       572,
-      488,
+      485,
       270,
       44
      ],
@@ -3221,21 +3243,21 @@ window.DATA = {
      "kind": "field"
     },
     {
-     "screen": "tabs-more",
+     "screen": "overview-1",
      "rect": [
-      945,
-      150,
-      160,
-      26
+      687,
+      93,
+      188,
+      38
      ],
-     "text": "On the patient page, click More, then Insurance and Verification. (On a wide screen the tab is in the row itself.)",
+     "text": "On the patient page, click the Insurance and Verification tab. (On a narrow screen it can be under More.)",
      "kind": "tab"
     },
     {
      "screen": "insurance-notpl",
      "rect": [
       554,
-      402,
+      439,
       612,
       100
      ],
@@ -3274,19 +3296,19 @@ window.DATA = {
     {
      "screen": "overview-1",
      "rect": [
-      535,
+      534,
       93,
-      102,
+      152,
       38
      ],
-     "text": "The patient page opens. Click the Overview tab if another tab is showing.",
+     "text": "The patient page opens. Click the Overview tab. If another tab is showing and Overview is not in the row, click More, then Overview.",
      "kind": "tab"
     },
     {
      "screen": "overview-1",
      "rect": [
       572,
-      488,
+      485,
       270,
       44
      ],
@@ -3321,14 +3343,14 @@ window.DATA = {
      "kind": "open"
     },
     {
-     "screen": "tabs-more",
+     "screen": "overview-1",
      "rect": [
-      945,
-      182,
-      160,
-      26
+      877,
+      93,
+      149,
+      38
      ],
-     "text": "On the patient page, click More, then Patient Attorney. (On a wide screen the tab is in the row itself.)",
+     "text": "On the patient page, click the Patient Attorney tab. (On a narrow screen it can be under More.)",
      "kind": "tab"
     },
     {
@@ -3410,21 +3432,21 @@ window.DATA = {
      "kind": "open"
     },
     {
-     "screen": "tabs-more",
+     "screen": "overview-1",
      "rect": [
-      945,
-      150,
-      160,
-      26
+      687,
+      93,
+      188,
+      38
      ],
-     "text": "On the patient page, click More, then Insurance and Verification. (On a wide screen the tab is in the row itself.)",
+     "text": "On the patient page, click the Insurance and Verification tab. (On a narrow screen it can be under More.)",
      "kind": "tab"
     },
     {
      "screen": "insurance-top",
      "rect": [
-      635,
-      542,
+      633,
+      597,
       117,
       31
      ],
@@ -3435,7 +3457,7 @@ window.DATA = {
      "screen": "insurance-coverage-type",
      "rect": [
       573,
-      537,
+      516,
       570,
       32
      ],
@@ -3472,21 +3494,21 @@ window.DATA = {
      "kind": "open"
     },
     {
-     "screen": "tabs-more",
+     "screen": "overview-1",
      "rect": [
-      945,
-      150,
-      160,
-      26
+      687,
+      93,
+      188,
+      38
      ],
-     "text": "On the patient page, click More, then Insurance and Verification. (On a wide screen the tab is in the row itself.)",
+     "text": "On the patient page, click the Insurance and Verification tab. (On a narrow screen it can be under More.)",
      "kind": "tab"
     },
     {
      "screen": "insurance-top",
      "rect": [
-      635,
-      542,
+      633,
+      597,
       117,
       31
      ],
@@ -3523,21 +3545,21 @@ window.DATA = {
      "kind": "open"
     },
     {
-     "screen": "overview-1",
+     "screen": "tabs-more",
      "rect": [
-      637,
-      93,
-      120,
-      38
+      960,
+      150,
+      150,
+      26
      ],
-     "text": "On the patient page, click the Hospital EMR tab.",
+     "text": "On the patient page, click More, then Hospital EMR. (On a wide screen it can be in the row itself.)",
      "kind": "tab"
     },
     {
      "screen": "ed-visit",
      "rect": [
       571,
-      362,
+      346,
       590,
       72
      ],
@@ -3574,21 +3596,21 @@ window.DATA = {
      "kind": "open"
     },
     {
-     "screen": "overview-1",
+     "screen": "tabs-more",
      "rect": [
-      637,
-      93,
-      120,
-      38
+      960,
+      150,
+      150,
+      26
      ],
-     "text": "On the patient page, click the Hospital EMR tab.",
+     "text": "On the patient page, click More, then Hospital EMR. (On a wide screen it can be in the row itself.)",
      "kind": "tab"
     },
     {
      "screen": "ed-visit",
      "rect": [
       571,
-      362,
+      346,
       590,
       72
      ],
@@ -3627,19 +3649,19 @@ window.DATA = {
     {
      "screen": "overview-1",
      "rect": [
-      535,
+      534,
       93,
-      102,
+      152,
       38
      ],
-     "text": "The patient page opens. Click the Overview tab if another tab is showing.",
+     "text": "The patient page opens. Click the Overview tab. If another tab is showing and Overview is not in the row, click More, then Overview.",
      "kind": "tab"
     },
     {
      "screen": "overview-1",
      "rect": [
       572,
-      488,
+      485,
       270,
       44
      ],
@@ -3647,21 +3669,21 @@ window.DATA = {
      "kind": "field"
     },
     {
-     "screen": "tabs-more",
+     "screen": "overview-1",
      "rect": [
-      945,
-      150,
-      160,
-      26
+      687,
+      93,
+      188,
+      38
      ],
-     "text": "On the patient page, click More, then Insurance and Verification. (On a wide screen the tab is in the row itself.)",
+     "text": "On the patient page, click the Insurance and Verification tab. (On a narrow screen it can be under More.)",
      "kind": "tab"
     },
     {
      "screen": "insurance-top",
      "rect": [
-      635,
-      542,
+      633,
+      597,
       117,
       31
      ],
@@ -3700,19 +3722,19 @@ window.DATA = {
     {
      "screen": "overview-1",
      "rect": [
-      535,
+      534,
       93,
-      102,
+      152,
       38
      ],
-     "text": "The patient page opens. Click the Overview tab if another tab is showing.",
+     "text": "The patient page opens. Click the Overview tab. If another tab is showing and Overview is not in the row, click More, then Overview.",
      "kind": "tab"
     },
     {
      "screen": "overview-1",
      "rect": [
       572,
-      488,
+      485,
       270,
       44
      ],
@@ -3720,21 +3742,21 @@ window.DATA = {
      "kind": "field"
     },
     {
-     "screen": "tabs-more",
+     "screen": "overview-1",
      "rect": [
-      945,
-      150,
-      160,
-      26
+      687,
+      93,
+      188,
+      38
      ],
-     "text": "On the patient page, click More, then Insurance and Verification. (On a wide screen the tab is in the row itself.)",
+     "text": "On the patient page, click the Insurance and Verification tab. (On a narrow screen it can be under More.)",
      "kind": "tab"
     },
     {
      "screen": "insurance-top",
      "rect": [
-      635,
-      542,
+      633,
+      597,
       117,
       31
      ],
@@ -3771,21 +3793,21 @@ window.DATA = {
      "kind": "open"
     },
     {
-     "screen": "tabs-more",
+     "screen": "overview-1",
      "rect": [
-      945,
-      150,
-      160,
-      26
+      687,
+      93,
+      188,
+      38
      ],
-     "text": "On the patient page, click More, then Insurance and Verification. (On a wide screen the tab is in the row itself.)",
+     "text": "On the patient page, click the Insurance and Verification tab. (On a narrow screen it can be under More.)",
      "kind": "tab"
     },
     {
      "screen": "insurance-top",
      "rect": [
-      635,
-      542,
+      633,
+      597,
       117,
       31
      ],
@@ -3796,7 +3818,7 @@ window.DATA = {
      "screen": "insurance-form",
      "rect": [
       555,
-      268,
+      247,
       611,
       458
      ],
@@ -3807,7 +3829,7 @@ window.DATA = {
      "screen": "insurance-policy",
      "rect": [
       555,
-      173,
+      139,
       611,
       330
      ],
@@ -3818,11 +3840,11 @@ window.DATA = {
      "screen": "insurance-top",
      "rect": [
       572,
-      303,
+      304,
       270,
-      55
+      170
      ],
-     "text": "Here it is: Police / Crash Report.",
+     "text": "Here it is: Police Report Number, Police Department, Police / Crash Report.",
      "kind": "field"
     }
    ]
@@ -3853,21 +3875,21 @@ window.DATA = {
      "kind": "open"
     },
     {
-     "screen": "tabs-more",
+     "screen": "overview-1",
      "rect": [
-      945,
-      150,
-      160,
-      26
+      687,
+      93,
+      188,
+      38
      ],
-     "text": "On the patient page, click More, then Insurance and Verification. (On a wide screen the tab is in the row itself.)",
+     "text": "On the patient page, click the Insurance and Verification tab. (On a narrow screen it can be under More.)",
      "kind": "tab"
     },
     {
      "screen": "insurance-top",
      "rect": [
-      635,
-      542,
+      633,
+      597,
       117,
       31
      ],
@@ -3878,7 +3900,7 @@ window.DATA = {
      "screen": "insurance-coverage-type",
      "rect": [
       573,
-      537,
+      516,
       570,
       32
      ],
@@ -3915,21 +3937,21 @@ window.DATA = {
      "kind": "open"
     },
     {
-     "screen": "tabs-more",
+     "screen": "overview-1",
      "rect": [
-      945,
-      150,
-      160,
-      26
+      687,
+      93,
+      188,
+      38
      ],
-     "text": "On the patient page, click More, then Insurance and Verification. (On a wide screen the tab is in the row itself.)",
+     "text": "On the patient page, click the Insurance and Verification tab. (On a narrow screen it can be under More.)",
      "kind": "tab"
     },
     {
      "screen": "insurance-top",
      "rect": [
-      635,
-      542,
+      633,
+      597,
       117,
       31
      ],
@@ -3940,7 +3962,7 @@ window.DATA = {
      "screen": "insurance-coverage-type",
      "rect": [
       573,
-      505,
+      484,
       570,
       32
      ],
@@ -3977,21 +3999,21 @@ window.DATA = {
      "kind": "open"
     },
     {
-     "screen": "tabs-more",
+     "screen": "overview-1",
      "rect": [
-      945,
-      150,
-      160,
-      26
+      687,
+      93,
+      188,
+      38
      ],
-     "text": "On the patient page, click More, then Insurance and Verification. (On a wide screen the tab is in the row itself.)",
+     "text": "On the patient page, click the Insurance and Verification tab. (On a narrow screen it can be under More.)",
      "kind": "tab"
     },
     {
      "screen": "insurance-policy",
      "rect": [
       572,
-      641,
+      600,
       60,
       32
      ],
@@ -4002,7 +4024,7 @@ window.DATA = {
      "screen": "insurance-verify",
      "rect": [
       572,
-      255,
+      210,
       572,
       445
      ],
@@ -4013,7 +4035,7 @@ window.DATA = {
      "screen": "insurance-policy",
      "rect": [
       632,
-      224,
+      190,
       62,
       22
      ],
@@ -4050,21 +4072,21 @@ window.DATA = {
      "kind": "open"
     },
     {
-     "screen": "tabs-more",
+     "screen": "overview-1",
      "rect": [
-      945,
-      150,
-      160,
-      26
+      687,
+      93,
+      188,
+      38
      ],
-     "text": "On the patient page, click More, then Insurance and Verification. (On a wide screen the tab is in the row itself.)",
+     "text": "On the patient page, click the Insurance and Verification tab. (On a narrow screen it can be under More.)",
      "kind": "tab"
     },
     {
      "screen": "insurance-policy",
      "rect": [
       572,
-      462,
+      428,
       420,
       40
      ],
@@ -4101,21 +4123,21 @@ window.DATA = {
      "kind": "open"
     },
     {
-     "screen": "tabs-more",
+     "screen": "overview-1",
      "rect": [
-      945,
-      150,
-      160,
-      26
+      687,
+      93,
+      188,
+      38
      ],
-     "text": "On the patient page, click More, then Insurance and Verification. (On a wide screen the tab is in the row itself.)",
+     "text": "On the patient page, click the Insurance and Verification tab. (On a narrow screen it can be under More.)",
      "kind": "tab"
     },
     {
      "screen": "insurance-policy",
      "rect": [
       572,
-      520,
+      486,
       400,
       24
      ],
@@ -4152,21 +4174,21 @@ window.DATA = {
      "kind": "open"
     },
     {
-     "screen": "overview-1",
+     "screen": "tabs-more",
      "rect": [
-      637,
-      93,
-      120,
-      38
+      960,
+      150,
+      150,
+      26
      ],
-     "text": "On the patient page, click the Hospital EMR tab.",
+     "text": "On the patient page, click More, then Hospital EMR. (On a wide screen it can be in the row itself.)",
      "kind": "tab"
     },
     {
      "screen": "tracker-1",
      "rect": [
       574,
-      405,
+      389,
       270,
       40
      ],
@@ -4203,14 +4225,14 @@ window.DATA = {
      "kind": "open"
     },
     {
-     "screen": "tabs-more",
+     "screen": "overview-1",
      "rect": [
-      945,
-      182,
-      160,
-      26
+      877,
+      93,
+      149,
+      38
      ],
-     "text": "On the patient page, click More, then Patient Attorney. (On a wide screen the tab is in the row itself.)",
+     "text": "On the patient page, click the Patient Attorney tab. (On a narrow screen it can be under More.)",
      "kind": "tab"
     },
     {
@@ -4255,14 +4277,14 @@ window.DATA = {
      "kind": "open"
     },
     {
-     "screen": "tabs-more",
+     "screen": "overview-1",
      "rect": [
-      945,
-      182,
-      160,
-      26
+      877,
+      93,
+      149,
+      38
      ],
-     "text": "On the patient page, click More, then Patient Attorney. (On a wide screen the tab is in the row itself.)",
+     "text": "On the patient page, click the Patient Attorney tab. (On a narrow screen it can be under More.)",
      "kind": "tab"
     },
     {
@@ -4306,14 +4328,14 @@ window.DATA = {
      "kind": "open"
     },
     {
-     "screen": "tabs-more",
+     "screen": "overview-1",
      "rect": [
-      945,
-      182,
-      160,
-      26
+      877,
+      93,
+      149,
+      38
      ],
-     "text": "On the patient page, click More, then Patient Attorney. (On a wide screen the tab is in the row itself.)",
+     "text": "On the patient page, click the Patient Attorney tab. (On a narrow screen it can be under More.)",
      "kind": "tab"
     },
     {
@@ -4379,14 +4401,14 @@ window.DATA = {
      "kind": "open"
     },
     {
-     "screen": "tabs-more",
+     "screen": "overview-1",
      "rect": [
-      945,
-      182,
-      160,
-      26
+      877,
+      93,
+      149,
+      38
      ],
-     "text": "On the patient page, click More, then Patient Attorney. (On a wide screen the tab is in the row itself.)",
+     "text": "On the patient page, click the Patient Attorney tab. (On a narrow screen it can be under More.)",
      "kind": "tab"
     },
     {
@@ -4441,14 +4463,14 @@ window.DATA = {
      "kind": "open"
     },
     {
-     "screen": "tabs-more",
+     "screen": "overview-1",
      "rect": [
-      945,
-      182,
-      160,
-      26
+      877,
+      93,
+      149,
+      38
      ],
-     "text": "On the patient page, click More, then Patient Attorney. (On a wide screen the tab is in the row itself.)",
+     "text": "On the patient page, click the Patient Attorney tab. (On a narrow screen it can be under More.)",
      "kind": "tab"
     },
     {
@@ -4494,14 +4516,14 @@ window.DATA = {
      "kind": "open"
     },
     {
-     "screen": "tabs-more",
+     "screen": "overview-1",
      "rect": [
-      945,
-      182,
-      160,
-      26
+      877,
+      93,
+      149,
+      38
      ],
-     "text": "On the patient page, click More, then Patient Attorney. (On a wide screen the tab is in the row itself.)",
+     "text": "On the patient page, click the Patient Attorney tab. (On a narrow screen it can be under More.)",
      "kind": "tab"
     },
     {
@@ -4545,14 +4567,14 @@ window.DATA = {
      "kind": "open"
     },
     {
-     "screen": "tabs-more",
+     "screen": "overview-1",
      "rect": [
-      945,
-      182,
-      160,
-      26
+      877,
+      93,
+      149,
+      38
      ],
-     "text": "On the patient page, click More, then Patient Attorney. (On a wide screen the tab is in the row itself.)",
+     "text": "On the patient page, click the Patient Attorney tab. (On a narrow screen it can be under More.)",
      "kind": "tab"
     },
     {
@@ -4596,14 +4618,14 @@ window.DATA = {
      "kind": "open"
     },
     {
-     "screen": "tabs-more",
+     "screen": "overview-1",
      "rect": [
-      945,
-      182,
-      160,
-      26
+      877,
+      93,
+      149,
+      38
      ],
-     "text": "On the patient page, click More, then Patient Attorney. (On a wide screen the tab is in the row itself.)",
+     "text": "On the patient page, click the Patient Attorney tab. (On a narrow screen it can be under More.)",
      "kind": "tab"
     },
     {
@@ -4651,14 +4673,14 @@ window.DATA = {
      "kind": "open"
     },
     {
-     "screen": "tabs-more",
+     "screen": "overview-1",
      "rect": [
-      945,
-      182,
-      160,
-      26
+      877,
+      93,
+      149,
+      38
      ],
-     "text": "On the patient page, click More, then Patient Attorney. (On a wide screen the tab is in the row itself.)",
+     "text": "On the patient page, click the Patient Attorney tab. (On a narrow screen it can be under More.)",
      "kind": "tab"
     },
     {
@@ -4713,21 +4735,21 @@ window.DATA = {
      "kind": "open"
     },
     {
-     "screen": "tabs-more",
+     "screen": "overview-1",
      "rect": [
-      945,
-      182,
-      160,
-      26
+      877,
+      93,
+      149,
+      38
      ],
-     "text": "On the patient page, click More, then Patient Attorney. (On a wide screen the tab is in the row itself.)",
+     "text": "On the patient page, click the Patient Attorney tab. (On a narrow screen it can be under More.)",
      "kind": "tab"
     },
     {
      "screen": "attorney-current",
      "rect": [
       571,
-      620,
+      607,
       145,
       32
      ],
@@ -4738,7 +4760,7 @@ window.DATA = {
      "screen": "attorney-verify",
      "rect": [
       572,
-      388,
+      371,
       572,
       305
      ],
@@ -4788,19 +4810,19 @@ window.DATA = {
     {
      "screen": "overview-1",
      "rect": [
-      535,
+      534,
       93,
-      102,
+      152,
       38
      ],
-     "text": "The patient page opens. Click the Overview tab if another tab is showing.",
+     "text": "The patient page opens. Click the Overview tab. If another tab is showing and Overview is not in the row, click More, then Overview.",
      "kind": "tab"
     },
     {
      "screen": "overview-3",
      "rect": [
       581,
-      271,
+      232,
       190,
       40
      ],
@@ -4839,19 +4861,19 @@ window.DATA = {
     {
      "screen": "overview-1",
      "rect": [
-      535,
+      534,
       93,
-      102,
+      152,
       38
      ],
-     "text": "The patient page opens. Click the Overview tab if another tab is showing.",
+     "text": "The patient page opens. Click the Overview tab. If another tab is showing and Overview is not in the row, click More, then Overview.",
      "kind": "tab"
     },
     {
      "screen": "overview-3",
      "rect": [
       581,
-      414,
+      368,
       575,
       250
      ],
@@ -4890,19 +4912,19 @@ window.DATA = {
     {
      "screen": "overview-1",
      "rect": [
-      535,
+      534,
       93,
-      102,
+      152,
       38
      ],
-     "text": "The patient page opens. Click the Overview tab if another tab is showing.",
+     "text": "The patient page opens. Click the Overview tab. If another tab is showing and Overview is not in the row, click More, then Overview.",
      "kind": "tab"
     },
     {
      "screen": "overview-3",
      "rect": [
       581,
-      360,
+      317,
       575,
       40
      ],
@@ -4941,19 +4963,19 @@ window.DATA = {
     {
      "screen": "overview-1",
      "rect": [
-      535,
+      534,
       93,
-      102,
+      152,
       38
      ],
-     "text": "The patient page opens. Click the Overview tab if another tab is showing.",
+     "text": "The patient page opens. Click the Overview tab. If another tab is showing and Overview is not in the row, click More, then Overview.",
      "kind": "tab"
     },
     {
      "screen": "overview-3",
      "rect": [
       581,
-      414,
+      368,
       575,
       250
      ],
@@ -4964,7 +4986,7 @@ window.DATA = {
      "screen": "overview-3",
      "rect": [
       776,
-      271,
+      232,
       190,
       40
      ],
@@ -5003,19 +5025,19 @@ window.DATA = {
     {
      "screen": "overview-1",
      "rect": [
-      535,
+      534,
       93,
-      102,
+      152,
       38
      ],
-     "text": "The patient page opens. Click the Overview tab if another tab is showing.",
+     "text": "The patient page opens. Click the Overview tab. If another tab is showing and Overview is not in the row, click More, then Overview.",
      "kind": "tab"
     },
     {
      "screen": "overview-4",
      "rect": [
       554,
-      391,
+      499,
       612,
       82
      ],
@@ -5056,19 +5078,19 @@ window.DATA = {
     {
      "screen": "overview-1",
      "rect": [
-      535,
+      534,
       93,
-      102,
+      152,
       38
      ],
-     "text": "The patient page opens. Click the Overview tab if another tab is showing.",
+     "text": "The patient page opens. Click the Overview tab. If another tab is showing and Overview is not in the row, click More, then Overview.",
      "kind": "tab"
     },
     {
      "screen": "overview-4",
      "rect": [
       554,
-      391,
+      499,
       612,
       82
      ],
@@ -5107,19 +5129,19 @@ window.DATA = {
     {
      "screen": "overview-1",
      "rect": [
-      535,
+      534,
       93,
-      102,
+      152,
       38
      ],
-     "text": "The patient page opens. Click the Overview tab if another tab is showing.",
+     "text": "The patient page opens. Click the Overview tab. If another tab is showing and Overview is not in the row, click More, then Overview.",
      "kind": "tab"
     },
     {
      "screen": "overview-3",
      "rect": [
       581,
-      360,
+      317,
       280,
       40
      ],
@@ -5158,19 +5180,19 @@ window.DATA = {
     {
      "screen": "overview-1",
      "rect": [
-      535,
+      534,
       93,
-      102,
+      152,
       38
      ],
-     "text": "The patient page opens. Click the Overview tab if another tab is showing.",
+     "text": "The patient page opens. Click the Overview tab. If another tab is showing and Overview is not in the row, click More, then Overview.",
      "kind": "tab"
     },
     {
      "screen": "overview-3",
      "rect": [
       581,
-      414,
+      368,
       575,
       250
      ],
@@ -5210,7 +5232,7 @@ window.DATA = {
      "screen": "overview-3",
      "rect": [
       233,
-      666,
+      620,
       260,
       58
      ],
@@ -5264,21 +5286,21 @@ window.DATA = {
      "kind": "open"
     },
     {
-     "screen": "overview-1",
+     "screen": "tabs-more",
      "rect": [
-      637,
-      93,
-      120,
-      38
+      960,
+      150,
+      150,
+      26
      ],
-     "text": "On the patient page, click the Hospital EMR tab.",
+     "text": "On the patient page, click More, then Hospital EMR. (On a wide screen it can be in the row itself.)",
      "kind": "tab"
     },
     {
      "screen": "tracker-1",
      "rect": [
-      554,
-      228,
+      556,
+      210,
       52,
       22
      ],
@@ -5288,8 +5310,8 @@ window.DATA = {
     {
      "screen": "tracker-2",
      "rect": [
-      574,
-      574,
+      576,
+      601,
       590,
       115
      ],
@@ -5300,7 +5322,7 @@ window.DATA = {
      "screen": "overview-3",
      "rect": [
       233,
-      620,
+      574,
       200,
       40
      ],
@@ -5335,21 +5357,21 @@ window.DATA = {
      "kind": "open"
     },
     {
-     "screen": "overview-1",
+     "screen": "tabs-more",
      "rect": [
-      637,
-      93,
-      120,
-      38
+      960,
+      150,
+      150,
+      26
      ],
-     "text": "On the patient page, click the Hospital EMR tab.",
+     "text": "On the patient page, click More, then Hospital EMR. (On a wide screen it can be in the row itself.)",
      "kind": "tab"
     },
     {
      "screen": "tracker-1",
      "rect": [
       556,
-      298,
+      282,
       297,
       280
      ],
@@ -5384,21 +5406,21 @@ window.DATA = {
      "kind": "open"
     },
     {
-     "screen": "tabs-more",
+     "screen": "overview-1",
      "rect": [
-      945,
-      150,
-      160,
-      26
+      687,
+      93,
+      188,
+      38
      ],
-     "text": "On the patient page, click More, then Insurance and Verification. (On a wide screen the tab is in the row itself.)",
+     "text": "On the patient page, click the Insurance and Verification tab. (On a narrow screen it can be under More.)",
      "kind": "tab"
     },
     {
      "screen": "insurance-notpl",
      "rect": [
       554,
-      402,
+      439,
       612,
       100
      ],
@@ -5433,21 +5455,21 @@ window.DATA = {
      "kind": "open"
     },
     {
-     "screen": "overview-1",
+     "screen": "tabs-more",
      "rect": [
-      637,
-      93,
-      120,
-      38
+      960,
+      150,
+      150,
+      26
      ],
-     "text": "On the patient page, click the Hospital EMR tab.",
+     "text": "On the patient page, click More, then Hospital EMR. (On a wide screen it can be in the row itself.)",
      "kind": "tab"
     },
     {
      "screen": "tracker-3",
      "rect": [
       554,
-      475,
+      458,
       612,
       250
      ],
@@ -5457,8 +5479,8 @@ window.DATA = {
     {
      "screen": "tracker-1",
      "rect": [
-      555,
-      187,
+      553,
+      169,
       170,
       22
      ],
@@ -5493,21 +5515,21 @@ window.DATA = {
      "kind": "open"
     },
     {
-     "screen": "overview-1",
+     "screen": "tabs-more",
      "rect": [
-      637,
-      93,
-      120,
-      38
+      960,
+      150,
+      150,
+      26
      ],
-     "text": "On the patient page, click the Hospital EMR tab.",
+     "text": "On the patient page, click More, then Hospital EMR. (On a wide screen it can be in the row itself.)",
      "kind": "tab"
     },
     {
      "screen": "tracker-3",
      "rect": [
       554,
-      475,
+      458,
       612,
       250
      ],
@@ -5543,21 +5565,21 @@ window.DATA = {
      "kind": "open"
     },
     {
-     "screen": "overview-1",
+     "screen": "tabs-more",
      "rect": [
-      637,
-      93,
-      120,
-      38
+      960,
+      150,
+      150,
+      26
      ],
-     "text": "On the patient page, click the Hospital EMR tab.",
+     "text": "On the patient page, click More, then Hospital EMR. (On a wide screen it can be in the row itself.)",
      "kind": "tab"
     },
     {
      "screen": "tracker-mid",
      "rect": [
-      864,
-      343,
+      866,
+      325,
       297,
       196
      ],
@@ -5590,21 +5612,21 @@ window.DATA = {
      "kind": "open"
     },
     {
-     "screen": "overview-1",
+     "screen": "tabs-more",
      "rect": [
-      637,
-      93,
-      120,
-      38
+      960,
+      150,
+      150,
+      26
      ],
-     "text": "On the patient page, click the Hospital EMR tab.",
+     "text": "On the patient page, click More, then Hospital EMR. (On a wide screen it can be in the row itself.)",
      "kind": "tab"
     },
     {
      "screen": "tracker-mid",
      "rect": [
-      556,
-      343,
+      558,
+      325,
       297,
       196
      ],
@@ -5614,19 +5636,19 @@ window.DATA = {
     {
      "screen": "tabs-more",
      "rect": [
-      945,
-      214,
-      160,
+      960,
+      248,
+      150,
       26
      ],
-     "text": "On the patient page, click More, then Lien and Collection. (On a wide screen the tab is in the row itself.)",
+     "text": "On the patient page, click More, then Lien and Collection. (On a wide screen it can be in the row itself.)",
      "kind": "tab"
     },
     {
      "screen": "lien-top",
      "rect": [
       554,
-      293,
+      283,
       624,
       122
      ],
@@ -5689,27 +5711,27 @@ window.DATA = {
   {
    "slug": "find-hidden-tab",
    "title": "Find a tab that is under More",
-   "about": "Insurance and Verification, Patient Attorney and Lien and Collection are not in the row of tabs.",
-   "words": "tab hidden more where is insurance attorney lien collection",
+   "about": "Hospital EMR, Patient Demographics, Activities and Lien and Collection are not in the row of tabs.",
+   "words": "tab hidden more where is hospital emr demographics activities lien collection insurance attorney",
    "steps": [
     {
      "screen": "overview-1",
      "rect": [
-      535,
+      534,
       93,
       578,
       38
      ],
-     "text": "Look at the row of tabs on the patient page: Overview, Hospital EMR, Patient Demographics, Activities.",
+     "text": "Look at the row of tabs on the patient page: Overview, Insurance and Verification, Patient Attorney.",
      "kind": "look",
      "help": "The tabs you do not see here are under More."
     },
     {
      "screen": "overview-1",
      "rect": [
-      1028,
+      1027,
       93,
-      84,
+      85,
       38
      ],
      "text": "Click More, to the right of the tabs.",
@@ -5719,33 +5741,33 @@ window.DATA = {
     {
      "screen": "tabs-more",
      "rect": [
-      945,
+      960,
       150,
-      160,
+      150,
       26
      ],
-     "text": "Insurance and Verification: the policies, the Payer Order, Verify.",
+     "text": "Hospital EMR: the ED Visit and the Hospital EMR Tracker.",
      "kind": "tab",
      "help": ""
     },
     {
      "screen": "tabs-more",
      "rect": [
-      945,
-      182,
-      160,
+      960,
+      183,
+      150,
       26
      ],
-     "text": "Patient Attorney: Attorney Status, the attorneys, Add New Verification.",
+     "text": "Patient Demographics: the patient, contact and address.",
      "kind": "tab",
      "help": ""
     },
     {
      "screen": "tabs-more",
      "rect": [
-      945,
-      214,
-      160,
+      960,
+      248,
+      150,
       26
      ],
      "text": "Lien and Collection: the liens and the hospital bills.",
@@ -5763,20 +5785,20 @@ window.DATA = {
     {
      "screen": "overview-1",
      "rect": [
-      535,
+      534,
       93,
-      102,
+      152,
       38
      ],
      "text": "Click the Overview tab.",
      "kind": "tab",
-     "help": ""
+     "help": "If Overview is not in the row of tabs, click More, then Overview."
     },
     {
      "screen": "overview-1",
      "rect": [
       556,
-      446,
+      443,
       298,
       158
      ],
@@ -5788,7 +5810,7 @@ window.DATA = {
      "screen": "overview-1",
      "rect": [
       572,
-      488,
+      485,
       270,
       44
      ],
@@ -5800,9 +5822,9 @@ window.DATA = {
      "screen": "overview-casetype",
      "rect": [
       573,
-      545,
-      260,
-      175
+      267,
+      262,
+      230
      ],
      "text": "Pick the Case Type from the list, for example PI, WC, PI and WC or Possible TPL.",
      "kind": "pick",
@@ -5812,7 +5834,7 @@ window.DATA = {
      "screen": "overview-1",
      "rect": [
       572,
-      543,
+      540,
       270,
       44
      ],
@@ -5841,22 +5863,22 @@ window.DATA = {
    "words": "add insurance policy coverage type insurance company claim number policy number third-party liability workers compensation own auto medpay health",
    "steps": [
     {
-     "screen": "tabs-more",
+     "screen": "overview-1",
      "rect": [
-      945,
-      150,
-      160,
-      26
+      687,
+      93,
+      188,
+      38
      ],
-     "text": "Click More, then Insurance and Verification.",
+     "text": "Click the Insurance and Verification tab.",
      "kind": "tab",
-     "help": "If Insurance and Verification is already in the row of tabs, just click it."
+     "help": "If it is not in the row of tabs, click More, then Insurance and Verification."
     },
     {
      "screen": "insurance-top",
      "rect": [
-      635,
-      542,
+      633,
+      597,
       117,
       31
      ],
@@ -5868,7 +5890,7 @@ window.DATA = {
      "screen": "insurance-coverage-type",
      "rect": [
       573,
-      405,
+      384,
       570,
       180
      ],
@@ -5880,7 +5902,7 @@ window.DATA = {
      "screen": "insurance-form",
      "rect": [
       572,
-      423,
+      402,
       572,
       70
      ],
@@ -5892,7 +5914,7 @@ window.DATA = {
      "screen": "insurance-form",
      "rect": [
       572,
-      517,
+      496,
       352,
       56
      ],
@@ -5904,7 +5926,7 @@ window.DATA = {
      "screen": "insurance-form-save",
      "rect": [
       572,
-      563,
+      542,
       126,
       34
      ],
@@ -5916,7 +5938,7 @@ window.DATA = {
      "screen": "insurance-second",
      "rect": [
       572,
-      348,
+      385,
       272,
       24
      ],
@@ -5933,22 +5955,22 @@ window.DATA = {
    "words": "verify verification method result verified attempt to verify failed wrong info phone reference confirmation number",
    "steps": [
     {
-     "screen": "tabs-more",
+     "screen": "overview-1",
      "rect": [
-      945,
-      150,
-      160,
-      26
+      687,
+      93,
+      188,
+      38
      ],
-     "text": "Click More, then Insurance and Verification.",
+     "text": "Click the Insurance and Verification tab.",
      "kind": "tab",
-     "help": "If Insurance and Verification is already in the row of tabs, just click it."
+     "help": "If it is not in the row of tabs, click More, then Insurance and Verification."
     },
     {
      "screen": "insurance-policy",
      "rect": [
       572,
-      641,
+      600,
       60,
       32
      ],
@@ -5960,7 +5982,7 @@ window.DATA = {
      "screen": "insurance-verify",
      "rect": [
       572,
-      296,
+      252,
       572,
       56
      ],
@@ -5972,7 +5994,7 @@ window.DATA = {
      "screen": "insurance-verify",
      "rect": [
       572,
-      366,
+      321,
       572,
       126
      ],
@@ -5984,7 +6006,7 @@ window.DATA = {
      "screen": "insurance-verify",
      "rect": [
       572,
-      507,
+      462,
       572,
       56
      ],
@@ -5996,7 +6018,7 @@ window.DATA = {
      "screen": "insurance-verify",
      "rect": [
       572,
-      662,
+      617,
       138,
       34
      ],
@@ -6008,7 +6030,7 @@ window.DATA = {
      "screen": "insurance-verify-result",
      "rect": [
       573,
-      596,
+      470,
       570,
       128
      ],
@@ -6020,7 +6042,7 @@ window.DATA = {
      "screen": "insurance-verify-failed",
      "rect": [
       572,
-      577,
+      532,
       572,
       78
      ],
@@ -6037,22 +6059,22 @@ window.DATA = {
    "words": "payer order primary secondary move up move down billed first order insurance",
    "steps": [
     {
-     "screen": "tabs-more",
+     "screen": "overview-1",
      "rect": [
-      945,
-      150,
-      160,
-      26
+      687,
+      93,
+      188,
+      38
      ],
-     "text": "Click More, then Insurance and Verification.",
+     "text": "Click the Insurance and Verification tab.",
      "kind": "tab",
-     "help": "If Insurance and Verification is already in the row of tabs, just click it."
+     "help": "If it is not in the row of tabs, click More, then Insurance and Verification."
     },
     {
      "screen": "insurance-policy",
      "rect": [
       573,
-      224,
+      190,
       120,
       22
      ],
@@ -6064,7 +6086,7 @@ window.DATA = {
      "screen": "insurance-policy",
      "rect": [
       701,
-      641,
+      600,
       106,
       32
      ],
@@ -6076,7 +6098,7 @@ window.DATA = {
      "screen": "insurance-moveup",
      "rect": [
       701,
-      244,
+      198,
       92,
       32
      ],
@@ -6108,7 +6130,7 @@ window.DATA = {
      "screen": "overview-1",
      "rect": [
       572,
-      488,
+      485,
       270,
       44
      ],
@@ -6117,22 +6139,22 @@ window.DATA = {
      "help": "The button Confirm No TPL / No Case then shows in the same box. (It is not in this picture because this patient is not set to No TPL / No Case.)"
     },
     {
-     "screen": "tabs-more",
+     "screen": "overview-1",
      "rect": [
-      945,
-      150,
-      160,
-      26
+      687,
+      93,
+      188,
+      38
      ],
-     "text": "Click More, then Insurance and Verification.",
+     "text": "Click the Insurance and Verification tab.",
      "kind": "tab",
-     "help": "If Insurance and Verification is already in the row of tabs, just click it."
+     "help": "If it is not in the row of tabs, click More, then Insurance and Verification."
     },
     {
      "screen": "insurance-notpl",
      "rect": [
       571,
-      457,
+      494,
       174,
       26
      ],
@@ -6144,7 +6166,7 @@ window.DATA = {
      "screen": "insurance-notpl-reason",
      "rect": [
       589,
-      500,
+      574,
       536,
       142
      ],
@@ -6156,7 +6178,7 @@ window.DATA = {
      "screen": "insurance-notpl-form",
      "rect": [
       588,
-      644,
+      680,
       174,
       28
      ],
@@ -6168,7 +6190,7 @@ window.DATA = {
      "screen": "insurance-notpl",
      "rect": [
       554,
-      402,
+      439,
       612,
       100
      ],
@@ -6185,16 +6207,16 @@ window.DATA = {
    "words": "attorney status own attorney referred declined wants referral undecided add attorney law firm verify representing add new verification",
    "steps": [
     {
-     "screen": "tabs-more",
+     "screen": "overview-1",
      "rect": [
-      945,
-      182,
-      160,
-      26
+      877,
+      93,
+      149,
+      38
      ],
-     "text": "Click More, then Patient Attorney.",
+     "text": "Click the Patient Attorney tab.",
      "kind": "tab",
-     "help": "If Patient Attorney is already in the row of tabs, just click it."
+     "help": "If it is not in the row of tabs, click More, then Patient Attorney."
     },
     {
      "screen": "attorney-top",
@@ -6284,7 +6306,7 @@ window.DATA = {
      "screen": "attorney-current",
      "rect": [
       571,
-      620,
+      607,
       145,
       32
      ],
@@ -6296,7 +6318,7 @@ window.DATA = {
      "screen": "attorney-verify-method",
      "rect": [
       573,
-      550,
+      470,
       570,
       142
      ],
@@ -6308,7 +6330,7 @@ window.DATA = {
      "screen": "attorney-verify-result",
      "rect": [
       573,
-      467,
+      528,
       570,
       112
      ],
@@ -6320,7 +6342,7 @@ window.DATA = {
      "screen": "attorney-verify",
      "rect": [
       572,
-      653,
+      636,
       138,
       32
      ],
@@ -6351,8 +6373,8 @@ window.DATA = {
     {
      "screen": "activities-menu",
      "rect": [
-      1298,
-      293,
+      1305,
+      281,
       190,
       26
      ],
@@ -6364,7 +6386,7 @@ window.DATA = {
      "screen": "log-call",
      "rect": [
       1008,
-      358,
+      315,
       125,
       48
      ],
@@ -6376,7 +6398,7 @@ window.DATA = {
      "screen": "log-call-outcome",
      "rect": [
       1010,
-      425,
+      382,
       160,
       222
      ],
@@ -6388,7 +6410,7 @@ window.DATA = {
      "screen": "log-call",
      "rect": [
       927,
-      492,
+      450,
       490,
       55
      ],
@@ -6400,19 +6422,19 @@ window.DATA = {
      "screen": "log-call",
      "rect": [
       927,
-      621,
+      579,
       380,
       26
      ],
      "text": "To call back later, tick Create a To-do task to follow up and pick the day and time.",
      "kind": "click",
-     "help": ""
+     "help": "The time shows as Callback Time on the Overview tab, under Last Contact."
     },
     {
      "screen": "log-call",
      "rect": [
       927,
-      668,
+      626,
       82,
       32
      ],
@@ -6429,22 +6451,22 @@ window.DATA = {
    "words": "hospital emr ed visit notes triage hpi discharge tracker h1 bi added date h2 tpl wc insurance added to hospital date attorney added billing indicator",
    "steps": [
     {
-     "screen": "overview-1",
+     "screen": "tabs-more",
      "rect": [
-      637,
-      93,
-      120,
-      38
+      960,
+      150,
+      150,
+      26
      ],
-     "text": "Click the Hospital EMR tab.",
+     "text": "Click More, then Hospital EMR.",
      "kind": "tab",
-     "help": ""
+     "help": "If Hospital EMR is already in the row of tabs, just click it."
     },
     {
      "screen": "ed-notes",
      "rect": [
       554,
-      252,
+      245,
       612,
       253
      ],
@@ -6456,7 +6478,7 @@ window.DATA = {
      "screen": "ed-notes-hpi",
      "rect": [
       763,
-      272,
+      265,
       190,
       102
      ],
@@ -6468,7 +6490,7 @@ window.DATA = {
      "screen": "ed-visit",
      "rect": [
       554,
-      248,
+      232,
       612,
       255
      ],
@@ -6479,8 +6501,8 @@ window.DATA = {
     {
      "screen": "tracker-1",
      "rect": [
-      555,
-      228,
+      557,
+      210,
       508,
       22
      ],
@@ -6491,8 +6513,8 @@ window.DATA = {
     {
      "screen": "tracker-2",
      "rect": [
-      574,
-      574,
+      576,
+      601,
       590,
       115
      ],
@@ -6504,7 +6526,7 @@ window.DATA = {
      "screen": "tracker-1",
      "rect": [
       574,
-      405,
+      389,
       270,
       40
      ],
@@ -6516,7 +6538,7 @@ window.DATA = {
      "screen": "tracker-mid",
      "rect": [
       574,
-      215,
+      199,
       270,
       40
      ],
@@ -6535,9 +6557,9 @@ window.DATA = {
     {
      "screen": "tabs-more",
      "rect": [
-      945,
-      214,
-      160,
+      960,
+      248,
+      150,
       26
      ],
      "text": "Click More, then Lien and Collection.",
@@ -6547,8 +6569,8 @@ window.DATA = {
     {
      "screen": "lien-top",
      "rect": [
-      572,
-      343,
+      570,
+      335,
       95,
       26
      ],
@@ -6560,7 +6582,7 @@ window.DATA = {
      "screen": "lien-form",
      "rect": [
       588,
-      436,
+      423,
       538,
       56
      ],
@@ -6572,7 +6594,7 @@ window.DATA = {
      "screen": "lien-form",
      "rect": [
       588,
-      540,
+      527,
       538,
       50
      ],
@@ -6584,7 +6606,7 @@ window.DATA = {
      "screen": "lien-form",
      "rect": [
       588,
-      652,
+      639,
       180,
       30
      ],
@@ -6596,7 +6618,7 @@ window.DATA = {
      "screen": "lien-top",
      "rect": [
       554,
-      293,
+      283,
       624,
       122
      ],
@@ -6615,20 +6637,20 @@ window.DATA = {
     {
      "screen": "overview-1",
      "rect": [
-      535,
+      534,
       93,
-      102,
+      152,
       38
      ],
      "text": "Click the Overview tab.",
      "kind": "tab",
-     "help": ""
+     "help": "If Overview is not in the row of tabs, click More, then Overview."
     },
     {
      "screen": "overview-1",
      "rect": [
       554,
-      251,
+      247,
       612,
       90
      ],
@@ -6640,7 +6662,7 @@ window.DATA = {
      "screen": "overview-2",
      "rect": [
       556,
-      448,
+      556,
       609,
       142
      ],
@@ -6652,7 +6674,7 @@ window.DATA = {
      "screen": "overview-2",
      "rect": [
       572,
-      548,
+      656,
       100,
       26
      ],
@@ -6664,7 +6686,7 @@ window.DATA = {
      "screen": "whats-left",
      "rect": [
       817,
-      110,
+      107,
       714,
       100
      ],
@@ -6676,7 +6698,7 @@ window.DATA = {
      "screen": "whats-left",
      "rect": [
       817,
-      243,
+      236,
       714,
       340
      ],
