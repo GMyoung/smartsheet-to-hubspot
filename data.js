@@ -2217,7 +2217,7 @@ window.DATA = {
      "rect": [
       352,
       549,
-      256,
+      190,
       53
      ],
      "text": "For a new patient you type it first, on the New ICT Patient page: Date of Service (DOS).",
@@ -2728,7 +2728,7 @@ window.DATA = {
      "rect": [
       352,
       549,
-      256,
+      190,
       53
      ],
      "text": "On the New ICT Patient page: A new patient with the new DOS.",
