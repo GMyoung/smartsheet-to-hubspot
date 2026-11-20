@@ -1412,7 +1412,7 @@ window.DATA = {
      "screen": "new-patient",
      "rect": [
       532,
-      182,
+      197,
       170,
       53
      ],
@@ -1474,7 +1474,7 @@ window.DATA = {
      "screen": "new-patient",
      "rect": [
       352,
-      182,
+      197,
       170,
       53
      ],
@@ -1496,7 +1496,7 @@ window.DATA = {
    ],
    "was": "Date of birth.",
    "where": "New ICT Patient page: Date of Birth. Later: Patient Demographics tab",
-   "how": "Type the digits (12271999 becomes 12/27/1999) or pick the day in the calendar. A date that cannot be right turns red. The age is worked out from it.",
+   "how": "Click the box and pick the day, or type the date with its slashes (12/27/1999) and press Enter. The age is worked out from it.",
    "kind": "Same fact, one field",
    "steps": [
     {
@@ -1536,8 +1536,8 @@ window.DATA = {
      "screen": "new-patient",
      "rect": [
       352,
-      323,
-      370,
+      338,
+      190,
       53
      ],
      "text": "For a new patient you type it first, on the New ICT Patient page: Date of Birth.",
@@ -1609,7 +1609,7 @@ window.DATA = {
      "screen": "new-patient",
      "rect": [
       352,
-      393,
+      408,
       97,
       53
      ],
@@ -1671,7 +1671,7 @@ window.DATA = {
      "screen": "new-patient",
      "rect": [
       352,
-      252,
+      267,
       170,
       53
      ],
@@ -1897,7 +1897,7 @@ window.DATA = {
      "screen": "new-patient",
      "rect": [
       352,
-      463,
+      478,
       170,
       53
      ],
@@ -1959,7 +1959,7 @@ window.DATA = {
      "screen": "new-patient",
      "rect": [
       532,
-      463,
+      478,
       170,
       53
      ],
@@ -2019,7 +2019,7 @@ window.DATA = {
      "screen": "new-patient",
      "rect": [
       459,
-      393,
+      408,
       170,
       53
      ],
@@ -2216,8 +2216,8 @@ window.DATA = {
      "screen": "new-patient",
      "rect": [
       352,
-      534,
-      370,
+      549,
+      190,
       53
      ],
      "text": "For a new patient you type it first, on the New ICT Patient page: Date of Service (DOS).",
@@ -2727,8 +2727,8 @@ window.DATA = {
      "screen": "new-patient",
      "rect": [
       352,
-      534,
-      370,
+      549,
+      190,
       53
      ],
      "text": "On the New ICT Patient page: A new patient with the new DOS.",
