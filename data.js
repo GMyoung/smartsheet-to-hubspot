@@ -5859,6 +5859,238 @@ window.DATA = {
  ],
  "tasks": [
   {
+   "slug": "create-patient",
+   "title": "Create a patient",
+   "about": "On the New ICT Patient page. One page for the whole intake; only the name and the Date of Service are required.",
+   "words": "new patient create add intake enter lead first name last name phone date of birth dob mrn account number dos email draft copy",
+   "steps": [
+    {
+     "screen": "new-patient",
+     "rect": [
+      352,
+      143,
+      150,
+      34
+     ],
+     "text": "Open the New ICT Patient page: the Marketplace icon at the top, then Labor Force Coverage Cards.",
+     "kind": "look",
+     "help": "Bookmark the page, so the next time it is one click."
+    },
+    {
+     "screen": "new-patient",
+     "rect": [
+      352,
+      197,
+      350,
+      53
+     ],
+     "text": "Type the First Name and the Last Name. Both are required.",
+     "kind": "type",
+     "help": ""
+    },
+    {
+     "screen": "new-patient",
+     "rect": [
+      352,
+      267,
+      170,
+      53
+     ],
+     "text": "Type the Phone Number.",
+     "kind": "type",
+     "help": ""
+    },
+    {
+     "screen": "new-patient",
+     "rect": [
+      352,
+      338,
+      256,
+      53
+     ],
+     "text": "Type the Date of Birth as digits. The slashes are added for you.",
+     "kind": "type",
+     "help": "A date that cannot be right turns red at once. To pick the day instead, click Calendar."
+    },
+    {
+     "screen": "new-patient",
+     "rect": [
+      352,
+      408,
+      276,
+      53
+     ],
+     "text": "Pick the Patient Language and the Hospital Facility.",
+     "kind": "pick",
+     "help": ""
+    },
+    {
+     "screen": "new-patient",
+     "rect": [
+      352,
+      478,
+      350,
+      53
+     ],
+     "text": "Type the MRN and the Hospital Account Number.",
+     "kind": "type",
+     "help": "An account number that another patient already has is refused. A new visit has a new account number."
+    },
+    {
+     "screen": "new-patient",
+     "rect": [
+      352,
+      549,
+      190,
+      53
+     ],
+     "text": "Click Date of Service and pick the day. It is required.",
+     "kind": "field",
+     "help": "A day in the future cannot be picked."
+    },
+    {
+     "screen": "new-patient-bottom",
+     "rect": [
+      352,
+      340,
+      712,
+      300
+     ],
+     "text": "The two optional parts below can wait. Fill in what the hospital record shows and leave the rest empty.",
+     "kind": "look",
+     "help": "Everything here can also be filled in later on its tab."
+    },
+    {
+     "screen": "new-patient-bottom",
+     "rect": [
+      352,
+      677,
+      144,
+      34
+     ],
+     "text": "Click Create ICT Patient.",
+     "kind": "save",
+     "help": "Pressing Enter does nothing. Only this button creates the patient."
+    },
+    {
+     "screen": "new-patient-created",
+     "rect": [
+      352,
+      190,
+      1042,
+      70
+     ],
+     "text": "The page now shows what was created. Open this patient takes you to the new record.",
+     "kind": "look",
+     "help": ""
+    },
+    {
+     "screen": "new-patient-created",
+     "rect": [
+      352,
+      410,
+      1042,
+      316
+     ],
+     "text": "Under it is the Email Draft: a subject and a text with everything you entered.",
+     "kind": "look",
+     "help": ""
+    },
+    {
+     "screen": "new-patient-email",
+     "rect": [
+      369,
+      157,
+      187,
+      32
+     ],
+     "text": "Click Copy Email and Copy Subject, then paste them into your own email.",
+     "kind": "click",
+     "help": "HubSpot sends nothing itself."
+    },
+    {
+     "screen": "new-patient-email",
+     "rect": [
+      352,
+      677,
+      170,
+      34
+     ],
+     "text": "Click Create Another Patient for the next one. The empty form comes back.",
+     "kind": "click",
+     "help": ""
+    }
+   ]
+  },
+  {
+   "slug": "same-person-again",
+   "title": "The same person again: a new visit or a duplicate",
+   "about": "A yellow box warns you when a new patient looks like one that exists. It never blocks you.",
+   "words": "duplicate possible duplicate patient same person second visit two cases not a duplicate delete this duplicate merge account number",
+   "steps": [
+    {
+     "screen": "new-patient-created",
+     "rect": [
+      352,
+      280,
+      1042,
+      109
+     ],
+     "text": "Right after Create, a yellow box says Possible Duplicate Patient. It names the other record and the reason.",
+     "kind": "look",
+     "help": "The reason can be the same phone, the same MRN at the same hospital, the same account number, or the same name and birth date."
+    },
+    {
+     "screen": "new-patient-created",
+     "rect": [
+      369,
+      318,
+      460,
+      22
+     ],
+     "text": "Look at the Date of Service of the other record. A different date means a new visit.",
+     "kind": "look",
+     "help": "One record is one hospital visit. The same person can have several."
+    },
+    {
+     "screen": "overview-duplicate",
+     "rect": [
+      554,
+      371,
+      612,
+      167
+     ],
+     "text": "Open the new patient. Its Overview tab has the same box. Click the line to open it.",
+     "kind": "click",
+     "help": ""
+    },
+    {
+     "screen": "overview-duplicate",
+     "rect": [
+      748,
+      465,
+      108,
+      26
+     ],
+     "text": "A new visit of the same person: keep both and click Not a Duplicate.",
+     "kind": "click",
+     "help": "The box then goes away on both records, for everyone."
+    },
+    {
+     "screen": "overview-duplicate",
+     "rect": [
+      590,
+      497,
+      139,
+      26
+     ],
+     "text": "The same visit entered twice, and nothing was done on the new record: click Delete This Duplicate.",
+     "kind": "click",
+     "help": "If both records already have work on them, ask a supervisor to merge them."
+    }
+   ]
+  },
+  {
    "slug": "find-hidden-tab",
    "title": "Find a tab that is under More",
    "about": "Hospital EMR, Patient Demographics, Activities and Lien and Collection are not in the row of tabs.",
@@ -6863,6 +7095,22 @@ window.DATA = {
   {
    "id": "new-patient",
    "title": "New ICT Patient page"
+  },
+  {
+   "id": "new-patient-bottom",
+   "title": "New ICT Patient page: the optional parts and Create ICT Patient"
+  },
+  {
+   "id": "new-patient-created",
+   "title": "New ICT Patient page: after Create"
+  },
+  {
+   "id": "new-patient-email",
+   "title": "New ICT Patient page: Email Draft and Create Another Patient"
+  },
+  {
+   "id": "overview-duplicate",
+   "title": "Overview tab: Possible Duplicate Patient"
   },
   {
    "id": "overview-1",
