@@ -1886,7 +1886,7 @@ window.DATA = {
      "screen": "ed-notes",
      "rect": [
       571,
-      571,
+      630,
       190,
       38
      ],
@@ -1948,7 +1948,7 @@ window.DATA = {
      "screen": "ed-notes",
      "rect": [
       772,
-      571,
+      630,
       190,
       38
      ],
@@ -2367,7 +2367,7 @@ window.DATA = {
       569,
       325,
       575,
-      191
+      220
      ],
      "text": "Here it is: HPI Notes: the doctor's notes, in ED Visit Notes.",
      "kind": "field"
@@ -2418,7 +2418,7 @@ window.DATA = {
       554,
       245,
       612,
-      253
+      312
      ],
      "text": "Here it is: What the hospital wrote: ED Visit Notes.",
      "kind": "field"
@@ -2705,6 +2705,28 @@ window.DATA = {
       112
      ],
      "text": "Here it is: Police / Crash Report, Case Files.",
+     "kind": "field"
+    },
+    {
+     "screen": "tabs-more",
+     "rect": [
+      960,
+      150,
+      150,
+      26
+     ],
+     "text": "On the patient page, click More, then Hospital EMR. (On a wide screen it can be in the row itself.)",
+     "kind": "tab"
+    },
+    {
+     "screen": "ed-notes",
+     "rect": [
+      576,
+      464,
+      300,
+      52
+     ],
+     "text": "Here it is: A file of an ED Visit note: + Add file under that note.",
      "kind": "field"
     }
    ]
@@ -6850,11 +6872,23 @@ window.DATA = {
       554,
       245,
       612,
-      253
+      312
      ],
      "text": "The ED Visit is first on the tab, and its ED Visit Notes come first: Triage Notes, HPI Notes, Discharge Notes.",
      "kind": "look",
      "help": "Click a note tab to read the whole note."
+    },
+    {
+     "screen": "ed-notes",
+     "rect": [
+      576,
+      464,
+      300,
+      52
+     ],
+     "text": "Each note has its own files. Click + Add file under the note to attach a document, for example the discharge papers.",
+     "kind": "look",
+     "help": "Up to 10 files per note. They are also listed in All Files on the Overview."
     },
     {
      "screen": "ed-notes-hpi",
